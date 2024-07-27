@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
-    <link rel="stylesheet" href="./../../index.css">
+    <link rel="stylesheet" href="./../../common/header-footer.css">
     <link rel="stylesheet" href="./../css/registration.css">
    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
