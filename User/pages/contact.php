@@ -45,31 +45,26 @@
 
 <div class="contact-card">
         <img src="./../../Images/banner3.jpg" alt="Profile Picture">
-        <h2>John Doe</h2>
-        <p>Web Developer</p>
+        <h2>jon doe</h2>
+        <p>frontend and backend<br>developer</p>
         <a href="mailto:john.doe@example.com">Email Me</a>
     </div>
 
     <div class="contact-card">
-        <img src=".\..\..\Images\logo2.png" alt="Profile Picture">
-        <h2>John Doe</h2>
-        <p>Web Developer</p>
-        <a href="mailto:john.doe@example.com">Email Me</a>
-    </div>
+        <img src="./../../Images/User-images/about.png" alt="Company Logo">
+        <h2>About Us</h2>
+        <p>Welcome to MovieTickets , <br>one place destination.</p>
+        <a href="/contact">Contact Us</a>
+</div>
 
     <div class="contact-card">
-        <img src="./../../Images/banner3.jpg" alt="Profile Picture">
-        <h2>John Doe</h2>
-        <p>Web Developer</p>
-        <a href="mailto:john.doe@example.com">Email Me</a>
+        <img src="./../../Images/User-images/gmap.png" alt="Company Logo">
+        <h2>Our Address</h2>
+        <p>123 Movie Street<br>Film City, 414001<br></p>
+        <a href="https://www.google.com/maps?q=123+Movie+Street,+Film+City,+FC+12345" target="_blank">View on Map</a>
     </div>
   
-    <div class="contact-card">
-        <img src="./../../Images/banner3.jpg" alt="Profile Picture">
-        <h2>John Doe</h2>
-        <p>Web Developer</p>
-        <a href="mailto:john.doe@example.com">Email Me</a>
-    </div>
+  
     
 
  

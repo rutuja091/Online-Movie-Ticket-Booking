@@ -54,14 +54,15 @@ body {
 
 /* contact card*/
 .contact-card {
-    margin-left: 8px;
+    margin-left: 20px;
     background: #fff;
-    padding: 20px;
+    padding: 1px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    border-radius: 10px;
+    width: 460px;
+    border-radius: 5px;
     text-align: center;
     display: inline-block;
+    margin-bottom: 25px;
 }
 .contact-card img {
     width: 100px;
@@ -87,5 +88,11 @@ body {
     color: #555;
 }
 .contact-card a:hover {
-    background-color: #ddd;
+    background:  #ff5722 ; 
+    color: #ffffff;
+}
+
+.contact-card:hover{
+    transform: scale(0.9);
+    border: 5px solid #ff5722 ; 
 }
