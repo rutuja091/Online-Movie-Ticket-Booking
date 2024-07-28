@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
     <link rel="stylesheet" href="./../../common/header-footer.css">
-    <link rel="stylesheet" href="./../css/login.css">
+    <link rel="stylesheet" href="./../css/registration.css">
    
    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -25,29 +25,40 @@
         </nav>
     </header>
 
-    <div class="carousel-item active" style="background-image:url('./../../Images/User-images/login-bg.jpg');">
 
+      <!-- Main Content -->
+      <main>
+      <div class="carousel-item active" style="background-image:url('./../../Images/User-images/login-bg.jpg');">
     <div class="container">
-       
-        <form  class="login-form">
-        <h2>Login</h2>
+        <form class="registration-form">
+            <h2>Register</h2>
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
             </div>
-            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            
-            <button type="submit">Login</button>
-            <a href="./registration.php">if you not registration?  Register Now </a>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit">Register</button>
+            <a href="./login.php">if you apready have an account?  login </a>
         </form>
     </div>
+    </main>
 
 
-      <footer class="footer">
+
+
+
+    <footer class="footer">
         <div class="social-icons">
             <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
             <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
