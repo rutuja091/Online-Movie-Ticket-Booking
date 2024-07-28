@@ -4,6 +4,12 @@ body {
     background-color: #1c1c1c;
     color:  #ffffff;
 }
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
 
 .container {
     display: flex;

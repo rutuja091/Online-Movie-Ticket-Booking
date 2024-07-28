@@ -25,6 +25,8 @@
         </nav>
     </header>
 
+    <div class="carousel-item active" style="background-image:url('./../../Images/User-images/login-bg.jpg');">
+
     <div class="container">
        
         <form  class="login-form">
