@@ -29,7 +29,7 @@
   <div class="carousel-inner">
         <div class="carousel-item" style="background-image: url('./../../Images/banner3.jpg');"></div>
         <div class="carousel-caption d-none d-md-block">
-            
+
                 <h5>About Us</h5>
                 <p>Welcome to MovieTicket Booking, your number one source for all things movies. We're dedicated to giving you the very best of movie booking experience, with a focus on convenience, customer service, and affordability.</p>
         <p>Founded in 2023, MovieTicket Booking has come a long way from its beginnings. When we first started out, our passion for providing the best online movie ticket booking drove us to do intense research, and gave us the impetus to turn hard work and inspiration into a booming online platform. We now serve customers all over the country and are thrilled to be a part of the fast-growing wing of the movie industry.</p>
@@ -38,10 +38,22 @@
             </div>
     </div>
 
-    
 
- 
+    <div class="slider">
+    <div class="slides">
+        <img src="./../../Images/User-images/partner3.png" alt="partner3">
+        <img src="./../../Images/User-images/partner2.jpg" alt="partner4">
+        <img src="./../../Images/User-images/partner1.jpg" alt="partner6">
+    </div>
+    <div class="navigation">
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+</div>
 
+
+
+   
 
     <footer class="footer">
         <div class="social-icons">
@@ -58,6 +70,42 @@
         </div>
         <p>&copy; 2024 Movie Ticket Booking System. All rights reserved.</p>
     </footer>
+
+
+    <script>
+    const slides = document.querySelector('.slides');
+    const images = document.querySelectorAll('.slides img');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        if (index >= images.length) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = images.length - 1;
+        } else {
+            currentIndex = index;
+        }
+        slides.style.transform = `translateX(${-currentIndex * 100}%)`;
+    }
+
+    prevButton.addEventListener('click', () => {
+        showSlide(currentIndex - 1);
+    });
+
+    nextButton.addEventListener('click', () => {
+        showSlide(currentIndex + 1);
+    });
+
+    setInterval(() => {
+        showSlide(currentIndex + 1);
+    }, 3000);
+</script>  
+ 
+
+
   <!-- Font Awesome CDN for social media icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 

@@ -54,11 +54,11 @@ body {
 
 /* contact card*/
 .contact-card {
-    margin-left: 20px;
+    margin-left: 35px;
     background: #fff;
     padding: 1px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 460px;
+    width: 440px;
     border-radius: 5px;
     text-align: center;
     display: inline-block;
@@ -93,6 +93,6 @@ body {
 }
 
 .contact-card:hover{
-    transform: scale(0.9);
+    transform: scale(1.02);
     border: 5px solid #ff5722 ; 
 }
