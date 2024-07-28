@@ -75,7 +75,78 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+
+
+
+<div class="centered-content">
+        <h5>Watch new movies</h5>
+        <h2>Movie Now Playing</h2>
+    </div>
+<div class="card-container">
+
+        <!-- <div class="movie-card">
+            <img src=".\Images\movie1.jpg" alt="Movie 1">
+             <div class="card-content">
+                <h3>Movie Title 1</h3>
+                <p>Short description of the movie.</p>
+                <a href="#" class="book-button">Book Ticket</a>
+            </div> 
+        </div> --->
+        <div class="movie-card">
+            <img src=".\Images\movie2.jpg" alt="Movie 2">
+            <div class="card-content">
+                <h3>Movie Title 2</h3>
+                <p>Short description of the movie.</p>
+                <a href="#" class="book-button">Book Ticket</a>
+            </div>
+        </div>
+
+        <!-- <div class="movie-card">
+            <img src=".\Images\movie3.jpg" alt="Movie 2">
+            <div class="card-content">
+                <h3>Movie Title 3</h3>
+                <p>Short description of the movie.</p>
+                <a href="#" class="book-button">Book Ticket</a>
+            </div>
+        </div> -->
+
+        <div class="movie-card">
+            <img src=".\Images\movie4.jpg" alt="Movie 2">
+            <div class="card-content">
+                <h3>Movie Title 4</h3>
+                <p>Short description of the movie.</p>
+                <a href="#" class="book-button">Book Ticket</a>
+            </div>
+        </div>
+        <div class="movie-card">
+            <img src=".\Images\movie5.jpg" alt="Movie 2">
+            <div class="card-content">
+                <h3>Movie Title 5</h3>
+                <p>Short description of the movie.</p>
+                <a href="#" class="book-button">Book Ticket</a>
+            </div>
+        </div>
+        <div class="movie-card">
+            <img src=".\Images\movie6.jpg" alt="Movie 2">
+            <div class="card-content">
+                <h3>Movie Title 6</h3>
+                <p>Short description of the movie.</p>
+                <a href="#" class="book-button">Book Ticket</a>
+            </div>
+        </div>
+        <!-- Add more movie cards as needed -->
+    </div>
+
+
+
     </main>
+
+
+
+
+
+
+
 
     <footer class="footer">
         <div class="social-icons">
