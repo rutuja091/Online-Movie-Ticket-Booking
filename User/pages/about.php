@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
     <link rel="stylesheet" href="./../../common/header-footer.css">
-    <link rel="stylesheet" href="./../css/login.css">
+    <link rel="stylesheet" href="./../css/about.css">
    
    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -25,29 +25,25 @@
         </nav>
     </header>
 
-    <div class="carousel-item active" style="background-image:url('./../../Images/User-images/login-bg.jpg');">
 
-    <div class="container">
-       
-        <form  class="login-form">
-        <h2>Login</h2>
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
+  <div class="carousel-inner">
+        <div class="carousel-item" style="background-image: url('./../../Images/banner3.jpg');"></div>
+        <div class="carousel-caption d-none d-md-block">
             
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <h5>About Us</h5>
+                <p>Welcome to MovieTicket Booking, your number one source for all things movies. We're dedicated to giving you the very best of movie booking experience, with a focus on convenience, customer service, and affordability.</p>
+        <p>Founded in 2023, MovieTicket Booking has come a long way from its beginnings. When we first started out, our passion for providing the best online movie ticket booking drove us to do intense research, and gave us the impetus to turn hard work and inspiration into a booming online platform. We now serve customers all over the country and are thrilled to be a part of the fast-growing wing of the movie industry.</p>
+        <p>We hope you enjoy our service as much as we enjoy offering it to you. If you have any questions or comments, please don't hesitate to contact us.</p>
+        <p>Sincerely,<br>The MovieTicket Booking Team</p>
             </div>
-            
-            <button type="submit">Login</button>
-            <a href="./registration.php">if you not registration?  Register Now </a>
-        </form>
     </div>
 
+    
 
-      <footer class="footer">
+ 
+
+
+    <footer class="footer">
         <div class="social-icons">
             <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
             <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>

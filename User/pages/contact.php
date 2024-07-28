@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
     <link rel="stylesheet" href="./../../common/header-footer.css">
-    <link rel="stylesheet" href="./../css/login.css">
+    <link rel="stylesheet" href="./../css/contact.css">
    
    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -24,30 +24,58 @@
             </ul>
         </nav>
     </header>
-
-    <div class="carousel-item active" style="background-image:url('./../../Images/User-images/login-bg.jpg');">
-
+  
     <div class="container">
-       
-        <form  class="login-form">
-        <h2>Login</h2>
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            
-            <button type="submit">Login</button>
-            <a href="./registration.php">if you not registration?  Register Now </a>
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
         </form>
     </div>
+</div>
+
+<div class="contact-card">
+        <img src="./../../Images/banner3.jpg" alt="Profile Picture">
+        <h2>John Doe</h2>
+        <p>Web Developer</p>
+        <a href="mailto:john.doe@example.com">Email Me</a>
+    </div>
+
+    <div class="contact-card">
+        <img src=".\..\..\Images\logo2.png" alt="Profile Picture">
+        <h2>John Doe</h2>
+        <p>Web Developer</p>
+        <a href="mailto:john.doe@example.com">Email Me</a>
+    </div>
+
+    <div class="contact-card">
+        <img src="./../../Images/banner3.jpg" alt="Profile Picture">
+        <h2>John Doe</h2>
+        <p>Web Developer</p>
+        <a href="mailto:john.doe@example.com">Email Me</a>
+    </div>
+  
+    <div class="contact-card">
+        <img src="./../../Images/banner3.jpg" alt="Profile Picture">
+        <h2>John Doe</h2>
+        <p>Web Developer</p>
+        <a href="mailto:john.doe@example.com">Email Me</a>
+    </div>
+    
+
+ 
 
 
-      <footer class="footer">
+    <footer class="footer">
         <div class="social-icons">
             <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
             <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
