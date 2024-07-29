@@ -239,6 +239,7 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
                 </div>
+                
             <div class="col-md-4">
                 <h5 class="footer-title">Newsletter</h5>
                 <p>Subscribe to Leitmotif newsletter this very day.</p>

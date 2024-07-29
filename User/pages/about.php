@@ -9,7 +9,10 @@
    
    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-   
+
+
+  
+
 </head>
 <body>
 
@@ -29,25 +32,136 @@
     </header>
 
 
-  <div class="carousel-inner">
-        <div class="carousel-item" style="background-image: url('./../../Images/User-images/theter.jpg');"></div>
-         <div class="carousel-caption d-none d-md-block">
+     
 
-
-         <div class="about-container">
-        <div class="about-box">
-            <h1>About Us</h1>
+    <div class="main-cont">
+      <div class="main-head">
+        <p id="dark-light-main-header"><b>About Us</b></p>
+      </div>
+      <div class="first-info">
+        <div class="info-cont">
+          <div class="first-info-head">
+            <p>About Starlight Theater
+            <p>
+          </div>
+          <div class="info">
             <p>Welcome to MovieBooker, your go-to platform for booking movie tickets with ease and convenience.</p>
-            <p>At MovieBooker, we believe in providing our customers with the best movie-going experience. From the latest blockbusters to timeless classics, we've got you covered. Our user-friendly interface ensures a hassle-free booking process, allowing you to select your preferred seats and showtimes effortlessly.</p>
-            <p>Founded in 2023, we are committed to bringing you the joy of cinema, right at your fingertips. Join us and dive into a world of entertainment like never before!</p>
+           
+           
             <p> A movie ticket booking system is a user-friendly platform designed to simplify the process of reserving tickets for movies. It offers a seamless experience, allowing users to browse through movie listings, select showtimes, and choose their preferred seats, all from the comfort of their homes. With secure payment gateways, instant booking confirmations, 
                 and options for refunds or cancellations, it ensures a hassle-free and enjoyable movie-going experience. </p>
+          </div>
+        </div>
+        <div class="info-img">
+          <img src="./../../Images/User-images/theter3.jpg" style="width:650px;height:350px;">
+        </div>
+      </div>
+      <hr>
+      <div class="container">
+        <h2 class="section-title">Some Beautiful Picture of Theater</h2>
+        <div class="movie-card-container">
+            <div class="movie-cards movie-card-1">
+                <img src="./../../Images/User-images/gallery1.jpg" alt="The Way of Water" class="movie-image">
+                <div class="movie-info">
+                    <h3 class="movie-title">Audience hall</h3>
+                    <p class="movie-genre"> the stage may consist of a platform (often raised) or series of platforms.</p>
+                   
+                 
+                </div>
+            </div>
+            <div class="movie-cards movie-card-2">
+                <img src="./../../Images/User-images/gallery2.jpg" alt="The Witcher Season 2" class="movie-image"   style="width:650px;height:230px;">
+                <div class="movie-info">
+                    <h3 class="movie-title">Luxirious thigs</h3>
+                    <p class="movie-genre">Many precious things are here</p>
+                    
+                   
+                </div>
+            </div>
+            <div class="movie-cards movie-card-3">
+                <img src="./../../Images/User-images/gallery3.jpg" alt="Wrong Turns Part 2" class="movie-image">
+                <div class="movie-info">
+                    <h3 class="movie-title">confortable Arrangement</h3>
+                    <p class="movie-genre">The audience members often sit on seats, which in most theaters are  with the highest part at the rear of the theater.</p>
+                
+                  
+                </div>
+            </div>
         </div>
     </div>
+      <hr>
+      <div class="middle-part">
+        <div class="card  mb-3"
+          style="max-width: 18rem;border:1px solid  black; background-color:black; color: white;margin: 10px 30px;">
+          <div class="card-body">
+            <p class="card-text">Powerful Marketplace Toolkit.</p>
+          </div>
+        </div>
+        <div class="card  mb-3"
+          style="max-width: 18rem;border:1px solid  black; background-color:black; color: white;margin: 10px 30px;">
+          <div class="card-body">
+            <p class="card-text">High Speed Performance.</p>
+          </div>
+        </div>
+        <div class="card  mb-3"
+          style="max-width: 18rem;border:1px solid  black; background-color:black; color: white ;margin:10px 30px;">
+          <div class="card-body">
+            <p class="card-text">Good Platform For Shopping.</p>
+          </div>
+        </div>
+        <div class="card  mb-3"
+          style="max-width: 18rem;border:1px solid  black; background-color:black; color: white;margin:10px 30px;">
+          <div class="card-body">
+            <p class="card-text">Great Support online System.</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="third-info">
+        <div class="info-cont">
+          <div class="first-info-head">
+            <p>Buy Branded and Quality Mobile Accessories at <b>MOBILE MART</b>
+            <p>
+          </div>
+          <div class="info">
+            <p> Giving you brands such as Mi, Nokia, Sony, Honor, Samsung, SanDisk, Solimo and much more, you can be
+              assured that you are purchasing original and quality products. Shop from an elaborate range of mobile
+              accessories on Amazon India.</p>
+            <div class="unorder-list">
+              <div class="un-list">
+                <ul>
+                  <li>Earphones</li>
+                  <li>Selfie sticks</li>
+                  <li>Headsets.</li>
+                </ul>
+              </div>
+              <div class="un-list">
+                <ul>
+                  <li>Power banks.</li>
+                  <li>Cables and chargers.</li>
+                  <li>Cases & covers.</li>
+                </ul>
+              </div>
+              <div class="un-list">
+                <ul>
+                  <li>Camera Lens attachments</li>
+                  <li>Screen protectors</li>
+                  <li>Bluetooth speakers.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info-img">
+          <img src="..\img\about-page-img\accessories.png"style="background-color:white; border-radius:20px;">
+        </div>
+      </div>
+</div>
 
 
-         </div>
-    </div>
+
+
+
 
 
   
@@ -107,5 +221,10 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <script src="script.js"></script>
+
+  
+
+
+
 </body>
 </html>
