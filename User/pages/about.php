@@ -30,16 +30,27 @@
 
 
   <div class="carousel-inner">
-        <div class="carousel-item" style="background-image: url('./../../Images/banner5.jpg');"></div>
-        <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-item" style="background-image: url('./../../Images/User-images/theter.jpg');"></div>
+         <div class="carousel-caption d-none d-md-block">
 
-                <h5 class="about"> About Us</h5>
-                <p>Welcome to MovieTicket Booking, your number one source for all things movies. We're dedicated to giving you the very best of movie booking experience, with a focus on convenience, customer service, and affordability.</p>
-        <p>Founded in 2023, MovieTicket Booking has come a long way from its beginnings. When we first started out, our passion for providing the best online movie ticket booking drove us to do intense research, and gave us the impetus to turn hard work and inspiration into a booming online platform. We now serve customers all over the country and are thrilled to be a part of the fast-growing wing of the movie industry.</p>
-        <p>We hope you enjoy our service as much as we enjoy offering it to you. If you have any questions or comments, please don't hesitate to contact us.</p>
-        <p>Sincerely,<br>The MovieTicket Booking Team</p>
-            </div>
+
+         <div class="about-container">
+        <div class="about-box">
+            <h1>About Us</h1>
+            <p>Welcome to MovieBooker, your go-to platform for booking movie tickets with ease and convenience.</p>
+            <p>At MovieBooker, we believe in providing our customers with the best movie-going experience. From the latest blockbusters to timeless classics, we've got you covered. Our user-friendly interface ensures a hassle-free booking process, allowing you to select your preferred seats and showtimes effortlessly.</p>
+            <p>Founded in 2023, we are committed to bringing you the joy of cinema, right at your fingertips. Join us and dive into a world of entertainment like never before!</p>
+            <p> A movie ticket booking system is a user-friendly platform designed to simplify the process of reserving tickets for movies. It offers a seamless experience, allowing users to browse through movie listings, select showtimes, and choose their preferred seats, all from the comfort of their homes. With secure payment gateways, instant booking confirmations, 
+                and options for refunds or cancellations, it ensures a hassle-free and enjoyable movie-going experience. </p>
+        </div>
     </div>
+
+
+         </div>
+    </div>
+
+
+  
 
     <section class="container mt-4">
         <div id="movieIconSlider" class="carousel slide" data-ride="carousel">
