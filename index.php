@@ -166,48 +166,49 @@
     </div>
 
 
-    <section class="container mt-4">
-        <div id="movieIconSlider" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="d-flex justify-content-around">
-                        <img src=".\Images\movie6.jpg" class="rounded-circle img-fluid small-icon" alt="Movie 1" style="width:150px;height:150px">
-                        <img src="movie2.jpg" class="rounded-circle img-fluid small-icon" alt="Movie 2">
-                        <img src="movie3.jpg" class="rounded-circle img-fluid small-icon" alt="Movie 3">
-                        <img src="movie4.jpg" class="rounded-circle img-fluid small-icon" alt="Movie 4">
-                        <img src="movie5.jpg" class="rounded-circle img-fluid small-icon" alt="Movie 5">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="d-flex justify-content-around">
-                        <img src="movie6.jpg" class="rounded-circle img-fluid small-icon" alt="Movie 6">
-                        <img src="movie7.jpg" class="rounded-circle img-fluid small-icon" alt="Movie 7">
-                        <img src="movie8.jpg" class="rounded-circle img-fluid small-icon" alt="Movie 8">
-                        <img src="movie9.jpg" class="rounded-circle img-fluid small-icon" alt="Movie 9">
-                        <img src="movie10.jpg" class="rounded-circle img-fluid small-icon" alt="Movie 10">
+    <div class="container">
+        <h2 class="section-title">Top Featured Movies</h2>
+        <div class="movie-card-container">
+            <div class="movie-cards movie-card-1">
+                <img src="path/to/image1.jpg" alt="The Way of Water" class="movie-image">
+                <div class="movie-info">
+                    <h3 class="movie-title">The Way of Water</h3>
+                    <p class="movie-genre">Adventure, Crime</p>
+                    <p class="movie-duration">190 Mins</p>
+                    <div class="movie-buttons">
+                        <button class="movie-button">Watch Trailer</button>
+                        <button class="movie-button">Get Ticket</button>
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#movieIconSlider" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#movieIconSlider" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="movie-cards movie-card-2">
+                <img src="path/to/image2.jpg" alt="The Witcher Season 2" class="movie-image">
+                <div class="movie-info">
+                    <h3 class="movie-title">The Witcher Season 2</h3>
+                    <p class="movie-genre">Action, Thriller</p>
+                    <p class="movie-duration">180 Mins</p>
+                    <div class="movie-buttons">
+                        <button class="movie-button">Watch Trailer</button>
+                        <button class="movie-button">Get Ticket</button>
+                    </div>
+                </div>
+            </div>
+            <div class="movie-cards movie-card-3">
+                <img src="path/to/image3.jpg" alt="Wrong Turns Part 2" class="movie-image">
+                <div class="movie-info">
+                    <h3 class="movie-title">Wrong Turns Part 2</h3>
+                    <p class="movie-genre">Thriller</p>
+                    <p class="movie-duration">180 Mins</p>
+                    <div class="movie-buttons">
+                        <button class="movie-button">Watch Trailer</button>
+                        <button class="movie-button">Get Ticket</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
-
+    </div>
 
     </main>
-
-
-
-
-
-
-
 
    <!-- Footer -->
 <div class="footer">
@@ -276,10 +277,10 @@
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
 

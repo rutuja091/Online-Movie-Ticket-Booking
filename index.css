@@ -220,3 +220,77 @@ h2 {
         width: 60px;
     }
 }
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 100px  auto;
+    text-align: center;
+
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.movie-card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.movie-cards {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: calc(33.333% - 20px); /* Adjusting width for 3 cards per row with gap */
+    transition: transform 0.3s ease;
+}
+
+.movie-cards:hover {
+    transform: translateY(-10px);
+}
+
+.movie-image {
+    width: 100%;
+    height: auto;
+}
+
+.movie-info {
+    padding: 20px;
+}
+
+.movie-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.movie-genre, .movie-duration {
+    color: #888;
+    margin: 5px 0;
+}
+
+.movie-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.movie-button {
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.movie-button:hover {
+    background-color: grey;
+}
