@@ -42,7 +42,7 @@
             </div>
             
             <button type="submit">Login</button>
-            <a href="./registration.php">if you not registration?  Register Now </a>
+           <h4>  if you not registered? </h4><a href="./registration.php" class="anchor"> Register Now </a>
         </form>
     </div>
 
