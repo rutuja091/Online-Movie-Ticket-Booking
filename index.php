@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <!-- Header -->
+    <!--- Header --->
     <header class="header">
         <div class="logo"><img src=".\Images\logo2.png" class="logo-img"></div>
         <nav class="nav">
@@ -23,7 +23,7 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
+    <!--- Main Content --->
     <main>
       
 <div id="movieCarousel" class="carousel slide" data-ride="carousel">
@@ -92,6 +92,7 @@
                 <a href="#" class="book-button">Book Ticket</a>
             </div> 
         </div> --->
+        
         <div class="movie-card">
             <img src=".\Images\movie2.jpg" alt="Movie 2">
             <div class="card-content">
