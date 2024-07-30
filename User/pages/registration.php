@@ -49,7 +49,7 @@
                 <input type="password" id="confirm-password" name="confirm-password" required>
             </div>
             <button type="submit">Register</button>
-            <a href="./login.php">if you apready have an account?  login </a>
+            <h4>if you apready have an account? </h4><a href="./login.php"> login </a>
         </form>
     </div>
     </main>
