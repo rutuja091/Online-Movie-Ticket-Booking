@@ -92,7 +92,7 @@
                 <ul>
                   <li>soft drinks</li>
                   <li>popcorn</li>
-                  <li>Big s</li>screen
+                  <li>Big </li>screen
                 </ul>
               </div>
             </div>
