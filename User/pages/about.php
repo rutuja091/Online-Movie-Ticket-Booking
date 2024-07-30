@@ -57,7 +57,54 @@
         </div>
       </div>
       <hr>
-      <div class="container">
+
+
+
+    
+      <div class="third-info">
+
+      <div class="info-img">
+          <img src="./../../Images/User-images/about1.jpg"  style="width:550px;height:400px;margin:30px"> 
+        </div>
+        <div class="info-cont">
+         <div class="first-info-head">
+         <p>Movies are like magic, they transport us to different worlds. .. <b>Movie vibes. 🦋</b>
+            <p>
+          </div>
+          <div class="info">
+            <p> Movie theaters offer a variety of snacks and drinks that you can't get at home, which can add to the overall movie-going experience. Movie theaters offer a chance to escape from reality for a few hours and immerse yourself in the world of the movie.</p>
+            <div class="unorder-list">
+              <div class="un-list">
+                <ul>
+                  <li>auditorium</li>
+                  <li>confortable sits</li>
+                  <li>foyer area</li>
+                </ul>
+              </div>
+              <div class="un-list">
+                <ul>
+                  <li>box ofice</li>
+                  <li>service bells.</li>
+                  <li>complimentary refills</li>
+                </ul>
+              </div>
+              <div class="un-list">
+                <ul>
+                  <li>soft drinks</li>
+                  <li>popcorn</li>
+                  <li>Big s</li>screen
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+</div>
+
+<hr>
+
+     <div class="container">
         <h2 class="section-title">Some Beautiful Picture of Theater</h2>
         <div class="movie-card-container">
             <div class="movie-cards movie-card-1">
@@ -90,104 +137,22 @@
         </div>
     </div>
       <hr>
-      <div class="middle-part">
-        <div class="card  mb-3"
-          style="max-width: 18rem;border:1px solid  black; background-color:black; color: white;margin: 10px 30px;">
-          <div class="card-body">
-            <p class="card-text">Powerful Marketplace Toolkit.</p>
-          </div>
-        </div>
-        <div class="card  mb-3"
-          style="max-width: 18rem;border:1px solid  black; background-color:black; color: white;margin: 10px 30px;">
-          <div class="card-body">
-            <p class="card-text">High Speed Performance.</p>
-          </div>
-        </div>
-        <div class="card  mb-3"
-          style="max-width: 18rem;border:1px solid  black; background-color:black; color: white ;margin:10px 30px;">
-          <div class="card-body">
-            <p class="card-text">Good Platform For Shopping.</p>
-          </div>
-        </div>
-        <div class="card  mb-3"
-          style="max-width: 18rem;border:1px solid  black; background-color:black; color: white;margin:10px 30px;">
-          <div class="card-body">
-            <p class="card-text">Great Support online System.</p>
-          </div>
-        </div>
-      </div>
-      <hr>
-      <div class="third-info">
-        <div class="info-cont">
-          <div class="first-info-head">
-            <p>Buy Branded and Quality Mobile Accessories at <b>MOBILE MART</b>
-            <p>
-          </div>
-          <div class="info">
-            <p> Giving you brands such as Mi, Nokia, Sony, Honor, Samsung, SanDisk, Solimo and much more, you can be
-              assured that you are purchasing original and quality products. Shop from an elaborate range of mobile
-              accessories on Amazon India.</p>
-            <div class="unorder-list">
-              <div class="un-list">
-                <ul>
-                  <li>Earphones</li>
-                  <li>Selfie sticks</li>
-                  <li>Headsets.</li>
-                </ul>
-              </div>
-              <div class="un-list">
-                <ul>
-                  <li>Power banks.</li>
-                  <li>Cables and chargers.</li>
-                  <li>Cases & covers.</li>
-                </ul>
-              </div>
-              <div class="un-list">
-                <ul>
-                  <li>Camera Lens attachments</li>
-                  <li>Screen protectors</li>
-                  <li>Bluetooth speakers.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="info-img">
-          <img src="..\img\about-page-img\accessories.png"style="background-color:white; border-radius:20px;">
-        </div>
-      </div>
-</div>
 
-
-
-
-
-
-
-  
-
-    <section class="container mt-4">
+<section class="container mt-4">
         <div id="movieIconSlider" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="d-flex justify-content-around">
-                        <img src="./../../Images/User-images/partner1.png" class="rounded-circle img-fluid small-icon" alt="Movie 1" style="width:150px;height:150px;margin:90px">
-                        <img src="./../../Images/User-images/partner2.png" class="rounded-circle img-fluid small-icon" alt="Movie 2" style="width:150px;height:150px;margin:90px">
-                        <img src="./../../Images/User-images/partner3.png" class="rounded-circle img-fluid small-icon" alt="Movie 3" style="width:150px;height:150px;margin:90px">
-                        <img src="./../../Images/User-images/partner4.png" class="rounded-circle img-fluid small-icon" alt="Movie 4" style="width:150px;height:150px;margin:90px">
+                        <img src="./../../Images/User-images/partner1.png" class="rounded-circle img-fluid small-icon" alt="Movie 1" style="width:150px;height:150px;margin:50px">
+                        <img src="./../../Images/User-images/partner2.png" class="rounded-circle img-fluid small-icon" alt="Movie 2" style="width:150px;height:150px;margin:50px">
+                        <img src="./../../Images/User-images/partner3.png" class="rounded-circle img-fluid small-icon" alt="Movie 3" style="width:150px;height:150px;margin:50px">
+                        <img src="./../../Images/User-images/partner4.png" class="rounded-circle img-fluid small-icon" alt="Movie 4" style="width:150px;height:150px;margin:50px">
                     
                     </div>
                 </div>
                
             </div>
-            <a class="carousel-control-prev" href="#movieIconSlider" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#movieIconSlider" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+          
         </div>
     </section>
 
