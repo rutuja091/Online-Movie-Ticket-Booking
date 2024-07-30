@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
-    <link rel="stylesheet" href="./../css/marathi_movie.css">
+    <link rel="stylesheet" href="./../css/comedy.css">
     <link rel="stylesheet" href="./../../common/header-footer.css">
    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -26,32 +26,29 @@
 
 
     <div class="centered-content">
-        <h3>Marathi Movies</h3>
+        <h3>Comedy Show</h3>
        
     </div>
 <div class="card-container">
         
         <div class="movie-card">
-            <img src="./../../Images/Movies/journy.jpg" alt="Movie 2">
+            <img src="./../../Images/Movies/double-life.avif" alt="Movie 2">
             <div class="card-content">
-                <h3>जर्नी </h3>
-                <p> The Journey is an example of speculative historical fiction at its most entertaining.
-                    This is an actors' movie .</p>
+                <h3> Double Life</h3>
+                <p>  Convoluted, clunky and increasingly implausible with waning suspense and poor use of exposition.
+                    </p>
                     <p class="movie-genre">Show-time:9:00 to 12:00</p>
-                    <p class="movie-duration">price: ₹250</p>
+                    <p class="movie-duration">price: ₹500</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
               </div>
 
         <div class="movie-card">
-            <img src="./../../Images/Movies/kasturi.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/bhabhiji.webp" alt="Movie 2">
             <div class="card-content">
-                <h3>मन कस्तुरी रे</h3>
-                <p>The film has a painful climax that drives you into an emotional state for a while, but after all, even that is seen stuff.
-                
-
-               
-                </p>
+                <h3> Bhabhi ji Ghar pr hai</h3>
+                <p>This tv serial are really entertaining acting and comedy timing really good Aasif Sheikh and other acter performance well.
+            </p>
 
                 <p class="movie-genre">Show-time: 7:00 to 9:00</p>
                     <p class="movie-duration">price: ₹500</p>
@@ -59,25 +56,25 @@
             </div>
         </div>
         <div class="movie-card">
-            <img src="./../../Images/Movies/googleaai.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/balnatya.avif" alt="Movie 2">
             <div class="card-content">
-                <h3>गूगल आई</h3>
-                <p>Google Aai (2024), Drama Thriller released in Marathi language in theatre .
-                The movie is directed by Govind Varaha.
+                <h3>Algabtya Galbatya</h3>
+                <p>Drama released in Marathi language in theatre near you. Know about Film reviews, 
+                    lead cast & crew, photos & video.
                 </p>
                 <p class="movie-genre">Show-time:2:00 to 5:00</p>
-                    <p class="movie-duration">price: ₹300</p>
+                    <p class="movie-duration">price: ₹250</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
         </div>
         <div class="movie-card">
-            <img src="./../../Images/Movies/shershivaji.jpg" alt="Movie 2">
+            <img src="./../../Images/Movies/hashyajatra.jpg" alt="Movie 2">
             <div class="card-content">
-                <h3>शेर शिवराज</h3>
-                <p>We've all heard this, but Sher Shivraj provides a fantastic extension.We didn't know 
-                     Afzal Khan  killed Shivaji's brother .</p>
+                <h3>Hashya Jatra</h3>
+                <p>"Pathetic scripts and overacting by the talented actors. Loud comedy with no timing at all.
+                     Biggest let down is Sai.</p>
                      <p class="movie-genre">Show-time:9:00 to 12:00</p>
-                    <p class="movie-duration">price: ₹500</p>
+                    <p class="movie-duration">price: ₹300</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
         </div>

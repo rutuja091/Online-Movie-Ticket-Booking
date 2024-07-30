@@ -26,17 +26,17 @@
 
 
     <div class="centered-content">
-        <h3>Marathi Movies</h3>
+        <h3>English Movies</h3>
        
     </div>
 <div class="card-container">
         
         <div class="movie-card">
-            <img src="./../../Images/Movies/journy.jpg" alt="Movie 2">
+            <img src="./../../Images/Movies/unsung-hero.avif" alt="Movie 2">
             <div class="card-content">
-                <h3>जर्नी </h3>
-                <p> The Journey is an example of speculative historical fiction at its most entertaining.
-                    This is an actors' movie .</p>
+                <h3> Unsung Hero</h3>
+                <p> Unsung Hero, co-directed by Joel Smallbone, is a heartwarming movie about the importance of family , challenges.
+                    </p>
                     <p class="movie-genre">Show-time:9:00 to 12:00</p>
                     <p class="movie-duration">price: ₹500</p>
                 <a href="#" class="book-button">Book Ticket</a>
@@ -44,11 +44,12 @@
               </div>
 
         <div class="movie-card">
-            <img src="./../../Images/Movies/kasturi.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/harold.avif" alt="Movie 2">
             <div class="card-content">
-                <h3>मन कस्तुरी रे</h3>
-                <p>The film has a painful climax that drives you into an emotional state for a while, but after all, even that is seen stuff.
-                
+                <h3> Harold</h3>
+                <p>13-year-old Harold has virtually nothing in the world going for him - for not only is he an eternally put-upon, 
+                    socially awkward.
+            
 
                
                 </p>
@@ -59,25 +60,25 @@
             </div>
         </div>
         <div class="movie-card">
-            <img src="./../../Images/Movies/googleaai.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/yodha.avif" alt="Movie 2">
             <div class="card-content">
-                <h3>गूगल आई</h3>
-                <p>Google Aai (2024), Drama Thriller released in Marathi language in theatre .
-                The movie is directed by Govind Varaha.
+                <h3>Yodha</h3>
+                <p>After Runway 34, Tejas, Fighter,Yodha is the latest in the action constantly hit by air pockets, 
+                    leading a turbulent experience.
                 </p>
                 <p class="movie-genre">Show-time:2:00 to 5:00</p>
-                    <p class="movie-duration">price: ₹500</p>
+                    <p class="movie-duration">price: ₹250</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
         </div>
         <div class="movie-card">
-            <img src="./../../Images/Movies/shershivaji.jpg" alt="Movie 2">
+            <img src="./../../Images/Movies/painter.avif" alt="Movie 2">
             <div class="card-content">
-                <h3>शेर शिवराज</h3>
-                <p>We've all heard this, but Sher Shivraj provides a fantastic extension.We didn't know 
-                     Afzal Khan  killed Shivaji's brother .</p>
+                <h3>The Painter</h3>
+                <p>"The Painter" is not a groundbreaking film,it is a highly entertaining,satisfying.
+                It is a well-madeaction thriller.</p>
                      <p class="movie-genre">Show-time:9:00 to 12:00</p>
-                    <p class="movie-duration">price: ₹500</p>
+                    <p class="movie-duration">price: ₹300</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
         </div>

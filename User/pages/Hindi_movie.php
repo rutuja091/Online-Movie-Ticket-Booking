@@ -51,7 +51,7 @@
                      engaging storytelling.
                 </p>
                <p class="movie-genre">Show-time: 7:00 to 9:00</p>
-                    <p class="movie-duration">price: ₹500</p>
+                    <p class="movie-duration">price: ₹250</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
         </div>
@@ -63,7 +63,7 @@
                 dealing with his own dreamsand fears.
                 </p>
                 <p class="movie-genre">Show-time:2:00 to 5:00</p>
-                    <p class="movie-duration">price: ₹500</p>
+                    <p class="movie-duration">price: ₹300</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
         </div>
