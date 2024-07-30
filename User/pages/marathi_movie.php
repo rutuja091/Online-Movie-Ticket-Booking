@@ -36,7 +36,9 @@
             <div class="card-content">
                 <h3>जर्नी </h3>
                 <p> The Journey is an example of speculative historical fiction at its most entertaining.
-                    This is an actors' movie and it's extremely pleasing to see</p>
+                    This is an actors' movie .</p>
+                    <p class="movie-genre">Show-time:9:00 to 12:00</p>
+                    <p class="movie-duration">price: ₹500</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
               </div>
@@ -46,10 +48,13 @@
             <div class="card-content">
                 <h3>मन कस्तुरी रे</h3>
                 <p>The film has a painful climax that drives you into an emotional state for a while, but after all, even that is seen stuff.
-                Mann Kasturi Re is about suppression. 
+                
 
                
                 </p>
+
+                <p class="movie-genre">Show-time: 7:00 to 9:00</p>
+                    <p class="movie-duration">price: ₹500</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
         </div>
@@ -57,9 +62,11 @@
             <img src="./../../Images/Movies/googleaai.avif" alt="Movie 2">
             <div class="card-content">
                 <h3>गूगल आई</h3>
-                <p>Google Aai (2024), Drama Thriller released in Marathi language in theatre near you.
-                The movie is directed by Govind Varaha, featured Pranav
+                <p>Google Aai (2024), Drama Thriller released in Marathi language in theatre .
+                The movie is directed by Govind Varaha.
                 </p>
+                <p class="movie-genre">Show-time:2:00 to 5:00</p>
+                    <p class="movie-duration">price: ₹500</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
         </div>
@@ -67,8 +74,10 @@
             <img src="./../../Images/Movies/shershivaji.jpg" alt="Movie 2">
             <div class="card-content">
                 <h3>शेर शिवराज</h3>
-                <p>We've all heard this, but Sher Shivraj provides a fantastic extension.We didn't know that
-                     Afzal Khan had killed Shivaji's brother .</p>
+                <p>We've all heard this, but Sher Shivraj provides a fantastic extension.We didn't know 
+                     Afzal Khan  killed Shivaji's brother .</p>
+                     <p class="movie-genre">Show-time:9:00 to 12:00</p>
+                    <p class="movie-duration">price: ₹500</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
         </div>

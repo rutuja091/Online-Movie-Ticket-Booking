@@ -115,3 +115,13 @@ h2 {
         width: 60px;
     }
 }
+.movie-duration{
+    color: #69f262;
+    margin: 5px 0;  
+}
+
+.movie-genre {
+    color: gold;
+    margin: 2px 0;
+    font-size:25px ;
+}
