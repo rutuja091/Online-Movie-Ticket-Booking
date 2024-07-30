@@ -8,11 +8,11 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color:  darkorange;
-    padding: 10px 20px;
+    padding: 20px 40px;
 }
 
 .logo-img {
-    height: 100px; /* Adjust the height as needed */
+    height: 120px; /* Adjust the height as needed */
     width: auto; /* Maintain aspect ratio */
 }
 
@@ -21,7 +21,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .nav ul li {
@@ -31,7 +31,11 @@ body {
 .nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 1em;
+    font-size: 30px;/* Increased font size */
+    font-weight: bold; /* Made text bold */
+    padding: 10px 15px; /* Added padding for larger clickable area */
+  
+    
 }
 
 .nav ul li a:hover {
@@ -54,7 +58,7 @@ body {
 .footer {
     background-color: #000;
     color: #fff;
-    padding: 40px 0;
+    padding: 20px 0;
 }
 .footer a {
     color: #ff5500;
@@ -143,7 +147,7 @@ h2 {
 
 .movie-card img {
     width: 100%;
-    height: auto;
+    height: 250px;
 }
 
 .card-content {
