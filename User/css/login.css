@@ -4,6 +4,8 @@ body {
     background-color: #1c1c1c;
     color:  #ffffff;
 }
+
+
 .carousel-item {
     height: 120vh;
     min-height: 300px;
@@ -47,8 +49,8 @@ body {
     padding: 10px;
     border: 1px solid #333;
     border-radius: 5px;
-    background-color: #2c2c2c;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #2c2c2c;
 }
 
 .form-group input:focus {
