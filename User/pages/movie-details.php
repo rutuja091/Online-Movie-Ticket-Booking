@@ -29,28 +29,29 @@
     <!--- Main Content --->
     <main>
 
-
-    <div class="container1">
+    <div class="containers">
         <div class="movie-image">
-            <img src="movie.jpg" alt="Movie Image">
+            <img src=".\..\..\Images\movie-details\siddhat.jpg" alt="Movie Image">
         </div>
         <div class="movie-details">
-            <h1>Movie Title</h1>
+            <h1>Shiddat</h1>
             <p>Rating: ⭐⭐⭐⭐☆</p>
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur nulla nec nunc.</p>
+            <p>It's true that in today's world of realistic cinema, we often don't get to see completely mad, 
+                raw and defiant love stories. This one goes there with Shiddat, but doesn't leave you deeply moved.</p>
             <div class="ticket-quantity">
                 <button onclick="decrement()">-</button>
                 <input type="text" id="quantity" value="1" readonly>
                 <button onclick="increment()">+</button>
             </div>
-            <p>Price: $<span id="price">10</span></p>
+            <p style="color: red;">Price: ₹50 per ticket</p>
+            <p>Total Price: ₹<span id="total-price">10</span></p>
             <button class="buy-button" onclick="buyTicket()">Buy Ticket</button>
         </div>
     </div>
-    <script >
 
-        let quantity = 1;
-const pricePerTicket = 10;
+    <script >
+let quantity = 1;
+const pricePerTicket = 250;
 
 function increment() {
     quantity++;
@@ -68,7 +69,7 @@ function decrement() {
 
 function updatePrice() {
     const totalPrice = quantity * pricePerTicket;
-    document.getElementById('price').textContent = totalPrice;
+    document.getElementById('total-price').textContent = totalPrice;
 }
 
 function buyTicket() {
@@ -76,10 +77,6 @@ function buyTicket() {
 }
 
     </script>
-
-
-
-
 
     </main>
 
