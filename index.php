@@ -16,9 +16,13 @@
         <nav class="nav">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
                 <li><a href="#">Movies</a></li>
+
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Login</a></li>
+                
             </ul>
         </nav>
     </header>
@@ -170,7 +174,7 @@
         <h2 class="section-title">Top Featured Movies</h2>
         <div class="movie-card-container">
             <div class="movie-cards movie-card-1">
-                <img src="path/to/image1.jpg" alt="The Way of Water" class="movie-image">
+                <img src=".\Images\cardimg1.jpg" alt="The Way of Water" class="movie-image">
                 <div class="movie-info">
                     <h3 class="movie-title">The Way of Water</h3>
                     <p class="movie-genre">Adventure, Crime</p>
@@ -182,7 +186,7 @@
                 </div>
             </div>
             <div class="movie-cards movie-card-2">
-                <img src="path/to/image2.jpg" alt="The Witcher Season 2" class="movie-image">
+                <img src=".\Images\cardimg2.jpg" alt="The Witcher Season 2" class="movie-image">
                 <div class="movie-info">
                     <h3 class="movie-title">The Witcher Season 2</h3>
                     <p class="movie-genre">Action, Thriller</p>
@@ -194,7 +198,7 @@
                 </div>
             </div>
             <div class="movie-cards movie-card-3">
-                <img src="path/to/image3.jpg" alt="Wrong Turns Part 2" class="movie-image">
+                <img src=".\Images\cardimg3.jpg" alt="Wrong Turns Part 2" class="movie-image">
                 <div class="movie-info">
                     <h3 class="movie-title">Wrong Turns Part 2</h3>
                     <p class="movie-genre">Thriller</p>
