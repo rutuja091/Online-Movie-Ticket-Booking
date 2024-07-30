@@ -45,7 +45,7 @@
             <!-- Card 2 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card">
-                    <img src=".\..\..\Images\Movies\Hindi.jpg" alt="Movie 2">
+                    <img src=".\..\..\Images\Movies\hindi1.jpg" alt="Movie 2">
                    
                 </div>
             </div>
@@ -56,60 +56,75 @@
                    
                 </div>
             </div>
-            <!-- Card 4 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card">
-                    <img src="path/to/image4.jpg" alt="Movie 4">
-                    <div class="card-content">
-                        <h5></h5>
-                        <p>Short description of movie 4.</p>
-                    </div>
-                </div>
-            </div>
-             <!-- Card 5 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card">
-                    <img src="path/to/image1.jpg" alt="Movie 1">
-                    <div class="card-content">
-                        <h5>Hindi Comedy Show</h5>
-                        <p>Short description of movie 1.</p>
-                    </div>
-                </div>
-            </div> 
-            <!-- Card 6 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card">
-                    <img src="path/to/image1.jpg" alt="Movie 1">
-                    <div class="card-content">
-                        <h5>English Horror Movies</h5>
-                        <p>Short description of movie 1.</p>
-                    </div>
-                </div>
-            </div>
-             <!-- Card 7 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card">
-                    <img src="path/to/image1.jpg" alt="Movie 1">
-                    <div class="card-content">
-                        <h5>Hindi Cartoon </h5>
-                        <p>Short description of movie 1.</p>
-                    </div>
-                </div>
-            </div>
-             <!-- Card 8 -->
-            <div class="col-md-6 col-lg-3">
-                <div class="card">
-                    <img src="path/to/image1.jpg" alt="Movie 1">
-                    <div class="card-content">
-                        <h5></h5>
-                        <p>Short description of movie 1.</p>
-                    </div>
-                </div>
-            </div>
+           
             
         </div>
     </div>
+
+
     
+
+    
+
+
+<!--   hover cards-->  
+     <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card movie-card">
+                    <img src=".\..\..\Images\Movies\hindi.jpeg" class="card-img-top" alt="Movie 1">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end">
+                        <div class="card-body">
+                        <p class="card-text">Crime, Thriller / 180 Mins</p>
+                        <h5 class="card-title">Alis Keep Walking</h5>
+                            <a href="#" class="btn btn-primary">View All</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card movie-card">
+                    <img src=".\..\..\Images\Movies\hindi.jpeg" class="card-img-top" alt="Movie 2">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end">
+                        <div class="card-body">
+                            <p class="card-text">Crime, Thriller / 180 Mins</p>
+                            <h5 class="card-title">Alis Keep Walking</h5>
+                            <a href="#" class="btn btn-primary">Get Ticket</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card movie-card">
+                    <img src=".\..\..\Images\Movies\hindi.jpeg" class="card-img-top" alt="Movie 3">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end">
+                        <div class="card-body">
+                            <p class="card-text">Animation, Thriller / 180 Mins</p>
+                            <h5 class="card-title">The Seventh Day</h5>
+                            <a href="#" class="btn btn-primary">Get Ticket</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card movie-card">
+                    <img src=".\..\..\Images\Movies\hindi.jpeg" class="card-img-top" alt="Movie 4">
+                    <div class="card-img-overlay d-flex flex-column justify-content-end">
+                        <div class="card-body">
+                            <p class="card-text">Horror / 120 Mins</p>
+                            <h5 class="card-title">Mystery House</h5>
+                            <a href="#" class="btn btn-primary">Get Ticket</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
     </main>
 
    <!-- Footer -->
