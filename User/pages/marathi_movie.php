@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./../css/marathi_movie.css">
+    <link rel="stylesheet" href="./../../common/header-footer.css">
    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -12,7 +13,7 @@
 <body>
     <!--- Header --->
     <header class="header">
-        <div class="logo"><img src=".\Images\logo2.png" class="logo-img"></div>
+        <div class="logo"><img src="./../../Images/logo2.png" class="logo-img"></div>
         <nav class="nav">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -22,6 +23,59 @@
             </ul>
         </nav>
     </header>
+
+
+    <div class="centered-content">
+        <h3>Marathi Movies</h3>
+       
+    </div>
+<div class="card-container">
+        
+        <div class="movie-card">
+            <img src="./../../Images/Movies/journy.jpg" alt="Movie 2">
+            <div class="card-content">
+                <h3>जर्नी </h3>
+                <p> The Journey is an example of speculative historical fiction at its most entertaining.
+                    This is an actors' movie and it's extremely pleasing to see</p>
+                <a href="#" class="book-button">Book Ticket</a>
+            </div>
+              </div>
+
+        <div class="movie-card">
+            <img src="./../../Images/Movies/kasturi.avif" alt="Movie 2">
+            <div class="card-content">
+                <h3>मन कस्तुरी रे</h3>
+                <p>The film has a painful climax that drives you into an emotional state for a while, but after all, even that is seen stuff.
+                Mann Kasturi Re is about suppression. 
+
+               
+                </p>
+                <a href="#" class="book-button">Book Ticket</a>
+            </div>
+        </div>
+        <div class="movie-card">
+            <img src="./../../Images/Movies/googleaai.avif" alt="Movie 2">
+            <div class="card-content">
+                <h3>गूगल आई</h3>
+                <p>Google Aai (2024), Drama Thriller released in Marathi language in theatre near you.
+                The movie is directed by Govind Varaha, featured Pranav
+                </p>
+                <a href="#" class="book-button">Book Ticket</a>
+            </div>
+        </div>
+        <div class="movie-card">
+            <img src="./../../Images/Movies/shershivaji.jpg" alt="Movie 2">
+            <div class="card-content">
+                <h3>शेर शिवराज</h3>
+                <p>We've all heard this, but Sher Shivraj provides a fantastic extension.We didn't know that
+                     Afzal Khan had killed Shivaji's brother .</p>
+                <a href="#" class="book-button">Book Ticket</a>
+            </div>
+        </div>
+        <!-- Add more movie cards as needed -->
+
+        
+    </div>
 
 
 
@@ -75,7 +129,7 @@
             </div>
         </div>
         <div class="text-center mt-4">
-            <p>&copy; Copyright 2023 by Ovatheme.com</p>
+            <p>&copy; Copyright 2023 by starlight.com</p>
         </div>
     </div>
 </div>
