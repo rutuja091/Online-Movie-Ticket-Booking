@@ -102,50 +102,80 @@ body {
 }
 
 
+/*end footer */
 
-/*cards css*/
-.card {
+
+
+.container1 {
     display: flex;
-    flex-direction: row;
-    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 80%;
+    max-width: 900px;
+}
+
+.movie-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.movie-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.movie-details {
+    flex: 2;
     padding: 20px;
-    align-items: center;
-
 }
 
-.card img {
-    border-radius: 20%;
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-    margin-right: 20px;
+.movie-details h1 {
+    margin: 0 0 10px;
 }
 
-.card-content {
+.movie-details p {
+    margin: 10px 0;
+}
+
+.ticket-quantity {
     display: flex;
-    flex-direction: column;
+    align-items: center;
 }
 
-.card-content h5 {
-    margin: 0;
-}
-
-.card-content p {
-    margin: 0;
-    color: gray;
-}
-
-.movie-button {
-    background-color: #ff5722;
+.ticket-quantity button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
     border: none;
     border-radius: 5px;
-    color: white;
-    margin-top: 10px;
-    padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    margin: 0 5px;
 }
 
-.movie-button:hover {
-    background-color: darkorange;
+.ticket-quantity input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.buy-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.buy-button:hover {
+    background-color: #218838;
 }

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
     <link rel="stylesheet" href="./../css/movies.css">
-   
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -22,7 +21,6 @@
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact Us</a></li>
                 <li><a href="#">Login</a></li>
-                
             </ul>
         </nav>
     </header>
@@ -34,11 +32,12 @@
 
     <h1 style="justify-content:center;text-align:center; color:#ff5500">Movies</h1>
         <div class="row">
+
             <!-- Card 1 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <img src=".\..\..\Images\Movies\Marathi.jpg" alt="Movie 1">
-            
+                    <button class="movie-button">Visit Now</button>
                 </div>
             </div>
             
@@ -46,84 +45,46 @@
             <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <img src=".\..\..\Images\Movies\hindi1.jpg" alt="Movie 2">
-                   
+                    <button class="movie-button">Visit Now</button>
                 </div>
             </div>
+
             <!-- Card 3 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <img src=".\..\..\Images\Movies\english.png" alt="Movie 3">
-                   
+                    <button class="movie-button">Visit Now</button>
                 </div>
-            </div>
-           
-            
+            </div> 
         </div>
-    </div>
 
-
-    
-
-    
-
-
-<!--   hover cards-->  
-     <div class="container mt-5">
         <div class="row">
-            <div class="col-md-3">
-                <div class="card movie-card">
-                    <img src=".\..\..\Images\Movies\hindi.jpeg" class="card-img-top" alt="Movie 1">
-                    <div class="card-img-overlay d-flex flex-column justify-content-end">
-                        <div class="card-body">
-                        <p class="card-text">Crime, Thriller / 180 Mins</p>
-                        <h5 class="card-title">Alis Keep Walking</h5>
-                            <a href="#" class="btn btn-primary">View All</a>
-                        </div>
-                    </div>
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src=".\..\..\Images\Movies\comedy.jpg" alt="Movie 1">
+                    <button class="movie-button">Visit Now</button>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card movie-card">
-                    <img src=".\..\..\Images\Movies\hindi.jpeg" class="card-img-top" alt="Movie 2">
-                    <div class="card-img-overlay d-flex flex-column justify-content-end">
-                        <div class="card-body">
-                            <p class="card-text">Crime, Thriller / 180 Mins</p>
-                            <h5 class="card-title">Alis Keep Walking</h5>
-                            <a href="#" class="btn btn-primary">Get Ticket</a>
-                        </div>
-                    </div>
+            
+            <!-- Card 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src=".\..\..\Images\Movies\cartoon.jpg" alt="Movie 2">
+                    <button class="movie-button">Visit Now</button>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="card movie-card">
-                    <img src=".\..\..\Images\Movies\hindi.jpeg" class="card-img-top" alt="Movie 3">
-                    <div class="card-img-overlay d-flex flex-column justify-content-end">
-                        <div class="card-body">
-                            <p class="card-text">Animation, Thriller / 180 Mins</p>
-                            <h5 class="card-title">The Seventh Day</h5>
-                            <a href="#" class="btn btn-primary">Get Ticket</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card movie-card">
-                    <img src=".\..\..\Images\Movies\hindi.jpeg" class="card-img-top" alt="Movie 4">
-                    <div class="card-img-overlay d-flex flex-column justify-content-end">
-                        <div class="card-body">
-                            <p class="card-text">Horror / 120 Mins</p>
-                            <h5 class="card-title">Mystery House</h5>
-                            <a href="#" class="btn btn-primary">Get Ticket</a>
-                        </div>
-                    </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src=".\..\..\Images\Movies\drama.jpg" alt="Movie 3">
+                    <button class="movie-button">Visit Now</button>
                 </div>
             </div>
         </div>
+
     </div>
-
-
-
-
 
     </main>
 
@@ -176,7 +137,7 @@
             </div>
         </div>
         <div class="text-center mt-4">
-            <p>&copy; Copyright 2023 by Ovatheme.com</p>
+            <p> &copy;Copyright 2023 by Ovatheme.com</p>
         </div>
     </div>
 </div>
