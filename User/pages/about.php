@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
-    <link rel="stylesheet" href="./../../common/header-footer.css">
+
     <link rel="stylesheet" href="./../css/about.css">
    
    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-
-  
 
 </head>
 <body>
@@ -119,7 +117,7 @@
             <div class="movie-cards movie-card-2">
                 <img src="./../../Images/User-images/gallery2.jpg" alt="The Witcher Season 2" class="movie-image"   style="width:650px;height:230px;">
                 <div class="movie-info">
-                    <h3 class="movie-title">Luxirious thigs</h3>
+                    <h3 class="movie-title">Luxirious things</h3>
                     <p class="movie-genre">Many precious things are here</p>
                     
                    
@@ -161,35 +159,76 @@
 
    
 
-    <footer class="footer">
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
-            <a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
-        </div>
-        <div class="links">
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact Us</a>
-        </div>
-        <p>&copy; 2024 Movie Ticket Booking System. All rights reserved.</p>
-    </footer>
+  <!-- Footer -->
+<div class="footer">
+ <div class="container">
+     <div class="row">
+         <div class="col-md-4">
+             <h3 class="footer-title">STARLIGHT CINEMA</h3>
+             <p>Buy movie tickets easily with Aovis system nationwide</p>
+             <a href="#" class="btn btn-warning">Get Your Ticket</a>
+         </div>
+         <div class="col-md-2">
+             <h5 class="footer-title">Movies</h5>
+             <ul class="list-unstyled">
+                 <li><a href="#">Action</a></li>
+                 <li><a href="#">Adventure</a></li>
+                 <li><a href="#">Animation</a></li>
+                 <li><a href="#">Comedy</a></li>
+                 <li><a href="#">Crime</a></li>
+             </ul>
+         </div>
+         <div class="col-md-2">
+             <h5 class="footer-title">Links</h5>
+             <ul class="list-unstyled">
+                 <li><a href="#">About</a></li>
+                 <li><a href="#">My Account</a></li>
+                 <li><a href="#">News</a></li>
+                 <li><a href="#">Latest Events</a></li>
+                 <li><a href="#">Contact</a></li>
+             </ul>
+             </div>
+         <div class="col-md-4">
+             <h5 class="footer-title">Newsletter</h5>
+             <p>Subscribe to Leitmotif newsletter this very day.</p>
+             <div class="newsletter">
+                 <input type="email" class="form-control" placeholder="Email Address">
+                 <button class="btn btn-warning mt-2">Subscribe</button>
+             </div>
+             <div class="mt-2">
+                 <input type="checkbox" id="terms">
+                 <label for="terms">I agree to all terms and policies of the company</label>
+             </div>
+             <div class="social-icons mt-3">
+                 <a href="#"><i class="fab fa-facebook-f"></i></a>
+                 <a href="#"><i class="fab fa-twitter"></i></a>
+                 <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                 <a href="#"><i class="fab fa-instagram"></i></a>
+             </div>
+         </div>
+     </div>
+     <div class="text-center mt-4">
+         <p> &copy;Copyright 2023 by Ovatheme.com</p>
+     </div>
+ </div>
+</div>
 
 
 
- 
+<!-- Font Awesome for social media icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-  <!-- Font Awesome CDN for social media icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    <script src="script.js"></script>
-
-  
+<!-- Font Awesome CDN for social media icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
