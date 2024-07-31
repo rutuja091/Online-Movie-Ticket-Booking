@@ -43,7 +43,7 @@
                 <input type="text" id="quantity" value="1" readonly>
                 <button onclick="increment()">+</button>
             </div>
-            <p style="color: red;">Price: ₹50 per ticket</p>
+            <p style="color: red;">Price: ₹250 per ticket</p>
             <p>Total Price: ₹<span id="total-price">10</span></p>
             <button class="buy-button" onclick="buyTicket()">Buy Ticket</button>
         </div>
