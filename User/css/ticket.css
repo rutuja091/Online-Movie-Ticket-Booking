@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkorange;
+    padding: 20px 40px;
+}
+
+.logo-img {
+    height: 120px;
+    /* Adjust the height as needed */
+    width: auto;
+    /* Maintain aspect ratio */
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.nav ul li {
+    margin: 0;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    /* Increased font size */
+    font-weight: bold;
+    /* Made text bold */
+    padding: 10px 15px;
+    /* Added padding for larger clickable area */
+
+
+}
+
+.nav ul li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/*footer*/
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #ff5500;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .footer-title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ff5500;
+}
+
+.footer .social-icons a {
+    margin: 0 10px;
+    color: #fff;
+}
+
+.footer .social-icons a:hover {
+    color: #ff5500;
+}
+
+.footer .newsletter input {
+    margin-top: 10px;
+}
+
+.footer .newsletter button {
+    background-color: #ff5500;
+    border: none;
+    padding: 5px 20px;
+    color: #fff;
+}
+
+.main-ticket{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin :40px auto;
+}
+
+.ticket {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 800px;
+    border: 2px dashed #000;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.ticket .left, .ticket .center, .ticket .right {
+    padding: 20px;
+    position: relative;
+}
+.ticket .left {
+    border-right: 2px dashed #000;
+}
+.ticket .right {
+    border-left: 2px dashed #000;
+}
+.cinema {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff007f;
+    text-align: center;
+}
+.details {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.movie-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff007f;
+    text-align: center;
+}
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.barcode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.barcode img {
+    width: 150px;
+    height: 50px;
+}
+.barcode-text {
+    font-size: 14px;
+}
