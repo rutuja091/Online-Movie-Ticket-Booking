@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkorange;
+    padding: 20px 40px;
+}
+
+.logo-img {
+    height: 120px;
+    /* Adjust the height as needed */
+    width: auto;
+    /* Maintain aspect ratio */
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.nav ul li {
+    margin: 0;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    /* Increased font size */
+    font-weight: bold;
+    /* Made text bold */
+    padding: 10px 15px;
+    /* Added padding for larger clickable area */
+
+
+}
+
+.nav ul li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/*footer*/
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #ff5500;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .footer-title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ff5500;
+}
+
+.footer .social-icons a {
+    margin: 0 10px;
+    color: #fff;
+}
+
+.footer .social-icons a:hover {
+    color: #ff5500;
+}
+
+.footer .newsletter input {
+    margin-top: 10px;
+}
+
+.footer .newsletter button {
+    background-color: #ff5500;
+    border: none;
+    padding: 5px 20px;
+    color: #fff;
+}
+
+
+
+/*cards css*/
+.card {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    padding: 20px;
+    align-items: center;
+
+}
+
+.card img {
+    border-radius: 20%;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h5 {
+    margin: 0;
+}
+
+.card-content p {
+    margin: 0;
+    color: gray;
+}
+
+.movie-button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.movie-button:hover {
+    background-color: rgb(61, 59, 173);
+}
