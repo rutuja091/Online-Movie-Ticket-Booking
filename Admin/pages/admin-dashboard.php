@@ -36,7 +36,7 @@
             <!-- Card 1 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card">
-                    <img src=".\..\..\Images\Movies\Marathi.jpg" alt="Movie 1">
+                    <img src=".\..\..\Images\admin-images\manage-movies.ico" alt="Movie 1">
                     <button class="movie-button">Manage Movies</button>
                 </div>
             </div>
@@ -44,7 +44,7 @@
             <!-- Card 2 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card">
-                    <img src=".\..\..\Images\Movies\hindi1.jpg" alt="Movie 2">
+                    <img src=".\..\..\Images\admin-images\manage-register.png" alt="Movie 2">
                     <button class="movie-button">Manage User Registration</button>
                 </div>
             </div>
@@ -52,7 +52,7 @@
             <!-- Card 3 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card">
-                    <img src=".\..\..\Images\Movies\english.png" alt="Movie 3">
+                    <img src=".\..\..\Images\admin-images\manage-feedback.png" alt="Movie 3">
                     <button class="movie-button">Manage User Feedback</button>
                 </div>
             </div> 
@@ -62,7 +62,7 @@
             <!-- Card 4 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card">
-                    <img src=".\..\..\Images\Movies\comedy.jpg" alt="Movie 1">
+                    <img src=".\..\..\Images\admin-images\manage-payment.png" alt="Movie 1">
                     <button class="movie-button">Manage Payment</button>
                 </div>
             </div>
@@ -70,18 +70,18 @@
             <!-- Card 5 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card">
-                    <img src=".\..\..\Images\Movies\cartoon.jpg" alt="Movie 2">
+                    <img src=".\..\..\Images\admin-images\all-reports.png" alt="Movie 2">
                     <button class="movie-button">View All Reports</button>
                 </div>
             </div>
 
             <!-- Card 6 -->
-            <div class="col-md-6 col-lg-4">
+            <!-- <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <img src=".\..\..\Images\Movies\drama.jpg" alt="Movie 3">
                     <button class="movie-button">Visit Now</button>
                 </div>
-            </div>
+            </div> -->
         </div>
 
     </div>
