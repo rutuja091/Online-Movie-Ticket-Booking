@@ -138,29 +138,27 @@ h2 {
     border-radius: 5px;
 }
 
-button {
+.action-btn {
     padding: 10px 15px;
     margin: 5px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
+    background-color: transparent;
+    color: #007bff;
+    text-decoration: none;
 }
 
-.edit-btn {
-    background-color: #28a745;
-    color: white;
+.action-btn:hover {
+    color: #0056b3;
 }
-
-.edit-btn:hover {
-    background-color: #218838;
-}
-
-.delete-btn {
-    background-color: #dc3545;
-    color: white;
-}
-
-.delete-btn:hover {
-    background-color: #c82333;
+.icon{
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    
 }

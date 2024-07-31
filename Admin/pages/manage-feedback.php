@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
     <link rel="stylesheet" href="./../../common/header-footer.css">
-    <link rel="stylesheet" href="./../css/movie-report.css">
+    <link rel="stylesheet" href="./../css/manage-feedback.css">
    
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-   
+   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Header -->
@@ -24,29 +24,33 @@
         </nav>
     </header>
 
+   
     <div class="container">
-        <h2>Movie Report</h2>
+        <h2> Manage User Feedback</h2>
         <table class="movie-table">
             <thead>
                 <tr>
-                    <th>Movie Picture</th>
+                    <th>User Id</th>
                     <th>Name</th>
-                    <th>Description</th>
-                    <th>Ticket Price</th>
-                    <th>Show Time</th>
+                    <th>Email</th>
+                    <th>subject</th>
+                    <th>message</th>
+                    
                     <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><img src="path_to_image.jpg" alt="Movie Image" class="movie-image"></td>
-                    <td>Movie Image</td>
-                    <td>Movie Description</td>
-                    <td>$10.00</td>
-                    <td>2024-07-31 19:00</td>
+                    
+                    <td>1</td>
+                    <td>name</td>
+                    <td>abc@gmail.com</td>
+                    <td>hello</td>
+                    <td>abc..</td>
+                   
                     <td>
-                        <button class="edit-btn">Edit</button>
-                        <button class="delete-btn">Delete</button>
+                    <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;">
+                    <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
                     </td>
                 </tr>
                 <!-- Repeat <tr> for more rows -->
