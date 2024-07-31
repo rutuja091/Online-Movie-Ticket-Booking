@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
-    <link rel="stylesheet" href="./../css/English_movie.css">
+    <link rel="stylesheet" href="./../css/marathi_movie.css">
     <link rel="stylesheet" href="./../../common/header-footer.css">
    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -26,60 +26,59 @@
 
 
     <div class="centered-content">
-        <h3>English Movies</h3>
+        <h3>Marathi Movies</h3>
        
     </div>
 <div class="card-container">
         
         <div class="movie-card">
-            <img src="./../../Images/Movies/unsung-hero.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/journy.jpg" alt="Movie 2">
             <div class="card-content">
-                <h3> Unsung Hero</h3>
-                <p> Unsung Hero, co-directed by Joel Smallbone, is a heartwarming movie about the importance of family , challenges.
-                    </p>
+                <h3>जर्नी </h3>
+                <p> The Journey is an example of speculative historical fiction at its most entertaining.
+                    This is an actors' movie .</p>
                     <p class="movie-genre">Show-time:9:00 to 12:00</p>
-                    <p class="movie-duration">price: ₹500</p>
-                <a href="#" class="book-button">Book Ticket</a>
+                    <p class="movie-duration">price: ₹250</p>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
               </div>
 
         <div class="movie-card">
-            <img src="./../../Images/Movies/harold.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/kasturi.avif" alt="Movie 2">
             <div class="card-content">
-                <h3> Harold</h3>
-                <p>13-year-old Harold has virtually nothing in the world going for him - for not only is he an eternally put-upon, 
-                    socially awkward.
-            
+                <h3>मन कस्तुरी रे</h3>
+                <p>The film has a painful climax that drives you into an emotional state for a while, but after all, even that is seen stuff.
+                
 
                
                 </p>
 
                 <p class="movie-genre">Show-time: 7:00 to 9:00</p>
                     <p class="movie-duration">price: ₹500</p>
-                <a href="#" class="book-button">Book Ticket</a>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
         </div>
         <div class="movie-card">
-            <img src="./../../Images/Movies/yodha.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/googleaai.avif" alt="Movie 2">
             <div class="card-content">
-                <h3>Yodha</h3>
-                <p>After Runway 34, Tejas, Fighter,Yodha is the latest in the action constantly hit by air pockets, 
-                    leading a turbulent experience.
+                <h3>गूगल आई</h3>
+                <p>Google Aai (2024), Drama Thriller released in Marathi language in theatre .
+                The movie is directed by Govind Varaha.
                 </p>
                 <p class="movie-genre">Show-time:2:00 to 5:00</p>
-                    <p class="movie-duration">price: ₹250</p>
+                    <p class="movie-duration">price: ₹300</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
         </div>
         <div class="movie-card">
-            <img src="./../../Images/Movies/painter.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/shershivaji.jpg" alt="Movie 2">
             <div class="card-content">
-                <h3>The Painter</h3>
-                <p>"The Painter" is not a groundbreaking film,it is a highly entertaining,satisfying.
-                It is a well-madeaction thriller.</p>
+                <h3>शेर शिवराज</h3>
+                <p>We've all heard this, but Sher Shivraj provides a fantastic extension.We didn't know 
+                     Afzal Khan  killed Shivaji's brother .</p>
                      <p class="movie-genre">Show-time:9:00 to 12:00</p>
-                    <p class="movie-duration">price: ₹300</p>
-                <a href="#" class="book-button">Book Ticket</a>
+                    <p class="movie-duration">price: ₹500</p>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
         </div>
         <!-- Add more movie cards as needed -->
@@ -96,7 +95,7 @@
             <div class="col-md-4">
                 <h3 class="footer-title">STARLIGHT CINEMA</h3>
                 <p>Buy movie tickets easily with Aovis system nationwide</p>
-                <a href="#" class="btn btn-warning">Get Your Ticket</a>
+                <a href=".\movie-details.php" class="btn btn-warning">Get Your Ticket</a>
             </div>
             <div class="col-md-2">
                 <h5 class="footer-title">Movies</h5>

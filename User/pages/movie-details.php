@@ -45,9 +45,9 @@
             </div>
             <p style="color: red;">Price: ₹250 per ticket</p>
             <p>Total Price: ₹<span id="total-price">10</span></p>
-            <button class="buy-button" onclick="buyTicket()">Buy Ticket</button>
+            <a  href=".\payment.php"class="buy-button" onclick="buyTicket()">Buy Ticket</a>
         </div>
-    </div>
+    </div> 
 
     <script >
 let quantity = 1;

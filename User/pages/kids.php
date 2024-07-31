@@ -39,7 +39,7 @@
                     </p>
                     <p class="movie-genre">Show-time:9:00 to 12:00</p>
                     <p class="movie-duration">price: ₹500</p>
-                <a href="#" class="book-button">Book Ticket</a>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
               </div>
 
@@ -52,7 +52,7 @@
 
                 <p class="movie-genre">Show-time: 7:00 to 9:00</p>
                     <p class="movie-duration">price: ₹500</p>
-                <a href="#" class="book-button">Book Ticket</a>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
         </div>
         <div class="movie-card">
@@ -64,7 +64,7 @@
                 </p>
                 <p class="movie-genre">Show-time:2:00 to 5:00</p>
                     <p class="movie-duration">price: ₹250</p>
-                <a href="#" class="book-button">Book Ticket</a>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
         </div>
         <div class="movie-card">
@@ -74,7 +74,7 @@
                 <p>Chillar Party is a small film with a big heart where a kiddo gang shows more maturity than the adult</p>
                      <p class="movie-genre">Show-time:9:00 to 12:00</p>
                     <p class="movie-duration">price: ₹300</p>
-                <a href="#" class="book-button">Book Ticket</a>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
         </div>
         <!-- Add more movie cards as needed -->

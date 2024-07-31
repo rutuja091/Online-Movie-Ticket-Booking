@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
-    <link rel="stylesheet" href="./../css/marathi_movie.css">
+    <link rel="stylesheet" href="./../css/Hindi_movie.css">
     <link rel="stylesheet" href="./../../common/header-footer.css">
    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -26,59 +26,56 @@
 
 
     <div class="centered-content">
-        <h3>Marathi Movies</h3>
+        <h3>Hindi Movies</h3>
        
     </div>
 <div class="card-container">
         
         <div class="movie-card">
-            <img src="./../../Images/Movies/journy.jpg" alt="Movie 2">
+            <img src="./../../Images/Movies/maidan.webp" alt="Movie 2">
             <div class="card-content">
-                <h3>जर्नी </h3>
-                <p> The Journey is an example of speculative historical fiction at its most entertaining.
-                    This is an actors' movie .</p>
+                <h3>Maidaan</h3>
+                <p> Maidaan movie review: Ajay Devgn plays Syed Abdul Rahim with a patent sincerity and only a hint 
+                    of the slo-mo swagger.</p>
                     <p class="movie-genre">Show-time:9:00 to 12:00</p>
-                    <p class="movie-duration">price: ₹250</p>
-                <a href="#" class="book-button">Book Ticket</a>
+                    <p class="movie-duration">price: ₹500</p>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
               </div>
 
         <div class="movie-card">
-            <img src="./../../Images/Movies/kasturi.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/jigra.avif" alt="Movie 2">
             <div class="card-content">
-                <h3>मन कस्तुरी रे</h3>
-                <p>The film has a painful climax that drives you into an emotional state for a while, but after all, even that is seen stuff.
-                
-
-               
+                <h3>Jigra</h3>
+                <p>Director Suri Kunder tackles a story that has been told countless times in Sandalwood, but fails to elevate it with
+                     engaging storytelling.
                 </p>
-
-                <p class="movie-genre">Show-time: 7:00 to 9:00</p>
-                    <p class="movie-duration">price: ₹500</p>
-                <a href="#" class="book-button">Book Ticket</a>
+               <p class="movie-genre">Show-time: 7:00 to 9:00</p>
+                    <p class="movie-duration">price: ₹250</p>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
         </div>
         <div class="movie-card">
-            <img src="./../../Images/Movies/googleaai.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/mahi.jpg" alt="Movie 2">
             <div class="card-content">
-                <h3>गूगल आई</h3>
-                <p>Google Aai (2024), Drama Thriller released in Marathi language in theatre .
-                The movie is directed by Govind Varaha.
+                <h3>Mr&Mrs Mhi</h3>
+                <p>Mr. And Mrs. Mahi, is a cinematic gem that beautifully blends the essence of romance and sports,
+                dealing with his own dreamsand fears.
                 </p>
                 <p class="movie-genre">Show-time:2:00 to 5:00</p>
                     <p class="movie-duration">price: ₹300</p>
-                <a href="#" class="book-button">Book Ticket</a>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
         </div>
         <div class="movie-card">
-            <img src="./../../Images/Movies/shershivaji.jpg" alt="Movie 2">
+            <img src="./../../Images/Movies/tejas.jpg" alt="Movie 2">
             <div class="card-content">
-                <h3>शेर शिवराज</h3>
-                <p>We've all heard this, but Sher Shivraj provides a fantastic extension.We didn't know 
-                     Afzal Khan  killed Shivaji's brother .</p>
+                <h3>Tejas</h3>
+                <p>Tejas, making us believe in her character's journey on a profound level. "Experiencing 'Tejas' on 
+                    cinematic delight that's not to be missed.</p>
                      <p class="movie-genre">Show-time:9:00 to 12:00</p>
                     <p class="movie-duration">price: ₹500</p>
-                <a href="#" class="book-button">Book Ticket</a>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
         </div>
         <!-- Add more movie cards as needed -->

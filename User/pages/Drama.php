@@ -39,7 +39,7 @@
                     </p>
                     <p class="movie-genre">Show-time:9:00 to 12:00</p>
                     <p class="movie-duration">price: ₹500</p>
-                <a href="#" class="book-button">Book Ticket</a>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
               </div>
 
@@ -52,7 +52,7 @@
 
                 <p class="movie-genre">Show-time: 7:00 to 9:00</p>
                     <p class="movie-duration">price: ₹500</p>
-                <a href="#" class="book-button">Book Ticket</a>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
         </div>
         <div class="movie-card">
@@ -63,7 +63,7 @@
                 </p>
                 <p class="movie-genre">Show-time:2:00 to 5:00</p>
                     <p class="movie-duration">price: ₹250</p>
-                <a href="#" class="book-button">Book Ticket</a>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
         </div>
         <div class="movie-card">
@@ -73,7 +73,7 @@
                 <p> ” Humare Ram” is that this drama exposed many hidden incidents of Ramayana which may not be known to many people.</p>
                      <p class="movie-genre">Show-time:9:00 to 12:00</p>
                     <p class="movie-duration">price: ₹300</p>
-                <a href="#" class="book-button">Book Ticket</a>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
         </div>
         <!-- Add more movie cards as needed -->
@@ -90,7 +90,7 @@
             <div class="col-md-4">
                 <h3 class="footer-title">STARLIGHT CINEMA</h3>
                 <p>Buy movie tickets easily with Aovis system nationwide</p>
-                <a href="#" class="btn btn-warning">Get Your Ticket</a>
+                <a href=".\movie-details.php" class="btn btn-warning">Get Your Ticket</a>
             </div>
             <div class="col-md-2">
                 <h5 class="footer-title">Movies</h5>

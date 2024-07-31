@@ -67,7 +67,7 @@
                     <label for="totalPrice">Total Price</label>
                     <input type="text" class="form-control" id="totalPrice" placeholder="Enter total price" required>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Make Payment</button>
+                <a href=".\ticket.php" type="submit" class="btn btn-primary btn-block">Make Payment</a>
             </form>
         </div>
     </div>

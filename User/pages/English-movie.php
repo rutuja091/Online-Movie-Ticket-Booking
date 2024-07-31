@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
-    <link rel="stylesheet" href="./../css/Hindi_movie.css">
+    <link rel="stylesheet" href="./../css/English_movie.css">
     <link rel="stylesheet" href="./../../common/header-footer.css">
    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -26,56 +26,60 @@
 
 
     <div class="centered-content">
-        <h3>Hindi Movies</h3>
+        <h3>English Movies</h3>
        
     </div>
 <div class="card-container">
         
         <div class="movie-card">
-            <img src="./../../Images/Movies/maidan.webp" alt="Movie 2">
+            <img src="./../../Images/Movies/unsung-hero.avif" alt="Movie 2">
             <div class="card-content">
-                <h3>Maidaan</h3>
-                <p> Maidaan movie review: Ajay Devgn plays Syed Abdul Rahim with a patent sincerity and only a hint 
-                    of the slo-mo swagger.</p>
+                <h3> Unsung Hero</h3>
+                <p> Unsung Hero, co-directed by Joel Smallbone, is a heartwarming movie about the importance of family , challenges.
+                    </p>
                     <p class="movie-genre">Show-time:9:00 to 12:00</p>
                     <p class="movie-duration">price: ₹500</p>
-                <a href="#" class="book-button">Book Ticket</a>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
               </div>
 
         <div class="movie-card">
-            <img src="./../../Images/Movies/jigra.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/harold.avif" alt="Movie 2">
             <div class="card-content">
-                <h3>Jigra</h3>
-                <p>Director Suri Kunder tackles a story that has been told countless times in Sandalwood, but fails to elevate it with
-                     engaging storytelling.
+                <h3> Harold</h3>
+                <p>13-year-old Harold has virtually nothing in the world going for him - for not only is he an eternally put-upon, 
+                    socially awkward.
+            
+
+               
                 </p>
-               <p class="movie-genre">Show-time: 7:00 to 9:00</p>
-                    <p class="movie-duration">price: ₹250</p>
-                <a href="#" class="book-button">Book Ticket</a>
+
+                <p class="movie-genre">Show-time: 7:00 to 9:00</p>
+                    <p class="movie-duration">price: ₹500</p>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
         </div>
         <div class="movie-card">
-            <img src="./../../Images/Movies/mahi.jpg" alt="Movie 2">
+            <img src="./../../Images/Movies/yodha.avif" alt="Movie 2">
             <div class="card-content">
-                <h3>Mr&Mrs Mhi</h3>
-                <p>Mr. And Mrs. Mahi, is a cinematic gem that beautifully blends the essence of romance and sports,
-                dealing with his own dreamsand fears.
+                <h3>Yodha</h3>
+                <p>After Runway 34, Tejas, Fighter,Yodha is the latest in the action constantly hit by air pockets, 
+                    leading a turbulent experience.
                 </p>
                 <p class="movie-genre">Show-time:2:00 to 5:00</p>
-                    <p class="movie-duration">price: ₹300</p>
-                <a href="#" class="book-button">Book Ticket</a>
+                    <p class="movie-duration">price: ₹250</p>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
         </div>
         <div class="movie-card">
-            <img src="./../../Images/Movies/tejas.jpg" alt="Movie 2">
+            <img src="./../../Images/Movies/painter.avif" alt="Movie 2">
             <div class="card-content">
-                <h3>Tejas</h3>
-                <p>Tejas, making us believe in her character's journey on a profound level. "Experiencing 'Tejas' on 
-                    cinematic delight that's not to be missed.</p>
+                <h3>The Painter</h3>
+                <p>"The Painter" is not a groundbreaking film,it is a highly entertaining,satisfying.
+                It is a well-madeaction thriller.</p>
                      <p class="movie-genre">Show-time:9:00 to 12:00</p>
-                    <p class="movie-duration">price: ₹500</p>
-                <a href="#" class="book-button">Book Ticket</a>
+                    <p class="movie-duration">price: ₹300</p>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
         </div>
         <!-- Add more movie cards as needed -->
@@ -92,7 +96,7 @@
             <div class="col-md-4">
                 <h3 class="footer-title">STARLIGHT CINEMA</h3>
                 <p>Buy movie tickets easily with Aovis system nationwide</p>
-                <a href="#" class="btn btn-warning">Get Your Ticket</a>
+                <a href=".\movie-details.php" class="btn btn-warning">Get Your Ticket</a>
             </div>
             <div class="col-md-2">
                 <h5 class="footer-title">Movies</h5>

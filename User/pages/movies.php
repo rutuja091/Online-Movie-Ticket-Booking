@@ -37,7 +37,8 @@
             <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <img src=".\..\..\Images\Movies\Marathi.jpg" alt="Movie 1">
-                    <button class="movie-button">Visit Now</button>
+                    <a href=".\marathi-movie.php" class="movie-button">Visit Now</a>
+                   
                 </div>
             </div>
             
@@ -45,7 +46,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <img src=".\..\..\Images\Movies\hindi1.jpg" alt="Movie 2">
-                    <button class="movie-button">Visit Now</button>
+                    <a href=".\Hindi-movie.php" class="movie-button">Visit Now</a>
                 </div>
             </div>
 
@@ -53,7 +54,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <img src=".\..\..\Images\Movies\english.png" alt="Movie 3">
-                    <button class="movie-button">Visit Now</button>
+                    <a href=".\English-movie.php" class="movie-button">Visit Now</a>
                 </div>
             </div> 
         </div>
@@ -63,7 +64,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <img src=".\..\..\Images\Movies\comedy.jpg" alt="Movie 1">
-                    <button class="movie-button">Visit Now</button>
+                    <a href=".\comedy.php" class="movie-button">Visit Now</a>
                 </div>
             </div>
             
@@ -71,7 +72,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <img src=".\..\..\Images\Movies\cartoon.jpg" alt="Movie 2">
-                    <button class="movie-button">Visit Now</button>
+                    <a href=".\kids.php" class="movie-button">Visit Now</a>
                 </div>
             </div>
 
@@ -79,7 +80,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <img src=".\..\..\Images\Movies\drama.jpg" alt="Movie 3">
-                    <button class="movie-button">Visit Now</button>
+                    <a href=".\Drama.php" class="movie-button">Visit Now</a>
                 </div>
             </div>
         </div>
