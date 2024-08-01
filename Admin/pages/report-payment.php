@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
     <link rel="stylesheet" href="./../../common/header-footer.css">
-    <link rel="stylesheet" href="./../css/manage-movie.css">
+    <link rel="stylesheet" href="./../css/manage-payment.css">
    
    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -16,7 +16,7 @@
         <div class="logo"><img src=".\..\..\Images\logo2.png" class="logo-img"></div>
         <nav class="nav">
             <ul>
-                <li><a href="./admin-dashboard.php">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Movies</a></li>
@@ -26,29 +26,29 @@
 
    
     <div class="container">
-        <h2> Manage Movie Details</h2>
+        <h2>User Details Report</h2>
         <table class="movie-table">
             <thead>
                 <tr>
-                    <th>Movie Picture</th>
+                    <th>User Id</th>
                     <th>Name</th>
-                    <th>Description</th>
-                    <th>Ticket Price</th>
-                    <th>Show Time</th>
-                    <th>Actions</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Address</th>
+                    <th>contact</th>
+                   
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><img src="path_to_image.jpg" alt="Movie Image" class="movie-image"></td>
-                    <td>Movie Name</td>
-                    <td>Movie Description</td>
-                    <td>$10.00</td>
-                    <td>2024-07-31 19:00</td>
-                    <td>
-                    <a href="./update_movie.php">  <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;"></a>
-                    <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
-                    </td>
+                    
+                    <td>1</td>
+                    <td>name</td>
+                    <td>abc@gmail.com</td>
+                    <td>pass123</td>
+                    <td>Nagar</td>
+                    <td>1234567890</td>
+                 
                 </tr>
                 <!-- Repeat <tr> for more rows -->
             </tbody>
