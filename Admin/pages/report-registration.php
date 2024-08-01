@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
-    <link rel="stylesheet" href="./../css/update_movie.css">
+    <link rel="stylesheet" href="./../../common/header-footer.css">
+    <link rel="stylesheet" href="./../css/manage-registration.css">
    
-   
-   
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-   
+   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Header -->
@@ -25,35 +24,36 @@
         </nav>
     </header>
 
- 
+   
     <div class="container">
-        <form class="movie-form" action="/submit-movie" method="POST" enctype="multipart/form-data">
-            <h2> Update Movie Details</h2>
-            <div class="form-group">
-                <label for="movie-image">Movie Image:</label>
-                <input type="file" id="movie-image" name="movie-image" accept="image/*" required>
-            </div>
-            <div class="form-group">
-                <label for="movie-name">Movie Name:</label>
-                <input type="text" id="movie-name" name="movie-name" required>
-            </div>
-            <div class="form-group">
-                <label for="movie-description">Movie Description:</label>
-                <textarea id="movie-description" name="movie-description" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="ticket-price">Ticket Price:</label>
-                <input type="number" id="ticket-price" name="ticket-price" step="0.01" required>
-            </div>
-            <div class="form-group">
-                <label for="show-time">Show Time:</label>
-                <input type="datetime-local" id="show-time" name="show-time" required>
-            </div>
-            <button type="submit">Add Movie</button>
-        </form>
+        <h2> User Registration Report</h2>
+        <table class="movie-table">
+            <thead>
+                <tr>
+                    <th>User Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Address</th>
+                    <th>contact</th>
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    
+                    <td>1</td>
+                    <td>name</td>
+                    <td>abc@gmail.com</td>
+                    <td>pass123</td>
+                    <td>Nagar</td>
+                    <td>1234567890</td>
+                   
+                </tr>
+                <!-- Repeat <tr> for more rows -->
+            </tbody>
+        </table>
     </div>
-
-
 
     <footer class="footer">
         <div class="social-icons">
