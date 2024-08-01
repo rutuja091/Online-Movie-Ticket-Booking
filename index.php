@@ -10,22 +10,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <!--- Header --->
-    <header class="header">
-        <div class="logo"><img src=".\Images\logo2.png" class="logo-img"></div>
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Movies</a></li>
+  
 
-                <li><a href="#">Offers</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Login</a></li>
-                
-            </ul>
-        </nav>
-    </header>
+
 
     <!--- Main Content --->
     <main>
@@ -285,7 +272,9 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="script.js"></script>
+<script>  document.querySelector('.nav').addEventListener('click', function() {
+            this.querySelector('ul').classList.toggle('show');
+        });</script>
 </body>
 </html>
 

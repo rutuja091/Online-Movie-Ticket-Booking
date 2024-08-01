@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkorange;
+    padding: 20px 40px;
+}
+
+.logo-img {
+    height: 120px;
+    /* Adjust the height as needed */
+    width: auto;
+    /* Maintain aspect ratio */
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.nav ul li {
+    margin: 0;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    /* Increased font size */
+    font-weight: bold;
+    /* Made text bold */
+    padding: 10px 15px;
+    /* Added padding for larger clickable area */
+
+
+}
+
+.nav ul li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/*footer*/
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #ff5500;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .footer-title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ff5500;
+}
+
+.footer .social-icons a {
+    margin: 0 10px;
+    color: #fff;
+}
+
+.footer .social-icons a:hover {
+    color: #ff5500;
+}
+
+.footer .newsletter input {
+    margin-top: 10px;
+}
+
+.footer .newsletter button {
+    background-color: #ff5500;
+    border: none;
+    padding: 5px 20px;
+    color: #fff;
+}
+
+
+
+
+.movie-card {
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    margin-bottom: 30px;
+}
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.movie-card img {
+    width: 100%;
+    height: auto;
+}
+.movie-card-body {
+    padding: 15px;
+}
+.movie-card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+.movie-card-meta, .movie-card-time {
+    color: #999;
+    font-size: 0.875rem;
+}
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.play-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.view-all-btn {
+    display: block;
+    margin: 30px auto;
+    background-color: #f60;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.view-all-btn:hover {
+    background-color: #d94d00;
+}
+.modal-video {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1050;
+    padding: 20px;
+    border-radius: 10px;
+}
+.modal-video iframe {
+    width: 100%;
+    height: 100%;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: #f60;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}

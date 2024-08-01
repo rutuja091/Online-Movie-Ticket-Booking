@@ -30,7 +30,7 @@
       
     <div class="container">
 
-    <h1 style="justify-content:center;text-align:center; color:#ff5500">Movies</h1>
+    <h1 style="justify-content:center;text-align:center; color:#ff5500">Manage Movies</h1>
         <div class="row">
 
             <!-- Card 1 -->
