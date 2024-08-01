@@ -17,7 +17,7 @@
         <div class="logo"><img src=".\..\..\Images\logo2.png" class="logo-img"></div>
         <nav class="nav">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="./admin-dashboard.php">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Movies</a></li>
@@ -25,8 +25,9 @@
         </nav>
     </header>
 
- 
+   
     <div class="container">
+    
         <form class="movie-form" action="/submit-movie" method="POST" enctype="multipart/form-data">
             <h2> Update Movie Details</h2>
             <div class="form-group">

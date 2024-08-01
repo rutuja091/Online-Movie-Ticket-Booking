@@ -16,7 +16,7 @@
         <div class="logo"><img src=".\..\..\Images\logo2.png" class="logo-img"></div>
         <nav class="nav">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="./admin-dashboard.php">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Movies</a></li>
@@ -46,7 +46,7 @@
                     <td>$10.00</td>
                     <td>2024-07-31 19:00</td>
                     <td>
-                    <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;">
+                    <a href="./update_movie.php">  <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;"></a>
                     <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
                     </td>
                 </tr>
