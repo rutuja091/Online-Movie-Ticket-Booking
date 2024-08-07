@@ -32,7 +32,7 @@
 <div class="card-container">
         
         <div class="movie-card">
-            <img src="./../../Images/Movies/double-life.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/double-life.jpg" alt="Movie 2">
             <div class="card-content">
                 <h3> Double Life</h3>
                 <p>  Convoluted, clunky and increasingly implausible with waning suspense and poor use of exposition.
@@ -44,7 +44,7 @@
               </div>
 
         <div class="movie-card">
-            <img src="./../../Images/Movies/bhabhiji.webp" alt="Movie 2">
+            <img src="./../../Images/Movies/bhabhiji.jpg" alt="Movie 2">
             <div class="card-content">
                 <h3> Bhabhi ji Ghar pr hai</h3>
                 <p>This tv serial are really entertaining acting and comedy timing really good Aasif Sheikh and other acter performance well.
@@ -56,7 +56,7 @@
             </div>
         </div>
         <div class="movie-card">
-            <img src="./../../Images/Movies/balnatya.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/balnatya.jpg" alt="Movie 2">
             <div class="card-content">
                 <h3>Algabtya Galbatya</h3>
                 <p>Drama released in Marathi language in theatre near you. Know about Film reviews, 

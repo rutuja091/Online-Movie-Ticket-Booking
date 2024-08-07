@@ -44,7 +44,7 @@
               </div>
 
         <div class="movie-card">
-            <img src="./../../Images/Movies/Frozen.webp" alt="Movie 2">
+            <img src="./../../Images/Movies/Frozen.jpg" alt="Movie 2">
             <div class="card-content">
                 <h3> Frozen</h3>
                 <p>"Frozen," the latest Disney musical extravaganza, preaches the importance of embracing your true nature.
@@ -68,7 +68,7 @@
             </div>
         </div>
         <div class="movie-card">
-            <img src="./../../Images/Movies/childrenparty.webp" alt="Movie 2">
+            <img src="./../../Images/Movies/childrenparty.jpg" alt="Movie 2">
             <div class="card-content">
                 <h3>Chillar Party</h3>
                 <p>Chillar Party is a small film with a big heart where a kiddo gang shows more maturity than the adult</p>
