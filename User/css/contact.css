@@ -1,68 +1,101 @@
+/* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #141313;
-    color:#ffffff;
-}
-
-
-
-/*navbar*/
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fbc56f;
-    padding: 10px 20px;
-}
-
-.navbar-logo img {
-    height: 50px;
-}
-
-.navbar-links {
-    display: inline-flex;
-    list-style-type: none;
     margin: 0;
-    padding: 0;
-    position: relative;
-
+    font-family: Arial, sans-serif;
 }
 
-.navbar-links li {
-    padding: 0 20px;
+/* Navbar Styling */
+.navbar {
+    background-color:  #ff5500; /* White background for the navbar */
+    width: 100%;
 }
 
-.navbar-links a {
-    color: white;
+.navbar-nav .nav-link {
+    color: #000000; /* Black color for the navigation links */
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* Logo Styling */
+.logo-img {
+    height: 100px;
+    width: auto;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer a {
+    color: #fff;
     text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-.navbar-links a:hover {
-    background-color: #ddd;
-    color: black;
-
+.footer a:hover {
+    text-decoration: underline;
 }
 
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
 
+/*footer*/
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
 
-.navbar-login a {
-    color: white;
-    font-size: 18px;
+.footer a {
+    color: #ff5500;
     text-decoration: none;
-    padding: 10px 15px;
 }
 
-.navbar-login a:hover {
-    color: #141313;
+.footer a:hover {
+    text-decoration: underline;
 }
 
+.footer .footer-title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ff5500;
+}
+
+.footer .social-icons a {
+    margin: 0 10px;
+    color: #fff;
+}
+
+.footer .social-icons a:hover {
+    color: #ff5500;
+}
+
+.footer .newsletter input {
+    margin-top: 10px;
+}
+
+.footer .newsletter button {
+    background-color: #ff5500;
+    border: none;
+    padding: 5px 20px;
+    color: #fff;
+}
 
 
 
@@ -177,47 +210,5 @@ body {
 .map{
     width:1500px;
     height: 500px;
-    margin: 35px  15px;
-}
-/*footer*/
-/*footer*/
-.footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px 0;
-}
-
-.footer a {
-    color: #f6efeb;
-    text-decoration: none;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
-.footer .footer-title {
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #ff5500;
-}
-
-.footer .social-icons a {
-    margin: 0 10px;
-    color: #fff;
-}
-
-.footer .social-icons a:hover {
-    color: #ff5500;
-}
-
-.footer .newsletter input {
-    margin-top: 10px;
-}
-
-.footer .newsletter button {
-    background-color: #ff5500;
-    border: none;
-    padding: 5px 20px;
-    color: #fff;
+    margin: 25px  15px;
 }
