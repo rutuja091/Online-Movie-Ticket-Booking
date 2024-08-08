@@ -6,6 +6,8 @@
     <title>Movie Ticket Booking</title>
     <link rel="stylesheet" href="./../../common/header-footer.css">
     <link rel="stylesheet" href="./../css/contact.css">
+
+    <link rel="stylesheet" href="./../css/movies.css">
    
    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -109,21 +111,65 @@
  
 
 
-    <footer class="footer">
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
-            <a href="https://linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+  <!-- Footer -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+              
+            <div class="navbar-logo">
+            <img src=".\..\..\Images\logo2.png" alt="Logo">
         </div>
-        <div class="links">
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact Us</a>
+                 
+                <h3 class="footer-title">STARLIGHT CINEMA</h3>
+                <p>Buy movie tickets easily with starlight system nationwide</p>
+                <a href="#" class="btn btn-warning">visit now</a>
+            </div>
+            <div class="col-md-2">
+                <h5 class="footer-title">Movies</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Adventure</a></li>
+                    <li><a href="#">Animation</a></li>
+                    <li><a href="#">Comedy</a></li>
+                    <li><a href="#">Crime</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h5 class="footer-title">Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#"> movie Gallery</a></li>
+                   
+                </ul>
+                </div>
+            <div class="col-md-4">
+                <h5 class="footer-title">Address</h5>
+                <p class="info">123 movie streat,</p>
+                <p class="info">film city 414006</p>
+                <div class="newsletter">
+                   
+                </div>
+                <div class="mt-2">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">I agree to all terms and policies of the company</label>
+                </div>
+                <div class="social-icons mt-3">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
         </div>
-        <p>&copy; 2024 Movie Ticket Booking System. All rights reserved.</p>
-    </footer>
+        <div class="text-center mt-4">
+            <p> &copy;Copyright 2023 by Starlight cinema.com</p>
+        </div>
+    </div>
+</div>
+
   <!-- Font Awesome CDN for social media icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 

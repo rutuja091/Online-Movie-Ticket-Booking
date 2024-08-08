@@ -37,11 +37,17 @@ body {
     text-decoration: none;
     font-size: 18px;
     padding: 10px 15px;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar-links a:hover {
     background-color: #ddd;
     color: black;
+
 }
 
 
@@ -172,4 +178,46 @@ body {
     width:1500px;
     height: 500px;
     margin: 35px  15px;
+}
+/*footer*/
+/*footer*/
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #f6efeb;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .footer-title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ff5500;
+}
+
+.footer .social-icons a {
+    margin: 0 10px;
+    color: #fff;
+}
+
+.footer .social-icons a:hover {
+    color: #ff5500;
+}
+
+.footer .newsletter input {
+    margin-top: 10px;
+}
+
+.footer .newsletter button {
+    background-color: #ff5500;
+    border: none;
+    padding: 5px 20px;
+    color: #fff;
 }
