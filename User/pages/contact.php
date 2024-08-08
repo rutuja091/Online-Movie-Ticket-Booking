@@ -113,7 +113,7 @@
         <div class="row">
      
             <div class="col-md-4">
-              <div class="logo" style="width:10px; margin-left:80px;">
+              <div class="logo" style="width:10px; margin-left:10px;">
               <img src="./../../Images/logo2.png" class="logo-img" alt="Logo">
               </div>
                 <h3 class="footer-title">STARLIGHT CINEMA</h3>
