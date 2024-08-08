@@ -32,7 +32,7 @@
 <div class="card-container">
         
         <div class="movie-card">
-            <img src="./../../Images/Movies/samantar.webp" alt="Movie 2">
+            <img src="./../../Images/Movies/samantar.jpg" alt="Movie 2">
             <div class="card-content">
                 <h3> samantar</h3>
                 <p>  Samantar is a tale of mystery and intrigue, intricately woven with a tinge of supernatural;
@@ -67,7 +67,7 @@
             </div>
         </div>
         <div class="movie-card">
-            <img src="./../../Images/Movies/ram.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/ram.jpg" alt="Movie 2">
             <div class="card-content">
                 <h3> Humare Ram</h3>
                 <p> ” Humare Ram” is that this drama exposed many hidden incidents of Ramayana which may not be known to many people.</p>

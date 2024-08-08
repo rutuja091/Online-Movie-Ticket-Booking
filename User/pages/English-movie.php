@@ -32,7 +32,7 @@
 <div class="card-container">
         
         <div class="movie-card">
-            <img src="./../../Images/Movies/unsung-hero.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/unsung-hero.jpg" alt="Movie 2">
             <div class="card-content">
                 <h3> Unsung Hero</h3>
                 <p> Unsung Hero, co-directed by Joel Smallbone, is a heartwarming movie about the importance of family , challenges.
@@ -44,7 +44,7 @@
               </div>
 
         <div class="movie-card">
-            <img src="./../../Images/Movies/harold.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/harold.jpg" alt="Movie 2">
             <div class="card-content">
                 <h3> Harold</h3>
                 <p>13-year-old Harold has virtually nothing in the world going for him - for not only is he an eternally put-upon, 
@@ -60,7 +60,7 @@
             </div>
         </div>
         <div class="movie-card">
-            <img src="./../../Images/Movies/yodha.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/yodha.jpg" alt="Movie 2">
             <div class="card-content">
                 <h3>Yodha</h3>
                 <p>After Runway 34, Tejas, Fighter,Yodha is the latest in the action constantly hit by air pockets, 
@@ -72,7 +72,7 @@
             </div>
         </div>
         <div class="movie-card">
-            <img src="./../../Images/Movies/painter.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/painter.jpg" alt="Movie 2">
             <div class="card-content">
                 <h3>The Painter</h3>
                 <p>"The Painter" is not a groundbreaking film,it is a highly entertaining,satisfying.

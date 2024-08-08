@@ -44,7 +44,7 @@
               </div>
 
         <div class="movie-card">
-            <img src="./../../Images/Movies/kasturi.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/kasturi.jpg" alt="Movie 2">
             <div class="card-content">
                 <h3>मन कस्तुरी रे</h3>
                 <p>The film has a painful climax that drives you into an emotional state for a while, but after all, even that is seen stuff.
@@ -59,7 +59,7 @@
             </div>
         </div>
         <div class="movie-card">
-            <img src="./../../Images/Movies/googleaai.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/googleaai.jpg" alt="Movie 2">
             <div class="card-content">
                 <h3>गूगल आई</h3>
                 <p>Google Aai (2024), Drama Thriller released in Marathi language in theatre .

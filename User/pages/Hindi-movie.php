@@ -32,7 +32,7 @@
 <div class="card-container">
         
         <div class="movie-card">
-            <img src="./../../Images/Movies/maidan.webp" alt="Movie 2">
+            <img src="./../../Images/Movies/maidan.jpg" alt="Movie 2">
             <div class="card-content">
                 <h3>Maidaan</h3>
                 <p> Maidaan movie review: Ajay Devgn plays Syed Abdul Rahim with a patent sincerity and only a hint 
@@ -44,7 +44,7 @@
               </div>
 
         <div class="movie-card">
-            <img src="./../../Images/Movies/jigra.avif" alt="Movie 2">
+            <img src="./../../Images/Movies/jigra.jpg" alt="Movie 2">
             <div class="card-content">
                 <h3>Jigra</h3>
                 <p>Director Suri Kunder tackles a story that has been told countless times in Sandalwood, but fails to elevate it with
