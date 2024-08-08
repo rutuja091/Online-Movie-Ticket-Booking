@@ -106,57 +106,73 @@
 
 
 
-
-
 <div class="centered-content">
-        <h5>Watch new movies</h5>
-        <h2>Movie Now Playing</h2>
-    </div>
+    <h5>Watch new movies</h5>
+    <h2>Movie Now Playing</h2>
+</div>
 <div class="card-container">
-        
-        <div class="movie-card">
-            <img src=".\homepage\auro-me-kaha-dum-tha.jpg" alt="Movie 2">
-            <div class="card-content">
-                <h3>
-                Auron Mein Kahan Dum Tha</h3>
-                <p>Auron Mein Kaha Dum Tha', is an epic love story that
-                     chronicles the life of Krishna and Vasudha as their 
-                     fledgling relationship faces a lot of hardship and eventually</p>
-                <a href="#" class="book-button">Book Ticket</a>
+    <div class="movie-card">
+        <img src=".\homepage\auro-me-kaha-dum-tha.jpg" alt="Auron Mein Kahan Dum Tha">
+        <div class="card-content">
+            <h3>Auron Mein Kahan Dum Tha</h3>
+            <p>Auron Mein Kaha Dum Tha', is an epic love story that chronicles the life of Krishna and Vasudha as their fledgling relationship faces a lot of hardship and eventually...</p>
+            <div class="movie-details">
+                <p><strong>Release Date:</strong> August 15, 2024</p>
+                <p><strong>Duration:</strong> 120 min</p>
+                <p><strong>Genre:</strong> Romance, Drama</p>
+                <p><strong>Showtimes:</strong> 2:00 PM, 5:00 PM, 8:00 PM</p>
             </div>
-              </div>
-
-        <div class="movie-card">
-            <img src=".\homepage\maidan.jpeg" alt="Movie 2">
-            <div class="card-content">
-                <h3>Maidan</h3>
-                <p>Inspired by the Indian national football team coach and manager 
-                    Syed Abdul Rahim, who is regarded as the architect of Indian football..</p>
-                <a href="#" class="book-button">Book Ticket</a>
-            </div>
+            <a href="#" class="book-button">Book Ticket</a>
         </div>
-        <div class="movie-card">
-            <img src=".\homepage\do-aur-do-pyar.jpg" alt="Movie 2">
-            <div class="card-content">
-                <h3>Do Aur Do Pyaar</h3>
-                <p>A couple on the brink of a breakup are cheating on each other with two  outsiders.
-                     Whilst they're waiting to reveal their secret and go their separate ways, 
-                     life has other plans for them.</p>
-                <a href="#" class="book-button">Book Ticket</a>
-            </div>
-        </div>
-        <div class="movie-card">
-            <img src=".\homepage\Sharmajee-ki-Beti.jpg" alt="Movie 2">
-            <div class="card-content">
-                <h3>Sharmajee ki Beti</h3>
-                <p>Multi-generational ensemble about the modern,
-                     middle-class female experience and the lives of urban women,
-                      all with the common surname of Sharma.</p>
-                <a href="#" class="book-button">Book Ticket</a>
-            </div>
-        </div>
-        <!-- Add more movie cards as needed -->
     </div>
+
+    <div class="movie-card">
+        <img src=".\homepage\maidan.jpeg" alt="Maidan">
+        <div class="card-content">
+            <h3>Maidan</h3>
+            <p>Inspired by the Indian national football team coach and manager Syed Abdul Rahim, who is regarded as the architect of Indian football...</p>
+            <div class="movie-details">
+                <p><strong>Release Date:</strong> August 22, 2024</p>
+                <p><strong>Duration:</strong> 150 min</p>
+                <p><strong>Genre:</strong> Sports, Biography</p>
+                <p><strong>Showtimes:</strong> 1:00 PM, 4:00 PM, 7:00 PM</p>
+            </div>
+            <a href="#" class="book-button">Book Ticket</a>
+        </div>
+    </div>
+
+    <div class="movie-card">
+        <img src=".\homepage\do-aur-do-pyar.jpg" alt="Do Aur Do Pyaar">
+        <div class="card-content">
+            <h3>Do Aur Do Pyaar</h3>
+            <p>A couple on the brink of a breakup are cheating on each other with two outsiders. Whilst they're waiting to reveal their secret and go their separate ways, life has other plans for them.</p>
+            <div class="movie-details">
+                <p><strong>Release Date:</strong> August 29, 2024</p>
+                <p><strong>Duration:</strong> 100 min</p>
+                <p><strong>Genre:</strong> Comedy, Drama</p>
+                <p><strong>Showtimes:</strong> 3:00 PM, 6:00 PM, 9:00 PM</p>
+            </div>
+            <a href="#" class="book-button">Book Ticket</a>
+        </div>
+    </div>
+
+    <div class="movie-card">
+        <img src=".\homepage\Sharmajee-ki-Beti.jpg" alt="Sharmajee ki Beti">
+        <div class="card-content">
+            <h3>Sharmajee ki Beti</h3>
+            <p>Multi-generational ensemble about the modern, middle-class female experience and the lives of urban women, all with the common surname of Sharma.</p>
+            <div class="movie-details">
+                <p><strong>Release Date:</strong> September 5, 2024</p>
+                <p><strong>Duration:</strong> 110 min</p>
+                <p><strong>Genre:</strong> Drama, Family</p>
+                <p><strong>Showtimes:</strong> 4:00 PM, 7:00 PM, 10:00 PM</p>
+            </div>
+            <a href="#" class="book-button">Book Ticket</a>
+        </div>
+    </div>
+    <!-- Add more movie cards as needed -->
+</div>
+
 
 
 
@@ -206,7 +222,7 @@
     </div>
 
 
-    <div class="container">
+    <div class="cards-container">
         <h2 class="section-title">Top Featured Movies</h2>
         <div class="movie-card-container">
             <div class="movie-cards movie-card-1">
