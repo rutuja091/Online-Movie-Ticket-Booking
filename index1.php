@@ -4,28 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index1.css">
    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <!--- Header --->
-    <header class="header">
-        <div class="logo"><img src=".\Images\logo2.png" class="logo-img"></div>
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Movies</a></li>
 
-                <li><a href="#">Offers</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Login</a></li>
-                
-            </ul>
-        </nav>
-    </header>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <div class="logo"><img src="./Images/logo2.png" class="logo-img" alt="Logo"></div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Movies</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            View More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">About Us</a></li>
+            <li><a class="dropdown-item" href="#">Contact Us</a></li>
+            <li><a class="dropdown-item" href="#">Gallery</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="d-flex align-items-center">
+      <a href="#" class="btn btn-outline-primary">
+        <i class="bi bi-person"></i> Login
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+
+
 
     <!--- Main Content --->
     <main>
@@ -60,7 +83,7 @@
         <div class="carousel-item" style="background-image: url('Images/banner4.jpg');">
             <div class="carousel-caption d-none d-md-block">
                 <h5>Movie Title 4</h5>
-                <p>Brief description of the movie.</p>
+                <p style="color:white">Brief description of the movie.</p>
             </div>
         </div>
         <div class="carousel-item" style="background-image: url('Images/banner5.jpg');">
@@ -82,6 +105,9 @@
 
 
 
+
+
+
 <div class="centered-content">
         <h5>Watch new movies</h5>
         <h2>Movie Now Playing</h2>
@@ -89,35 +115,43 @@
 <div class="card-container">
         
         <div class="movie-card">
-            <img src=".\Images\movie2.jpg" alt="Movie 2">
+            <img src=".\homepage\auro-me-kaha-dum-tha.jpg" alt="Movie 2">
             <div class="card-content">
-                <h3>Movie Title 2</h3>
-                <p>Short description of the movie.</p>
+                <h3>
+                Auron Mein Kahan Dum Tha</h3>
+                <p>Auron Mein Kaha Dum Tha', is an epic love story that
+                     chronicles the life of Krishna and Vasudha as their 
+                     fledgling relationship faces a lot of hardship and eventually</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
               </div>
 
         <div class="movie-card">
-            <img src=".\Images\movie4.jpg" alt="Movie 2">
+            <img src=".\homepage\maidan.jpeg" alt="Movie 2">
             <div class="card-content">
-                <h3>Movie Title 4</h3>
-                <p>Short description of the movie.</p>
+                <h3>Maidan</h3>
+                <p>Inspired by the Indian national football team coach and manager 
+                    Syed Abdul Rahim, who is regarded as the architect of Indian football..</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
         </div>
         <div class="movie-card">
-            <img src=".\Images\movie5.jpg" alt="Movie 2">
+            <img src=".\homepage\do-aur-do-pyar.jpg" alt="Movie 2">
             <div class="card-content">
-                <h3>Movie Title 5</h3>
-                <p>Short description of the movie.</p>
+                <h3>Do Aur Do Pyaar</h3>
+                <p>A couple on the brink of a breakup are cheating on each other with two  outsiders.
+                     Whilst they're waiting to reveal their secret and go their separate ways, 
+                     life has other plans for them.</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
         </div>
         <div class="movie-card">
-            <img src=".\Images\movie6.jpg" alt="Movie 2">
+            <img src=".\homepage\Sharmajee-ki-Beti.jpg" alt="Movie 2">
             <div class="card-content">
-                <h3>Movie Title 6</h3>
-                <p>Short description of the movie.</p>
+                <h3>Sharmajee ki Beti</h3>
+                <p>Multi-generational ensemble about the modern,
+                     middle-class female experience and the lives of urban women,
+                      all with the common surname of Sharma.</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
         </div>
@@ -134,26 +168,28 @@
 <div class="card-container">
         
         <div class="movie-card">
-            <img src=".\Images\movie2.jpg" alt="Movie 2">
+            <img src=".\homepage\demonte-colony-2.jpg" alt="Movie 2">
             <div class="card-content">
-                <h3>Movie Title 2</h3>
+                <h3>demonte colony 2</h3>
                 <p>Short description of the movie.</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
               </div>
 
         <div class="movie-card">
-            <img src=".\Images\movie4.jpg" alt="Movie 2">
+            <img src=".\homepage\Vedaa.jpg" alt="Movie 2">
             <div class="card-content">
-                <h3>Movie Title 4</h3>
-                <p>Short description of the movie.</p>
+                <h3>Vedaa</h3>
+                <p>The journey of a young woman, who faces and 
+                    resists a repressive system against portrayal 
+                    of an antagonist.</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
         </div>
         <div class="movie-card">
             <img src=".\Images\movie5.jpg" alt="Movie 2">
             <div class="card-content">
-                <h3>Movie Title 5</h3>
+                <h3>Devera</h3>
                 <p>Short description of the movie.</p>
                 <a href="#" class="book-button">Book Ticket</a>
             </div>
@@ -214,8 +250,13 @@
 
     </main>
 
+
+
+
+
+
    <!-- Footer -->
-<div class="footer">
+   <div class="footer">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -273,6 +314,7 @@
 
 <!-- Font Awesome for social media icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -285,7 +327,9 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="script.js"></script>
+<script>  document.querySelector('.nav').addEventListener('click', function() {
+            this.querySelector('ul').classList.toggle('show');
+        });</script>
 </body>
 </html>
 
