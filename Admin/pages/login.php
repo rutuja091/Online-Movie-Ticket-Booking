@@ -15,11 +15,14 @@
     <header class="header">
         <div class="logo"><img src=".\..\..\Images\logo2.png" class="logo-img"></div>
         <nav class="nav">
-            <ul>
-            <li><a href="./admin-dashboard.php">Home</a></li>
-            <li><a href="./login.php">Login</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Movies</a></li>
+        <ul>
+            <li><a href="./admin-dashboard.php" style="margin-right:50px; font-size:30px;" >Home</a></li>
+            
+            <div class="d-flex align-items-center">
+            <a href="./login.php" class="btn btn-outline-primary">
+        <i class="bi bi-person"></i><img src =".\..\..\Images\login.png" style="height:40px;"> 
+      </a>
+    </div>
             </ul>
         </nav>
     </header>

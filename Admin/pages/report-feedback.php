@@ -33,11 +33,15 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             View More
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">About Us</a></li>
-            <li><a class="dropdown-item" href="#">Contact Us</a></li>
-            <li><a class="dropdown-item" href="#">Gallery</a></li>
-          </ul>
+          <ul>
+            <li><a href="./admin-dashboard.php" style="margin-right:50px; font-size:30px;" >Home</a></li>
+            
+            <div class="d-flex align-items-center">
+            <a href="./login.php" class="btn btn-outline-primary">
+        <i class="bi bi-person"></i><img src =".\..\..\Images\login.png" style="height:40px;"> 
+      </a>
+    </div>
+            </ul>
         </li>
       </ul>
     </div>
