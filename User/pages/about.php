@@ -29,7 +29,7 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Movies</a>
@@ -39,9 +39,9 @@
             View More
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">About Us</a></li>
-            <li><a class="dropdown-item" href="#">Contact Us</a></li>
-            <li><a class="dropdown-item" href="#">Gallery</a></li>
+          <li><a class="dropdown-item" href=".\about.php">About Us</a></li>
+            <li><a class="dropdown-item" href=".\..\..\User\pages\contact.php">Contact Us</a></li>
+            <li><a class="dropdown-item" href=".\..\..\User\pages\gallery.php">Gallery</a></li>
           </ul>
         </li>
       </ul>
@@ -123,7 +123,7 @@
 
 <hr>
 
-   <div class="container">
+   <div class="containers3">
         <h2 class="section-title">Some Beautiful Picture of Theater</h2>
         <div class="movie-card-container">
             <div class="movie-cards movie-card-1">
@@ -154,7 +154,7 @@
     </div>
       <hr>
 
-<section class="container mt-4">
+<section class="containers3 mt-4">
         <div id="movieIconSlider" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -170,9 +170,9 @@
             </div>
     </section>
 
-      
- <!-- Footer -->
- <div class="footer">
+   
+   <!-- Footer -->
+   <div class="footer">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -229,12 +229,25 @@
 </div>
 
 
-<!-- Font Awesome CDN for social media icons -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<!-- Font Awesome for social media icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <!-- Font Awesome CDN for social media icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="script.js"></script> -->
+<script>  document.querySelector('.nav').addEventListener('click', function() {
+            this.querySelector('ul').classList.toggle('show');
+        });</script>
 </body>
 </html>
+
