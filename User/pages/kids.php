@@ -12,20 +12,9 @@
 </head>
 <body>
     <!--- Header --->
-    <header class="header">
-        <div class="logo"><img src="./../../Images/logo2.png" class="logo-img"></div>
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Movies</a></li>
-            </ul>
-        </nav>
-    </header>
+    <link rel="stylesheet" href="./../css/contact.css">
 
-
-    <div class="centered-content">
+   <div class="centered-content">
         <h3>Kids Show</h3>
        
     </div>
@@ -78,20 +67,20 @@
             </div>
         </div>
         <!-- Add more movie cards as needed -->
+      </div>
 
-        
-    </div>
-
-
-
-     <!-- Footer -->
+<!-- Footer -->
 <div class="footer">
     <div class="container">
         <div class="row">
+     
             <div class="col-md-4">
+              <div class="logo" style="width:10px; margin-left:5px;">
+              <img src="./../../Images/logo2.png" class="logo-img" alt="Logo">
+              </div>
                 <h3 class="footer-title">STARLIGHT CINEMA</h3>
-                <p>Buy movie tickets easily with Aovis system nationwide</p>
-                <a href="#" class="btn btn-warning">Get Your Ticket</a>
+                <p>Buy movie tickets easily with starlight system nationwide</p>
+                <a href="#" class="btn btn-warning">visit now</a>
             </div>
             <div class="col-md-2">
                 <h5 class="footer-title">Movies</h5>
@@ -107,8 +96,8 @@
                 <h5 class="footer-title">Links</h5>
                 <ul class="list-unstyled">
                     <li><a href="#">About</a></li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">News</a></li>
+                    <li><a href="#">My gallery</a></li>
+                    <li><a href="#">Movies</a></li>
                     <li><a href="#">Latest Events</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
@@ -116,7 +105,7 @@
                 
             <div class="col-md-4">
                 <h5 class="footer-title">Newsletter</h5>
-                <p>Subscribe to Leitmotif newsletter this very day.</p>
+                <p>Subscribe to starlight channel.</p>
                 <div class="newsletter">
                     <input type="email" class="form-control" placeholder="Email Address">
                     <button class="btn btn-warning mt-2">Subscribe</button>
@@ -134,10 +123,11 @@
             </div>
         </div>
         <div class="text-center mt-4">
-            <p>&copy; Copyright 2023 by starlight.com</p>
+            <p>&copy; Copyright 2023 by Ovatheme.com</p>
         </div>
     </div>
 </div>
+
 
 
 
