@@ -1,9 +1,104 @@
+
+/* General Body Styling */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ffff;
 }
+
+/* Navbar Styling */
+.navbar {
+    background-color:  #ff5500; /* White background for the navbar */
+    width: 100%;
+}
+
+.navbar-nav .nav-link {
+    color: #000000; /* Black color for the navigation links */
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* Logo Styling */
+.logo-img {
+    height: 100px;
+    width: auto;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/*footer*/
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #ff5500;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .footer-title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ff5500;
+}
+
+.footer .social-icons a {
+    margin: 0 10px;
+    color: #fff;
+}
+
+.footer .social-icons a:hover {
+    color: #ff5500;
+}
+
+.footer .newsletter input {
+    margin-top: 10px;
+}
+
+.footer .newsletter button {
+    background-color: #ff5500;
+    border: none;
+    padding: 5px 20px;
+    color: #fff;
+}
+
+
 .carousel-item {
     height: 120vh;
     min-height: 300px;
@@ -11,8 +106,7 @@ body {
     background-size: cover;
 }
 
-
-.container {
+.containers2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +115,7 @@ body {
 }
 
 .registration-form {
-   background-color: #1c1c1c;
-  
+    background-color: #1c1c1c;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -50,7 +143,7 @@ body {
     border: 1px solid #333;
     border-radius: 5px;
     background-color: #ffffff;
-    color: black;
+    color: #2c2c2c;
 }
 
 .form-group input:focus {

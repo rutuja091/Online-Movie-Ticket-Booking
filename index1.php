@@ -82,14 +82,15 @@
         </div>
         <div class="carousel-item" style="background-image: url('Images/banner4.jpg');">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Movie Title 4</h5>
-                <p style="color:white">Brief description of the movie.</p>
+                <h5>Behind the Mask</h5>
+                <p style="color:white">The next great killer and psychopath has given a documentary
+                 film crew exclusive access to his life as he plans his reign of terror over the quiet town of Glen Echo.</p>
             </div>
         </div>
         <div class="carousel-item" style="background-image: url('Images/banner5.jpg');">
             <div class="carousel-caption d-none d-md-block">
-                <h5>Movie Title 5</h5>
-                <p>Brief description of the movie.</p>
+                <h5>Alis Keep Walking</h5>
+                <p>A man's life changes after he sustains an injury in a terrorist attack.</p>
             </div>
         </div>
     </div>
