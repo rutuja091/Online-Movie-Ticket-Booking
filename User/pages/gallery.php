@@ -33,7 +33,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href=".\..\..\User\pages\about.php">About Us</a></li>
             <li><a class="dropdown-item" href=".\..\..\User\pages\contact.php">Contact Us</a></li>
-            <li><a class="dropdown-item" href=".\..\..\User\pages\gallery.php">Gallery</a></li>
+            <li><a class="dropdown-item" href=".\gallery.php">Gallery</a></li>
           </ul>
         </li>
       </ul>
