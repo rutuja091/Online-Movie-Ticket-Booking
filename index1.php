@@ -344,7 +344,8 @@
             </div>
         </div>
         <div class="text-center mt-4">
-            <p>&copy; Copyright 2024 by starlightcinema.com</p>
+            <p>&copy; Copyright 2024 by starlightcinema.com  &nbsp; &nbsp; &nbsp; &nbsp;    Developed By Gaikwad Rutuja & Nimse Nikita</p>
+          
         </div>
     </div>
 </div>
