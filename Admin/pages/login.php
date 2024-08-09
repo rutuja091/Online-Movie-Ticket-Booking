@@ -24,8 +24,8 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
+     <!-- Main Content -->
+     <main>
     <div class="container">
         <form class="login-form">
             <h2>Login</h2>
@@ -43,7 +43,6 @@
         </form>
     </div>
     </main>
-
 
     <footer class="footer">
         <div class="social-icons">

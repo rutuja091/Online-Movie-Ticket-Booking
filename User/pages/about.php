@@ -132,8 +132,7 @@
                     <h3 class="movie-title">Audience hall</h3>
                     <p class="movie-genre"> the stage may consist of a platform (often raised) or series of platforms.</p>
                    
-                 
-                </div>
+                  </div>
             </div>
             <div class="movie-cards movie-card-2">
                 <img src="./../../Images/User-images/gallery2.jpg" alt="The Witcher Season 2" class="movie-image"   style="width:650px;height:230px;">
@@ -149,7 +148,6 @@
                 <div class="movie-info">
                     <h3 class="movie-title">confortable Arrangement</h3>
                     <p class="movie-genre">The audience members often sit on seats, which in most theaters are  with the highest part at the rear of the theater.</p>
-                
                  </div>
             </div>
         </div>
@@ -178,37 +176,35 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-              <div class="logo" style="width:10px; margin-left:80px;">
-              <img src="./../../Images/logo2.png" class="logo-img" alt="Logo">
-              </div>
                 <h3 class="footer-title">STARLIGHT CINEMA</h3>
-                <p>Buy movie tickets easily with starlight system nationwide</p>
-                <a href="#" class="btn btn-warning">visit now</a>
+                <p>Buy movie tickets easily with Starlight Cinema system nationwide</p>
+                <a href="#" class="btn btn-warning">Get Your Ticket</a>
             </div>
             <div class="col-md-2">
                 <h5 class="footer-title">Movies</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Adventure</a></li>
-                    <li><a href="#">Animation</a></li>
-                    <li><a href="#">Comedy</a></li>
-                    <li><a href="#">Crime</a></li>
+                    <li><a href="#">Comedy Shows</a></li>
+                    <li><a href="#">Drama</a></li>
+                    <li><a href="#">Kids Movie</a></li>
+                    <li><a href="#">Marathi Movies</a></li>
+                    <li><a href="#">Hindi Movies</a></li>
+                    <li><a href="#">English Movies</a></li>
                 </ul>
             </div>
             <div class="col-md-2">
                 <h5 class="footer-title">Links</h5>
                 <ul class="list-unstyled">
                     <li><a href="#">About</a></li>
-                    <li><a href="#">My Gallery</a></li>
-                    <li><a href="#">Movie</a></li>
-                    <li><a href="#">Latest Events</a></li>
                     <li><a href="#">Contact</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Login</a></li>
                 </ul>
                 </div>
                 
             <div class="col-md-4">
                 <h5 class="footer-title">Newsletter</h5>
-                <p>Subscribe to starlight channel.</p>
+                <p>Subscribe to STARLIGHT CINEMA .</p>
                 <div class="newsletter">
                     <input type="email" class="form-control" placeholder="Email Address">
                     <button class="btn btn-warning mt-2">Subscribe</button>
@@ -226,10 +222,12 @@
             </div>
         </div>
         <div class="text-center mt-4">
-            <p>&copy; Copyright 2023 by startlight.com</p>
+            <p>&copy; Copyright 2024 by starlightcinema.com  &nbsp; &nbsp; &nbsp; &nbsp;    Developed By Gaikwad Rutuja & Nimse Nikita</p>
+          
         </div>
     </div>
 </div>
+
 
 <!-- Font Awesome CDN for social media icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
