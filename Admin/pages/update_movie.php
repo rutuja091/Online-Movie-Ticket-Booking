@@ -16,7 +16,11 @@
             <ul>
                 <li><a href="#">Home</a></li>
              
-                <li><a href="#">Login</a></li>
+                <div class="d-flex align-items-center">
+            <a href="./login.php" class="btn btn-outline-primary">
+        <i class="bi bi-person"></i><img src =".\..\..\Images\login.png" style="height:40px;"> 
+      </a>
+    </div>
             </ul>
         </nav>
     </header>

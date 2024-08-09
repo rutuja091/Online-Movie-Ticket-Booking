@@ -27,7 +27,7 @@
 
       <!-- Main Content -->
     <main>
-    <div class="container">
+    <div class="containers">
         <form class="registration-form">
             <h2>Register</h2>
             <div class="form-group">
@@ -53,7 +53,7 @@
       
   <!-- Footer -->
       <div class="footer">
-    <div class="container2">
+    <div class="container" style="background-color:black;">
         <div class="row">
             <div class="col-md-4">
                 <h3 class="footer-title">STARLIGHT CINEMA</h3>
