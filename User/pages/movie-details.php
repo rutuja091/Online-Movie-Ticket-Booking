@@ -22,19 +22,19 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href=".\..\..\index1.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Movies</a>
+          <a class="nav-link" href=".\..\..\User\pages\movies.php">Movies</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             View More
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">About Us</a></li>
-            <li><a class="dropdown-item" href="#">Contact Us</a></li>
-            <li><a class="dropdown-item" href="#">Gallery</a></li>
+          <li><a class="dropdown-item" href=".\..\..\User\pages\about.php">About Us</a></li>
+            <li><a class="dropdown-item" href=".\..\..\User\pages\contact.php">Contact Us</a></li>
+            <li><a class="dropdown-item" href=".\..\..\User\pages\gallery.php">Gallery</a></li>
           </ul>
         </li>
       </ul>
