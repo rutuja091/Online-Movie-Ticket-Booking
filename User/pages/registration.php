@@ -62,7 +62,7 @@
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
+                <label for="password" >Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
             <div class="form-group">
@@ -70,7 +70,14 @@
                 <input type="password" id="confirm-password" name="confirm-password" required>
             </div>
             <button type="submit">Register</button>
-            <h4>if you apready have an account? </h4><a href="./login.php"> login </a>
+           <!-- <h6 style="color: #f3f1f1; margin-top:10px;">if you apready have an account? </h6><a href="./login.php"> login </a> -->
+
+           <h6 style="color: #f3f1f1; margin-top: 20px; display: inline;">
+             if you already have an account? &nbsp;
+           </h6>
+          <a href="./login.php" style="color: white; text-decoration: none; display: inline; margin-left: 5px;">
+            login
+            </a>
         </form>
     </div>
 
