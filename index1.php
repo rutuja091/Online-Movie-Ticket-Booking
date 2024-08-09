@@ -112,14 +112,14 @@
 </div>
 <div class="card-container">
     <div class="movie-card">
-        <img src=".\homepage\auro-me-kaha-dum-tha.jpg" alt="Auron Mein Kahan Dum Tha">
+        <img src=".\homepage\kill.jpg" alt="Auron Mein Kahan Dum Tha">
         <div class="card-content">
-            <h3>Auron Mein Kahan Dum Tha</h3>
-            <p>Auron Mein Kaha Dum Tha', is an epic love story that chronicles the life of Krishna and Vasudha as their fledgling relationship faces a lot of hardship and eventually...</p>
+            <h3>Kill</h3>
+            <p>Army commando Amrit (Lakshya) finds out his true love Tulika (Tanya Maniktala) is en-route, he boards a New Delhi-bound train in a daring quest to derail the their eventual seperation.</p>
             <div class="movie-details">
                 <p><strong>Release Date:</strong> August 15, 2024</p>
                 <p><strong>Duration:</strong> 120 min</p>
-                <p><strong>Genre:</strong> Romance, Drama</p>
+                
                 <p><strong>Showtimes:</strong> 2:00 PM, 5:00 PM, 8:00 PM</p>
             </div>
             <a href="#" class="book-button">Book Ticket</a>
@@ -127,14 +127,14 @@
     </div>
 
     <div class="movie-card">
-        <img src=".\homepage\maidan.jpeg" alt="Maidan">
+        <img src=".\homepage\golmal.jpg" alt="Maidan">
         <div class="card-content">
-            <h3>Maidan</h3>
-            <p>Inspired by the Indian national football team coach and manager Syed Abdul Rahim, who is regarded as the architect of Indian football...</p>
+            <h3>Golmal</h3>
+            <p>Gopal`s life hits choppy waters when he gets stuck on a boat one night after saving a woman from goons. Now his wife suspects he`s having an affair and a policeman is on his tail.</p>
             <div class="movie-details">
                 <p><strong>Release Date:</strong> August 22, 2024</p>
                 <p><strong>Duration:</strong> 150 min</p>
-                <p><strong>Genre:</strong> Sports, Biography</p>
+                
                 <p><strong>Showtimes:</strong> 1:00 PM, 4:00 PM, 7:00 PM</p>
             </div>
             <a href="#" class="book-button">Book Ticket</a>
@@ -142,14 +142,14 @@
     </div>
 
     <div class="movie-card">
-        <img src=".\homepage\do-aur-do-pyar.jpg" alt="Do Aur Do Pyaar">
+        <img src=".\homepage\sarfira.jpg" alt="Do Aur Do Pyaar">
         <div class="card-content">
-            <h3>Do Aur Do Pyaar</h3>
-            <p>A couple on the brink of a breakup are cheating on each other with two outsiders. Whilst they're waiting to reveal their secret and go their separate ways, life has other plans for them.</p>
+            <h3>Safira</h3>
+            <p>An incredible story, set in the world of startups and aviation, Sarfira will inspire the common man to dream big and to chase your dreams even if the world calls you crazy.</p>
             <div class="movie-details">
                 <p><strong>Release Date:</strong> August 29, 2024</p>
                 <p><strong>Duration:</strong> 100 min</p>
-                <p><strong>Genre:</strong> Comedy, Drama</p>
+              
                 <p><strong>Showtimes:</strong> 3:00 PM, 6:00 PM, 9:00 PM</p>
             </div>
             <a href="#" class="book-button">Book Ticket</a>
@@ -157,14 +157,14 @@
     </div>
 
     <div class="movie-card">
-        <img src=".\homepage\Sharmajee-ki-Beti.jpg" alt="Sharmajee ki Beti">
+        <img src=".\homepage\babu.jpg" alt="Sharmajee ki Beti">
         <div class="card-content">
-            <h3>Sharmajee ki Beti</h3>
-            <p>Multi-generational ensemble about the modern, middle-class female experience and the lives of urban women, all with the common surname of Sharma.</p>
+            <h3>Babu</h3>
+            <p>Babu is a Marathi movie starring Ankit Mohan, Ruchira Jadhav, Neha Mahajan and Smita Tambe in prominent roles. It is a drama directed by Mayur Madhukar Shinde.</p>
             <div class="movie-details">
                 <p><strong>Release Date:</strong> September 5, 2024</p>
                 <p><strong>Duration:</strong> 110 min</p>
-                <p><strong>Genre:</strong> Drama, Family</p>
+              
                 <p><strong>Showtimes:</strong> 4:00 PM, 7:00 PM, 10:00 PM</p>
             </div>
             <a href="#" class="book-button">Book Ticket</a>
@@ -181,46 +181,68 @@
         <h5>New upcoming movies</h5>
         <h2>Movies Coming Soon</h2>
     </div>
-<div class="card-container">
-        
-        <div class="movie-card">
-            <img src=".\homepage\demonte-colony-2.jpg" alt="Movie 2">
-            <div class="card-content">
-                <h3>demonte colony 2</h3>
-                <p>Short description of the movie.</p>
-                <a href="#" class="book-button">Book Ticket</a>
+    <div class="card-container">
+    <div class="movie-card">
+        <img src=".\homepage\auro-me-kaha-dum-tha.jpg" alt="Auron Mein Kahan Dum Tha">
+        <div class="card-content">
+            <h3>Auron Mein Kahan Dum Tha</h3>
+            <p>Auron Mein Kaha Dum Tha', is an epic love story that chronicles the life of Krishna and Vasudha as their fledgling relationship faces a lot of hardship and eventually...</p>
+            <div class="movie-details">
+                <p><strong>Release Date:</strong> August 15, 2024</p>
+                <p><strong>Duration:</strong> 120 min</p>
+                
+                <p><strong>Showtimes:</strong> 2:00 PM, 5:00 PM, 8:00 PM</p>
             </div>
-              </div>
-
-        <div class="movie-card">
-            <img src=".\homepage\Vedaa.jpg" alt="Movie 2">
-            <div class="card-content">
-                <h3>Vedaa</h3>
-                <p>The journey of a young woman, who faces and 
-                    resists a repressive system against portrayal 
-                    of an antagonist.</p>
-                <a href="#" class="book-button">Book Ticket</a>
-            </div>
+            <a href="#" class="book-button">Book Ticket</a>
         </div>
-        <div class="movie-card">
-            <img src=".\Images\movie5.jpg" alt="Movie 2">
-            <div class="card-content">
-                <h3>Devera</h3>
-                <p>Short description of the movie.</p>
-                <a href="#" class="book-button">Book Ticket</a>
-            </div>
-        </div>
-        <div class="movie-card">
-            <img src=".\Images\movie6.jpg" alt="Movie 2">
-            <div class="card-content">
-                <h3>Movie Title 6</h3>
-                <p>Short description of the movie.</p>
-                <a href="#" class="book-button">Book Ticket</a>
-            </div>
-        </div>
-        <!-- Add more movie cards as needed -->
     </div>
 
+    <div class="movie-card">
+        <img src=".\homepage\maidan.jpeg" alt="Maidan">
+        <div class="card-content">
+            <h3>Maidan</h3>
+            <p>Inspired by the Indian national football team coach and manager Syed Abdul Rahim, who is regarded as the architect of Indian football...</p>
+            <div class="movie-details">
+                <p><strong>Release Date:</strong> August 22, 2024</p>
+                <p><strong>Duration:</strong> 150 min</p>
+                
+                <p><strong>Showtimes:</strong> 1:00 PM, 4:00 PM, 7:00 PM</p>
+            </div>
+            <a href="#" class="book-button">Book Ticket</a>
+        </div>
+    </div>
+
+    <div class="movie-card">
+        <img src=".\homepage\do-aur-do-pyar.jpg" alt="Do Aur Do Pyaar">
+        <div class="card-content">
+            <h3>Do Aur Do Pyaar</h3>
+            <p>A couple on the brink of a breakup are cheating on each other with two outsiders. Whilst they're waiting to reveal their secret and go their separate ways, life has other plans for them.</p>
+            <div class="movie-details">
+                <p><strong>Release Date:</strong> August 29, 2024</p>
+                <p><strong>Duration:</strong> 100 min</p>
+              
+                <p><strong>Showtimes:</strong> 3:00 PM, 6:00 PM, 9:00 PM</p>
+            </div>
+            <a href="#" class="book-button">Book Ticket</a>
+        </div>
+    </div>
+
+    <div class="movie-card">
+        <img src=".\homepage\Sharmajee-ki-Beti.jpg" alt="Sharmajee ki Beti">
+        <div class="card-content">
+            <h3>Sharmajee ki Beti</h3>
+            <p>Multi-generational ensemble about the modern, middle-class female experience and the lives of urban women, all with the common surname of Sharma.</p>
+            <div class="movie-details">
+                <p><strong>Release Date:</strong> September 5, 2024</p>
+                <p><strong>Duration:</strong> 110 min</p>
+              
+                <p><strong>Showtimes:</strong> 4:00 PM, 7:00 PM, 10:00 PM</p>
+            </div>
+            <a href="#" class="book-button">Book Ticket</a>
+        </div>
+    </div>
+    <!-- Add more movie cards as needed -->
+</div>
 
     <div class="cards-container">
         <h2 class="section-title">Top Featured Movies</h2>
@@ -277,33 +299,34 @@
         <div class="row">
             <div class="col-md-4">
                 <h3 class="footer-title">STARLIGHT CINEMA</h3>
-                <p>Buy movie tickets easily with Aovis system nationwide</p>
+                <p>Buy movie tickets easily with Starlight Cinema system nationwide</p>
                 <a href="#" class="btn btn-warning">Get Your Ticket</a>
             </div>
             <div class="col-md-2">
                 <h5 class="footer-title">Movies</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Adventure</a></li>
-                    <li><a href="#">Animation</a></li>
-                    <li><a href="#">Comedy</a></li>
-                    <li><a href="#">Crime</a></li>
+                    <li><a href="#">Comedy Shows</a></li>
+                    <li><a href="#">Drama</a></li>
+                    <li><a href="#">Kids Movie</a></li>
+                    <li><a href="#">Marathi Movies</a></li>
+                    <li><a href="#">Hindi Movies</a></li>
+                    <li><a href="#">English Movies</a></li>
                 </ul>
             </div>
             <div class="col-md-2">
                 <h5 class="footer-title">Links</h5>
                 <ul class="list-unstyled">
                     <li><a href="#">About</a></li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Latest Events</a></li>
                     <li><a href="#">Contact</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Login</a></li>
                 </ul>
                 </div>
                 
             <div class="col-md-4">
                 <h5 class="footer-title">Newsletter</h5>
-                <p>Subscribe to Leitmotif newsletter this very day.</p>
+                <p>Subscribe to STARLIGHT CINEMA .</p>
                 <div class="newsletter">
                     <input type="email" class="form-control" placeholder="Email Address">
                     <button class="btn btn-warning mt-2">Subscribe</button>
@@ -321,7 +344,8 @@
             </div>
         </div>
         <div class="text-center mt-4">
-            <p>&copy; Copyright 2023 by Ovatheme.com</p>
+            <p>&copy; Copyright 2024 by starlightcinema.com  &nbsp; &nbsp; &nbsp; &nbsp;    Developed By Gaikwad Rutuja & Nimse Nikita</p>
+          
         </div>
     </div>
 </div>
