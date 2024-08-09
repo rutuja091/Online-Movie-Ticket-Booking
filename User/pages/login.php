@@ -66,7 +66,12 @@
             </div>
             
             <button type="submit">Login</button>
-           <h4>  if you not registered? </h4><a href="./registration.php" class="anchor"> Register Now </a>
+            <h6 style="color: #f3f1f1; margin-top: 20px; display: inline;">
+             if not have account &nbsp;
+           </h6>
+          <a href="./register.php" style="color: white; text-decoration: none; display: inline; margin-left: 5px;">
+            Register
+            </a>
         </form>
     </div>
 

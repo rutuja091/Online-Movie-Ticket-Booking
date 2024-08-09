@@ -16,16 +16,16 @@
         <div class="logo"><img src=".\..\..\Images\logo2.png" class="logo-img"></div>
         <nav class="nav">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+            <li><a href="./admin-dashboard.php">Home</a></li>
+            <li><a href="./login.php">Login</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Movies</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
+     <!-- Main Content -->
+     <main>
     <div class="container">
         <form class="login-form">
             <h2>Login</h2>
@@ -43,7 +43,6 @@
         </form>
     </div>
     </main>
-
 
     <footer class="footer">
         <div class="social-icons">
