@@ -45,7 +45,7 @@
     </div>
     <div class="d-flex align-items-center">
       <a href="#" class="btn btn-outline-primary">
-        <i class="bi bi-person"></i> Login
+      <i class="bi bi-person"></i> <img src =".\..\..\Images\login.png" style="height:40px;">
       </a>
     </div>
   </div>
