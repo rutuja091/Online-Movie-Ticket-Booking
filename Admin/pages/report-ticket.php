@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
     <link rel="stylesheet" href="./../css/addmovie.css">
-    <link rel="stylesheet" href="./../css/manage-registration.css">
+    <link rel="stylesheet" href="./../css/manage-movie.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -28,31 +28,28 @@
 
 
 
-    <div class="containers">
-        <h2> Manage User Details</h2>
+      
+   <div class="containers">
+        <h2> Manage Movie Details</h2>
         <table class="movie-table">
             <thead>
                 <tr>
-                    <th>User Id</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Password</th>
-                    <th>Address</th>
-                    <th>contact</th>
-                    <th>Actions</th>
+                <th>User Name</th>
+                    <th>Movie Name</th>
+                    <th>Seat No</th>
+                    <th>Ticket Price</th>
+                    <th>Show Time</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    
-                    <td>1</td>
-                    <td>name</td>
-                    <td>abc@gmail.com</td>
-                    <td>pass123</td>
-                    <td>Nagar</td>
-                    <td>1234567890</td>
+                   <td>user Name</td>
+                    <td>Movie Name</td>
+                    <td>Movie Description</td>
+                    <td>$10.00</td>
+                    <td>2024-07-31 19:00</td>
                     <td>
-                 <a href="./update-registration.php">   <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;"></a>
+                    <a href="./update_movie.php">  <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;"></a>
                     <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
                     </td>
                 </tr>
@@ -60,7 +57,7 @@
             </tbody>
         </table>
     </div>
-   
+
   <!-- Footer -->
       <div class="footer">
     <div class="container" style="background-color:black;">
@@ -118,14 +115,18 @@
     </div>
 </div>
 
+
+
 <!-- Font Awesome for social media icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
- <!-- Font Awesome CDN for social media icons -->
+
+  <!-- Font Awesome CDN for social media icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

@@ -59,12 +59,7 @@
         </table>
     </div>
 
-  
-
-
-
-
-      <!-- Footer -->
+  <!-- Footer -->
       <div class="footer">
     <div class="container" style="background-color:black;">
         <div class="row">
