@@ -30,16 +30,16 @@
           <a class="nav-link active" aria-current="page" href=".\..\..\index1.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href=".\..\..\User\pages\movies.php">Movies</a>
+          <a class="nav-link active" href=".\..\..\User\pages\movies.php">Movies</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             View More
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href=".\..\..\User\pages\about.php">About Us</a></li>
-            <li><a class="dropdown-item" href=".\contact.php">Contact Us</a></li>
-            <li><a class="dropdown-item" href=".\..\..\User\pages\gallery.php">Gallery</a></li>
+          <li><a class="dropdown-item active" href=".\..\..\User\pages\about.php">About Us</a></li>
+            <li><a class="dropdown-item active" href=".\contact.php">Contact Us</a></li>
+            <li><a class="dropdown-item active" href=".\..\..\User\pages\gallery.php">Gallery</a></li>
           </ul>
         </li>
       </ul>
