@@ -1,11 +1,26 @@
+
+/* General Body Styling */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ffffff;
 }
 
+/* Navbar Styling */
+.navbar {
+    background-color:  #ff5500; /* White background for the navbar */
+    width: 100%;
+}
 
+.navbar-nav .nav-link {
+    color: #000000; /* Black color for the navigation links */
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}
 
 .registration-form {
     background-color: #1c1c1c;
@@ -28,7 +43,7 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 5px;
-    color: #ffffff;
+    color: #f3f1f1;
 }
 
 .form-group input {
@@ -37,7 +52,7 @@ body {
     border: 1px solid #333;
     border-radius: 5px;
     background-color: #ffffff;
-    color: #ffffff;
+    color: #f3f1f1;
 }
 
 .form-group input:focus {
