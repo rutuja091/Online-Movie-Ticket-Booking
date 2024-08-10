@@ -25,10 +25,10 @@
           <a class="nav-link active" aria-current="page" href=".\..\..\index1.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href=".\..\..\User\pages\movies.php">Movies</a>
+          <a class="nav-link active" href=".\..\..\User\pages\movies.php">Movies</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             View More
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -161,7 +161,7 @@
             </div>
         </div>
         <div class="text-center mt-4">
-            <p>&copy; Copyright 2024 by starlightcinema.com  &nbsp; &nbsp; &nbsp; &nbsp;    Developed By Gaikwad Rutuja & Nimse Nikita</p>
+            <p>&copy; Copyright 2024 by starlightcinema.com  &nbsp; &nbsp; &nbsp; &nbsp;  Developed By Gaikwad Rutuja & Nimse Nikita</p>
           
         </div>
     </div>
