@@ -47,9 +47,7 @@
 </nav>
 
 <!-- end nav -->
-
-
-    <div class="centered-content">
+  <div class="centered-content">
         <h3>Marathi Movies</h3>
        
     </div>
@@ -73,8 +71,6 @@
                 <h3>मन कस्तुरी रे</h3>
                 <p>The film has a painful climax that drives you into an emotional state for a while, but after all, even that is seen stuff.
                 
-
-               
                 </p>
 
                 <p class="movie-genre">Show-time: 7:00 to 9:00</p>
@@ -107,12 +103,9 @@
         </div>
         <!-- Add more movie cards as needed -->
 
-        
-    </div>
+   </div>
 
-
-
-     <!-- Footer -->
+   <!-- Footer -->
    <div class="footer">
     <div class="container">
         <div class="row">

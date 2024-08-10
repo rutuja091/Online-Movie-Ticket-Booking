@@ -29,7 +29,7 @@
 
 
       
-   <div class="container">
+   <div class="containers">
         <h2> Manage Movie Details</h2>
         <table class="movie-table">
             <thead>
@@ -66,7 +66,7 @@
 
       <!-- Footer -->
       <div class="footer">
-    <div class="container2">
+    <div class="container" style="background-color:black;">
         <div class="row">
             <div class="col-md-4">
                 <h3 class="footer-title">STARLIGHT CINEMA</h3>
