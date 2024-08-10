@@ -20,7 +20,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-      <ul class="navbar-nav mb-2 mb-lg-0">
+      <!-- <ul class="navbar-nav mb-2 mb-lg-0">
       <li class="nav-item">
           <a class="nav-link active" aria-current="page" href=".\..\..\index1.php">Home</a>
         </li>
@@ -37,7 +37,7 @@
             <li><a class="dropdown-item" href=".\..\..\User\pages\gallery.php">Gallery</a></li>
           </ul>
         </li>
-      </ul>
+      </ul> -->
     </div>
     <div class="d-flex align-items-center">
       <a href="#" class="btn btn-outline-primary">
