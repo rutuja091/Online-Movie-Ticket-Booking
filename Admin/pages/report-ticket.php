@@ -45,8 +45,8 @@
                 <tr>
                    <td>user Name</td>
                     <td>Movie Name</td>
-                    <td>Movie Description</td>
-                    <td>$10.00</td>
+                    <td>0012</td>
+                    <td>Rs.100</td>
                     <td>2024-07-31 19:00</td>
                    
                 </tr>
