@@ -6,6 +6,8 @@
     <title>Movie Ticket Booking</title>
   
     <link rel="stylesheet" href="./../css/manage-feedback.css">
+    <link rel="stylesheet" href="./../css/addmovie.css">
+
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -14,7 +16,7 @@
     <header class="header">
         <div class="logo"><img src=".\..\..\Images\logo2.png" class="logo-img"></div>
         <nav class="nav">
-            <ul>
+        <ul>
             <li><a href="./admin-dashboard.php" style="margin-right:50px; font-size:30px;" >Home</a></li>
             
             <div class="d-flex align-items-center">
@@ -102,7 +104,7 @@
    
    <!-- Footer -->
 <div class="footer">
-    <div class="container"style="background-color:black;">
+    <div class="containers"style="background-color:black;">
         <div class="row">
             <div class="col-md-4">
                 <h3 class="footer-title">STARLIGHT CINEMA</h3>

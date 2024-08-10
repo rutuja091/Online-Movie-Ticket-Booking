@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
-    <link rel="stylesheet" href="./../css/addmovie.css">
+  
     <link rel="stylesheet" href="./../css/registration.css">
+    <link rel="stylesheet" href="./../css/addmovie.css">
+
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -26,9 +28,8 @@
         </nav>
     </header>
 
-
-      <!-- Main Content -->
-    <main>
+        <!-- Main Content -->
+        <main>
     <div class="container">
         <form class="registration-form">
             <h2>Register</h2>
@@ -52,44 +53,42 @@
         </form>
     </div>
     </main>
-      
-  <!-- Footer -->
-      <div class="footer">
-    <div class="container2">
+   
+   <!-- Footer -->
+<div class="footer">
+    <div class="containers"style="background-color:black;">
         <div class="row">
             <div class="col-md-4">
                 <h3 class="footer-title">STARLIGHT CINEMA</h3>
-                <p>Buy movie tickets easily with Starlight Cinema system nationwide</p>
+                <p>Buy movie tickets easily with Aovis system nationwide</p>
                 <a href="#" class="btn btn-warning">Get Your Ticket</a>
             </div>
             <div class="col-md-2">
                 <h5 class="footer-title">Movies</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#">Comedy Shows</a></li>
-                    <li><a href="#">Drama</a></li>
-                    <li><a href="#">Kids Movie</a></li>
-                    <li><a href="#">Marathi Movies</a></li>
-                    <li><a href="#">Hindi Movies</a></li>
-                    <li><a href="#">English Movies</a></li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Adventure</a></li>
+                    <li><a href="#">Animation</a></li>
+                    <li><a href="#">Comedy</a></li>
+                    <li><a href="#">Crime</a></li>
                 </ul>
             </div>
             <div class="col-md-2">
                 <h5 class="footer-title">Links</h5>
                 <ul class="list-unstyled">
                     <li><a href="#">About</a></li>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Latest Events</a></li>
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Login</a></li>
                 </ul>
                 </div>
-                
             <div class="col-md-4">
                 <h5 class="footer-title">Newsletter</h5>
-                <p>Subscribe to STARLIGHT CINEMA .</p>
+                <p>Subscribe to Leitmotif newsletter this very day.</p>
                 <div class="newsletter">
-                    <input type="email" class="form-control" placeholder="Email Address">
-                    <button class="btn btn-warning mt-2">Subscribe</button>
+                    <input type="email" class="form-control" placeholder="Email Address" style="width:350px">
+                    <button class="btn btn-warning mt-2" style="width:150px">Subscribe</button>
                 </div>
                 <div class="mt-2">
                     <input type="checkbox" id="terms">
@@ -104,8 +103,7 @@
             </div>
         </div>
         <div class="text-center mt-4">
-            <p>&copy; Copyright 2024 by starlightcinema.com  &nbsp; &nbsp; &nbsp; &nbsp;    Developed By Gaikwad Rutuja & Nimse Nikita</p>
-          
+            <p> &copy;Copyright 2023 by Ovatheme.com</p>
         </div>
     </div>
 </div>
