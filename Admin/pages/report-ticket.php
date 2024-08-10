@@ -30,7 +30,7 @@
 
       
    <div class="containers">
-        <h2> ticket reports</h2>
+        <h2> ticket Reports</h2>
         <table class="movie-table">
             <thead>
                 <tr>
@@ -48,10 +48,7 @@
                     <td>Movie Description</td>
                     <td>$10.00</td>
                     <td>2024-07-31 19:00</td>
-                    <td>
-                    <a href="./update_movie.php">  <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;"></a>
-                    <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
-                    </td>
+                   
                 </tr>
                 <!-- Repeat <tr> for more rows -->
             </tbody>
