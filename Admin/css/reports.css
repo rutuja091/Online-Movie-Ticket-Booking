@@ -1,0 +1,148 @@
+
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color:#ff5500; /* White background for the navbar */
+    width: 100%;
+}
+
+.navbar-nav .nav-link {
+    color: #000000; /* Black color for the navigation links */
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/* Logo Styling */
+.logo-img {
+    height: 100px;
+    width: auto;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/*footer*/
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: #ff5500;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .footer-title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ff5500;
+}
+
+.footer .social-icons a {
+    margin: 0 10px;
+    color: #fff;
+}
+
+.footer .social-icons a:hover {
+    color: #ff5500;
+}
+
+.footer .newsletter input {
+    margin-top: 10px;
+}
+
+.footer .newsletter button {
+    background-color: #ff5500;
+    border: none;
+    padding: 5px 20px;
+    color: #fff;
+}
+
+
+
+/*cards css*/
+.card {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    padding: 20px;
+    align-items: center;
+
+}
+
+.card img {
+    border-radius: 20%;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h5 {
+    margin: 0;
+}
+
+.card-content p {
+    margin: 0;
+    color: gray;
+}
+
+.movie-button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.movie-button:hover {
+    background-color: rgb(61, 59, 173);
+}

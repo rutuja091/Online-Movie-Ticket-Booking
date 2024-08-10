@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
  
-    <link rel="stylesheet" href=".\..\css\admin-dashboard.css">
+    <link rel="stylesheet" href=".\..\css\reports.css">
    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -52,30 +52,30 @@
       
     <div class="container">
 
-    <h1 style="justify-content:center;text-align:center; color:#ff5500">Manage Movies</h1>
+    <h1 style="justify-content:center;text-align:center; color:#ff5500">View Reports</h1>
         <div class="row">
 
             <!-- Card 1 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card">
-                    <img src=".\..\..\Images\admin-images\manage-movies.ico" alt="Movie 1">
-                   <a href="./manage-movie.php"><button class="movie-button">Manage Movies</button></a>
+                    <img src=".\..\..\Images\admin-images\movie-report.png" alt="Movie 1">
+                   <a href="./manage-movie.php"><button class="movie-button">view Movies Report</button></a>
                 </div>
             </div>
             
             <!-- Card 2 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card">
-                    <img src=".\..\..\Images\admin-images\manage-register.png" alt="Movie 2">
-                    <a href="./manage-registration.php"> <button class="movie-button">Manage User Registration</button> </a>
+                    <img src=".\..\..\Images\admin-images\registration-report.png" alt="Movie 2">
+                    <a href="./manage-registration.php"> <button class="movie-button">View Registration Report</button> </a>
                 </div>
             </div>
 
             <!-- Card 3 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card">
-                    <img src=".\..\..\Images\admin-images\manage-feedback.png" alt="Movie 3">
-                    <a href="./manage-feedback.php"> <button class="movie-button">Manage User Feedback</button> </a>
+                    <img src=".\..\..\Images\admin-images\feedback-repoort.png" alt="Movie 3">
+                    <a href="./manage-feedback.php"> <button class="movie-button">View Feedback Report</button> </a>
                 </div>
             </div> 
         </div>
@@ -84,8 +84,8 @@
             <!-- Card 4 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card">
-                    <img src=".\..\..\Images\admin-images\manage-payment.png" alt="Movie 1">
-                    <a href="./manage-payment.php">  <button class="movie-button">Manage Payment</button> </a>
+                    <img src=".\..\..\Images\admin-images\payment-report.png" alt="Movie 1">
+                    <a href="./manage-payment.php">  <button class="movie-button">View Payment Report</button> </a>
                 </div>
             </div>
 
@@ -93,20 +93,11 @@
               <!-- Card 5 -->
               <div class="col-md-6 col-lg-4">
                 <div class="card">
-                    <img src=".\..\..\Images\admin-images\tickets.png" alt="Movie 3">
-                    <button class="movie-button">View Tickets</button>
+                    <img src=".\..\..\Images\admin-images\ticket-reports.png" alt="Movie 3">
+                    <button class="movie-button">View Ticket Report</button>
                 </div>
             </div> 
-            
-            <!-- Card 6 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                    <img src=".\..\..\Images\admin-images\all-reports.png" alt="Movie 2">
-                    <a href =".\..\pages\reports.php"><button class="movie-button"> View All Report</button></a>
-                </div>
-            </div>
-
-            
+                 
         </div>
 
     </div>
