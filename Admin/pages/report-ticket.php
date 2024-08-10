@@ -30,7 +30,7 @@
 
       
    <div class="containers">
-        <h2> Manage Movie Details</h2>
+        <h2> ticket reports</h2>
         <table class="movie-table">
             <thead>
                 <tr>

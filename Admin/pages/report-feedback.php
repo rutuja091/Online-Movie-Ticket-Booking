@@ -29,7 +29,7 @@
     </header>
 
     <div class="containers">
-        <h2  > Manage User Feedback</h2>
+        <h2  >User Feedback report</h2>
         <table class="movie-table">
             <thead>
                 <tr>
