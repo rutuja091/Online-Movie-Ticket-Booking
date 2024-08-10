@@ -29,7 +29,7 @@
 
 
     <div class="containers">
-        <h2> Manage User Details</h2>
+        <h2>  User Registration report</h2>
         <table class="movie-table">
             <thead>
                 <tr>
