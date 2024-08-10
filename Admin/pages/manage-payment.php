@@ -30,17 +30,18 @@
 
       
     <div class="containers">
-        <h2> Manage User Details</h2>
+        <h2> Manage payment Details</h2>
         <table class="movie-table">
             <thead>
                 <tr>
                     <th>User Id</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Password</th>
-                    <th>Address</th>
-                    <th>contact</th>
-                    <th>Actions</th>
+                    <th>mobile no</th>
+                    <th>product Name</th>
+                    <th>card no </th>
+                    <th>total price</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -49,9 +50,10 @@
                     <td>1</td>
                     <td>name</td>
                     <td>abc@gmail.com</td>
-                    <td>pass123</td>
-                    <td>Nagar</td>
                     <td>1234567890</td>
+                    <td>ticket</td>
+                    <td>1234</td>
+                    <td>500</td>
                     <td>
                     <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;">
                     <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
