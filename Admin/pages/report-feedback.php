@@ -4,36 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
-    <link rel="stylesheet" href="./../../common/header-footer.css">
+  
     <link rel="stylesheet" href="./../css/manage-feedback.css">
-   
-   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./../css/addmovie.css">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-       <!-- Header -->
-    
-<nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container-fluid">
-    <div class="logo">
-      <img src="./../../Images/logo2.png" class="logo-img" alt="Logo">
-  </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Movies</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            View More
-          </a>
-          <ul>
+    <!--- Header --->
+    <header class="header">
+        <div class="logo"><img src=".\..\..\Images\logo2.png" class="logo-img"></div>
+        <nav class="nav">
+        <ul>
             <li><a href="./admin-dashboard.php" style="margin-right:50px; font-size:30px;" >Home</a></li>
             
             <div class="d-flex align-items-center">
@@ -42,22 +25,11 @@
       </a>
     </div>
             </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="d-flex align-items-center">
-      <a href="#" class="btn btn-outline-primary">
-        <i class="bi bi-person"></i> Login
-      </a>
-    </div>
-  </div>
-</nav>
+        </nav>
+    </header>
 
-<!-- end nav -->
-
-   
-    <div class="container">
-        <h2>User Feedback Report</h2>
+    <div class="containers">
+        <h2  > Manage User Feedback</h2>
         <table class="movie-table">
             <thead>
                 <tr>
@@ -67,13 +39,43 @@
                     <th>subject</th>
                     <th>message</th>
                     
-                   
+               
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    
-                    <td>1</td>
+                   <td>1</td>
+                    <td>name</td>
+                    <td>abc@gmail.com</td>
+                    <td>hello</td>
+                    <td>abc..</td>
+                 
+                </tr>
+
+
+
+                <tr>
+                   <td>1</td>
+                    <td>name</td>
+                    <td>abc@gmail.com</td>
+                    <td>hello</td>
+                    <td>abc..</td>
+                   
+                  
+                </tr>
+
+                <tr>
+                   <td>1</td>
+                    <td>name</td>
+                    <td>abc@gmail.com</td>
+                    <td>hello</td>
+                    <td>abc..</td>
+                   
+                 
+                </tr>
+
+                <tr>
+                   <td>1</td>
                     <td>name</td>
                     <td>abc@gmail.com</td>
                     <td>hello</td>
@@ -86,9 +88,10 @@
         </table>
     </div>
 
-    <!-- Footer -->
+   
+   <!-- Footer -->
 <div class="footer">
-    <div class="container">
+    <div class="containers"style="background-color:black;">
         <div class="row">
             <div class="col-md-4">
                 <h3 class="footer-title">STARLIGHT CINEMA</h3>
@@ -115,7 +118,6 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
                 </div>
-                
             <div class="col-md-4">
                 <h5 class="footer-title">Newsletter</h5>
                 <p>Subscribe to Leitmotif newsletter this very day.</p>
@@ -136,7 +138,7 @@
             </div>
         </div>
         <div class="text-center mt-4">
-            <p>&copy; Copyright 2023 by Ovatheme.com</p>
+            <p> &copy;Copyright 2023 by Ovatheme.com</p>
         </div>
     </div>
 </div>
@@ -158,9 +160,5 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="script.js"></script>
-  <!-- Font Awesome CDN for social media icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    <script src="script.js"></script>
 </body>
 </html>
