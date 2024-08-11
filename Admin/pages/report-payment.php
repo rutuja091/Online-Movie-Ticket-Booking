@@ -38,13 +38,10 @@
                     <th>product Name</th>
                     <th>card no </th>
                     <th>total price</th>
-                  
-
-                </tr>
+               </tr>
             </thead>
             <tbody>
                 <tr>
-                    
                     <td>1</td>
                     <td>name</td>
                     <td>abc@gmail.com</td>
@@ -52,7 +49,6 @@
                     <td>ticket</td>
                     <td>1234</td>
                     <td>500</td>
-                  
                 </tr>
                 <tr>
                     
