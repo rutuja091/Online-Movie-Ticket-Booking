@@ -27,7 +27,7 @@
     </header>
 
  <div class="containers">
-        <h2> payment Report </h2>
+        <h2> Payment Report </h2>
         <table class="movie-table">
             <thead>
                 <tr>
