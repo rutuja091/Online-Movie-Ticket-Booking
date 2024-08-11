@@ -36,9 +36,10 @@
                     <th>User Id</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Password</th>
-                    <th>Address</th>
                     <th>contact</th>
+                    <th>Password</th>
+                    <th>confirm Password</th>
+                   
                </tr>
             </thead>
             <tbody>
@@ -47,9 +48,10 @@
                     <td>1</td>
                     <td>name</td>
                     <td>abc@gmail.com</td>
-                    <td>pass123</td>
-                    <td>Nagar</td>
                     <td>1234567890</td>
+                    <td>pass123</td>
+                    <td>pass123</td>
+                   
                
                 </tr>
 
@@ -58,9 +60,10 @@
                     <td>2</td>
                     <td>tom</td>
                     <td>tom@gmail.com</td>
-                    <td>pass123</td>
-                    <td>pune</td>
                     <td>1234567890</td>
+                    <td>tom6</td>
+                    <td>tom6</td>
+                  
                  
                 </tr>
 
@@ -69,9 +72,10 @@
                     <td>3</td>
                     <td>sai</td>
                     <td>sai@gmail.com</td>
-                    <td>pass123</td>
-                    <td>Mumbai</td>
                     <td>1234567890</td>
+                    <td>sai7</td>
+                    <td>sai7</td>
+                  
                  
                 </tr>
                 <!-- Repeat <tr> for more rows -->
