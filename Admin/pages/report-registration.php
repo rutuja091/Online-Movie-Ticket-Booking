@@ -29,7 +29,7 @@
 
 
     <div class="containers">
-        <h2>  User Registration report</h2>
+        <h2>  User Registration Report</h2>
         <table class="movie-table">
             <thead>
                 <tr>
@@ -42,7 +42,7 @@
                </tr>
             </thead>
             <tbody>
-                <tr>
+            <tr>
                     
                     <td>1</td>
                     <td>name</td>
@@ -51,6 +51,28 @@
                     <td>Nagar</td>
                     <td>1234567890</td>
                
+                </tr>
+
+                <tr>
+                    
+                    <td>2</td>
+                    <td>tom</td>
+                    <td>tom@gmail.com</td>
+                    <td>pass123</td>
+                    <td>pune</td>
+                    <td>1234567890</td>
+                 
+                </tr>
+
+                <tr>
+                    
+                    <td>3</td>
+                    <td>sai</td>
+                    <td>sai@gmail.com</td>
+                    <td>pass123</td>
+                    <td>Mumbai</td>
+                    <td>1234567890</td>
+                 
                 </tr>
                 <!-- Repeat <tr> for more rows -->
             </tbody>

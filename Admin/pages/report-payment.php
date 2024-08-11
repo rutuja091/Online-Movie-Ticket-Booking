@@ -54,6 +54,31 @@
                     <td>500</td>
                   
                 </tr>
+                <tr>
+                    
+                    <td>2</td>
+                    <td>jon</td>
+                    <td>jon@gmail.com</td>
+                    <td>1289565890</td>
+                    <td>ticket</td>
+                    <td>1780</td>
+                    <td>200</td>
+                    <td>
+                    <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;">
+                    <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td>3</td>
+                    <td>jerry</td>
+                    <td>jerry@gmail.com</td>
+                    <td>1289567890</td>
+                    <td>ticket</td>
+                    <td>1204</td>
+                    <td>200</td>
+                  
+                </tr>
                 <!-- Repeat <tr> for more rows -->
             </tbody>
         </table>

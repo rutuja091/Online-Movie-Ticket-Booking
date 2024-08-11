@@ -30,7 +30,7 @@
 
       
    <div class="containers">
-        <h2> Manage ticket Details</h2>
+        <h2> Manage Ticket Details</h2>
         <table class="movie-table">
             <thead>
                 <tr>
@@ -45,6 +45,28 @@
             <tbody>
                 <tr>
                     <td>jerry</td>
+                    <td>Movie Name</td>
+                    <td>0012</td>
+                    <td>Rs.100</td>
+                    <td>2024-07-31 19:00</td>
+                    <td>
+                    <a href="./update_movie.php">  <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;"></a>
+                    <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>jon</td>
+                    <td>Movie Name</td>
+                    <td>0012</td>
+                    <td>Rs.100</td>
+                    <td>2024-07-31 19:00</td>
+                    <td>
+                    <a href="./update_movie.php">  <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;"></a>
+                    <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>sai</td>
                     <td>Movie Name</td>
                     <td>0012</td>
                     <td>Rs.100</td>
