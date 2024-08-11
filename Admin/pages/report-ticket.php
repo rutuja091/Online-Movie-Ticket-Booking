@@ -40,16 +40,8 @@
                     <th>Ticket Price</th>
                     <th>Show Time</th>
                 </tr>
-            </thead>
-            <tbody>
-            <tr>
-                    <th>User Name</th>
-                    <th>Movie Name</th>
-                    <th>Seat No</th>
-                    <th>Ticket Price</th>
-                    <th>Show Time</th>
-                    <th>Actions</th>
-                </tr>
+          
+        
             </thead>
             <tbody>
                 <tr>
