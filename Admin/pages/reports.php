@@ -59,7 +59,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <img src=".\..\..\Images\admin-images\movie-report.png" alt="Movie 1">
-                   <a href="./manage-movie.php"><button class="movie-button">view Movies Report</button></a>
+                   <a href="./report-movie.php"><button class="movie-button">view Movies Report</button></a>
                 </div>
             </div>
             
@@ -67,7 +67,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <img src=".\..\..\Images\admin-images\registration-report.png" alt="Movie 2">
-                    <a href="./manage-registration.php"> <button class="movie-button">View Registration Report</button> </a>
+                    <a href="./report-registration.php"> <button class="movie-button">View Registration Report</button> </a>
                 </div>
             </div>
 
@@ -75,7 +75,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <img src=".\..\..\Images\admin-images\feedback-repoort.png" alt="Movie 3">
-                    <a href="./manage-feedback.php"> <button class="movie-button">View Feedback Report</button> </a>
+                    <a href="./report-feedback.php"> <button class="movie-button">View Feedback Report</button> </a>
                 </div>
             </div> 
         </div>
@@ -85,7 +85,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <img src=".\..\..\Images\admin-images\payment-report.png" alt="Movie 1">
-                    <a href="./manage-payment.php">  <button class="movie-button">View Payment Report</button> </a>
+                    <a href="./report-payment.php">  <button class="movie-button">View Payment Report</button> </a>
                 </div>
             </div>
 
@@ -94,7 +94,7 @@
               <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <img src=".\..\..\Images\admin-images\ticket-reports.png" alt="Movie 3">
-                    <button class="movie-button">View Ticket Report</button>
+                    <a href="./report-ticket.php"> <button class="movie-button">View Ticket Report</button> </a>
                 </div>
             </div> 
                  
