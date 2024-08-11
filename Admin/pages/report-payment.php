@@ -27,7 +27,7 @@
     </header>
 
  <div class="containers">
-        <h2> payment report </h2>
+        <h2> payment Report </h2>
         <table class="movie-table">
             <thead>
                 <tr>
@@ -63,10 +63,7 @@
                     <td>ticket</td>
                     <td>1780</td>
                     <td>200</td>
-                    <td>
-                    <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;">
-                    <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
-                    </td>
+                
                 </tr>
                 <tr>
                     
