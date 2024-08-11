@@ -30,7 +30,7 @@
 
       
     <div class="containers">
-        <h2> Manage payment Details</h2>
+        <h2> Manage Payment Details</h2>
         <table class="movie-table">
             <thead>
                 <tr>
@@ -54,6 +54,34 @@
                     <td>ticket</td>
                     <td>1234</td>
                     <td>500</td>
+                    <td>
+                    <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;">
+                    <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td>2</td>
+                    <td>jon</td>
+                    <td>jon@gmail.com</td>
+                    <td>1265456780</td>
+                    <td>ticket</td>
+                    <td>1240</td>
+                    <td>300</td>
+                    <td>
+                    <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;">
+                    <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td>3</td>
+                    <td>jerry</td>
+                    <td>abc@gmail.com</td>
+                    <td>1289567890</td>
+                    <td>ticket</td>
+                    <td>1204</td>
+                    <td>200</td>
                     <td>
                     <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;">
                     <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">

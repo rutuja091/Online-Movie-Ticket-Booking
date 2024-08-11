@@ -30,7 +30,7 @@
 
       
    <div class="containers">
-        <h2> ticket Reports</h2>
+        <h2> Ticket Reports</h2>
         <table class="movie-table">
             <thead>
                 <tr>
@@ -42,8 +42,34 @@
                 </tr>
             </thead>
             <tbody>
+            <tr>
+                    <th>User Name</th>
+                    <th>Movie Name</th>
+                    <th>Seat No</th>
+                    <th>Ticket Price</th>
+                    <th>Show Time</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
                 <tr>
-                   <td>user Name</td>
+                    <td>jerry</td>
+                    <td>Movie Name</td>
+                    <td>0012</td>
+                    <td>Rs.100</td>
+                    <td>2024-07-31 19:00</td>
+             
+                </tr>
+                <tr>
+                    <td>jon</td>
+                    <td>Movie Name</td>
+                    <td>0012</td>
+                    <td>Rs.100</td>
+                    <td>2024-07-31 19:00</td>
+                 
+                </tr>
+                <tr>
+                    <td>sai</td>
                     <td>Movie Name</td>
                     <td>0012</td>
                     <td>Rs.100</td>

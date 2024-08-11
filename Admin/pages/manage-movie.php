@@ -44,16 +44,40 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><img src="path_to_image.jpg" alt="Movie Image" class="movie-image"></td>
+                    <td><img src="./../../Images/Movies/maidan.jpg" alt="Movie Image" class="movie-image"></td>
                     <td>Movie Name</td>
                     <td>Movie Description</td>
-                    <td>$10.00</td>
+                    <td>Rs200</td>
                     <td>2024-07-31 19:00</td>
                     <td>
                     <a href="./update_movie.php">  <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;"></a>
                     <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
                     </td>
                 </tr>
+
+                <tr>
+                    <td><img src="./../../Images/Movies/Frozen.jpg" alt="Movie Image" class="movie-image"></td>
+                    <td>Frozen</td>
+                    <td>Movie Description</td>
+                    <td>Rs150</td>
+                    <td>2024-07-31 19:00</td>
+                    <td>
+                    <a href="./update_movie.php">  <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;"></a>
+                    <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td><img src="./../../Images/Movies/childrenparty.jpg" alt="Movie Image" class="movie-image"></td>
+                    <td>chillar party</td>
+                    <td>Movie Description</td>
+                    <td>Rs180</td>
+                    <td>2024-07-31 19:00</td>
+                    <td>
+                    <a href="./update_movie.php">  <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;"></a>
+                    <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
+                    </td>
+                </tr>
+
                 <!-- Repeat <tr> for more rows -->
             </tbody>
         </table>
