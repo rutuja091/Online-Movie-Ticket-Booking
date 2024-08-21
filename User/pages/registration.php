@@ -51,29 +51,34 @@
 
     <div class="carousel-item active" style="background-image:url('./../../Images/User-images/login-bg.jpg');">
     <div class="containers2">
-        <form class="registration-form">
+        <form class="registration-form" action="" method="post" enctype="multipart/form-data" onsubmit="return.validate()">
             <h2>Register</h2>
             <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+            <label for="user_name" class="form-label">Username</label>
+                    <input type="text"id="user_name" class="form-control" 
+                    placeholder="enter your user name" autocomplete="off" required="required"
+                    name="user_name">
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+            <label for="email" class="form-label">Email</label>
+                    <input type="email"id="email" class="form-control" 
+                    placeholder="enter your user email" autocomplete="off"
+                     required="required" name="email">
+            </div>
+          
+            <div class="form-group">
+            <label for="password" class="form-label">Enter Your password</label>
+                    <input type="password"id="password" class="form-control" 
+                    placeholder="enter your user password" autocomplete="off"
+                     required="required" name="password">
             </div>
             <div class="form-group">
-                <label for="contact">Contact No</label>
-                <input type="text" id="contact" name="contact" required>
+            <input type="password"id="confirm_password" class="form-control" 
+                    placeholder=" confirm_password" autocomplete="off"
+                     required="required" name="confirm_password" onkeyup="check(this)">
+                     <error id="alert" class="text-danger"></error>
             </div>
-            <div class="form-group">
-                <label for="password" >Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
-            </div>
-            <button type="submit">Register</button>
+            <button type="submit" type="submit"  name="user_registration">Register</button>
            <!-- <h6 style="color: #f3f1f1; margin-top:10px;">if you apready have an account? </h6><a href="./login.php"> login </a> -->
 
            <h6 style="color: #f3f1f1; margin-top: 20px; display: inline;">
@@ -163,5 +168,88 @@
             this.querySelector('ul').classList.toggle('show');
         });</script>
 </body>
+
+
+<script type="text/javascript">
+
+var user_password=document.getElementById('password');
+var flag=1;
+function check(elem){
+if(elem.value.length>0){
+  if(elem.value!=password.value){
+    document.getElementById('alert').innerText="confirm Password does not Match";
+  }
+  else{
+    document.getElementById('alert').innerText=""; 
+  }
+
+}
+else{
+  document.getElementById('alert').innerText="please enter confirm password"; 
+}
+}
+function validate(){
+  if(flag==1){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+</script>
+
 </html>
+
+
+
+<?php
+
+include("dbcon.php");
+
+if (isset($_POST['user_registration'])) {
+	
+	$user_name =  $_POST['user_name'];
+  $email =  $_POST['email'];
+  $password =  $_POST['password'];
+	$confirm_password =  $_POST['confirm_password'];
+
+  /* New code
+
+  $duplicate=mysqli_query($con,"select * from user_register where user_username='$user_username'or user_email='$user_email'");
+  if(mysquli_num_rows( $duplicate>0)){
+ echo"<script>alert('Username and email already taken')</script>";
+  }
+  else{
+    if( $user_password ==$conf_user_password ){
+      $sql="imsert into user_register values('','$user_username','$user_email','$user_password','$conf_user_password','$user_address','$user_contact')";
+      mysqli_query($con,$sql);
+      echo"<script>alert('Registration Successful');</script>";
+    }
+    else{
+      echo"<script>alert('Password does not match');</script>";
+    }
+  }*/
+         
+		$sql= "INSERT INTO user_registration (`user_name`,`email`, `password`, `confirm_password`)VALUES ('$user_name','$email', '$password', '$confirm_password')";
+		
+         if($con->query($sql))
+        {
+            echo    '<script type="text/javascript">
+                    alert ("Registration Successfully Complete..👍");
+                    window.location="user_login.php";
+                    </script>';
+        }
+        else
+        {
+            echo    '<script type="text/javascript">
+            alert ("Registration Unsuccessful...!");
+            window.location="registration.php";
+            </script>';
+        }
+}
+
+
+
+?>
 
