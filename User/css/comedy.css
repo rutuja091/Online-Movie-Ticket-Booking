@@ -17,9 +17,11 @@ h1 {
 h2 {
     font-size: 32px;
 }
-
-.card-container {
+.card-container{
     display: flex;
+}
+.card-container{
+    
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
@@ -27,10 +29,10 @@ h2 {
     
 }
 
+
 .movie-card {
     background-color: #333;
     color: #ffff;
-   
     overflow: hidden;
     width: 300px;
     transition: transform 0.3s;
@@ -125,3 +127,12 @@ h2 {
     margin: 2px 0;
     font-size:25px ;
 }
+
+
+
+
+
+
+
+
+

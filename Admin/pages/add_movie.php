@@ -28,29 +28,47 @@
       <!-- Main Content -->
        <div class="container1">
     
-    <form class="movie-form" action="/submit-movie" method="POST" enctype="multipart/form-data">
+    <form class="movie-form" action="add_movie.php" method="POST" enctype="multipart/form-data">
         <h2> Add Movie Details</h2>
         <div class="form-group">
-            <label for="movie-image">Movie Image:</label>
-            <input type="file" id="movie-image" name="movie-image" accept="image/*" required>
+            <label for="image">Movie Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" >
         </div>
         <div class="form-group">
-            <label for="movie-name">Movie Name:</label>
-            <input type="text" id="movie-name" name="movie-name" required>
+            <label for="name">Movie Name:</label>
+            <input type="text" id="name" name="name" required>
         </div>
         <div class="form-group">
-            <label for="movie-description">Movie Description:</label>
-            <textarea id="movie-description" name="movie-description" rows="4" required></textarea>
+            <label for="description">Movie Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
         </div>
         <div class="form-group">
-            <label for="ticket-price">Ticket Price:</label>
-            <input type="number" id="ticket-price" name="ticket-price" step="0.01" required>
+            <label for="price">Ticket Price:</label>
+            <input type="number" id="price" name="price" step="0.01" required>
         </div>
         <div class="form-group">
-            <label for="show-time">Show Time:</label>
-            <input type="datetime-local" id="show-time" name="show-time" required>
+            <label for="time">Show Time:</label>
+            <input type="datetime-local" id="time" name="time" required>
         </div>
-        <button type="submit" class="button1">Add Movie</button>
+         
+        <div class="form-group">
+                    <label for="category" class="form-label">Movie Category</label>
+                    <select type="text"id="category" class="form-control" 
+                    placeholder="Movie category" autocomplete="off"
+                     required="required" name="category"  >
+                     <option></option>
+                     <option>Marathi Movie</option>
+                     <option>Hindi Movie</option>
+                     <option>English Movie</option>
+                     <option>Comedy Movie</option>
+                     <option>Kids Movie</option>
+                     <option>Drama</option>
+                     </select>
+                        
+                    
+                </div>
+
+        <button type="submit" name="submit" class="button1">Add Movie</button>
     </form>
 </div>
 
@@ -130,3 +148,50 @@
 <script src="script.js"></script>
 </body>
 </html>
+
+
+
+<?php
+
+
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+//Database connection 
+
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
+
+
+$msg = "";
+if(isset($_POST["submit"]))
+{    $image = $_FILES['image']['name'];
+  $target = "images/".basename($image);
+
+    
+     $name =$_POST["name"];
+	   $description=$_POST["description"];
+     $time=$_POST["time"];
+     $price=$_POST["price"];
+     $category=$_POST["category"];
+    
+
+     $sql = "INSERT INTO movies(`image`, `name`, `description`, `time`, `price`, `category`)
+     VALUES ('$image', '$name', '$description', '$time', '$price', '$category')";
+
+		
+mysqli_query($con, $sql); 
+ 
+if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+  $msg = "Image uploaded successfully";
+}else{
+  $msg = "Failed to upload image";
+}
+
+
+$result = mysqli_query($con, "SELECT * FROM movies");
+
+
+}
+?>

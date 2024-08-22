@@ -49,25 +49,61 @@
 
 
 
-   <div class="centered-content">
-        <h3>Kids Show</h3>
+  
+<div class="centered-content">
+        <h3>Kids Movies</h3>
        
     </div>
-<div class="card-container">
+
+    <div class="card-container">
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+//Database connection 
+
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
+
+// Fetch data in descending order (lastest entry first)
+$sql = "SELECT * FROM movies WHERE category='Kids Movie' ORDER BY id DESC ";
+$query_run=mysqli_query($con,$sql);
+$check_movie=mysqli_num_rows($query_run)>0;
+
+ if($check_movie)
+ {
+ while($row=mysqli_fetch_array($query_run))
+ {
+  ?>
+ 
+
         
         <div class="movie-card">
-            <img src="./../../Images/Movies/stargirl.jpg" alt="Movie 2">
+            <img src="./../../Images/Movies/double-life.jpg" alt="Movie 2">
             <div class="card-content">
-                <h3> Star Girl</h3>
-                <p>  The plot is decent about a coming of age story. Involving a teenage boy who is struggling from a loss. Who meets .
-                    </p>
-                    <p class="movie-genre">Show-time:9:00 to 12:00</p>
-                    <p class="movie-duration">price: ₹500</p>
+                <h3><?php echo $row['name'];?></h3>
+                <p><?php echo $row['description'];?></p>
+                    <p class="movie-genre"><?php echo $row['time'];?></p>
+                    <p class="movie-duration"><?php echo $row['price'];?></p>
                 <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
               </div>
+            
 
-        <div class="movie-card">
+  <?php
+
+ 
+
+}
+
+
+ 
+ }
+?>
+</div>
+
+        <!-- <div class="movie-card">
             <img src="./../../Images/Movies/Frozen.jpg" alt="Movie 2">
             <div class="card-content">
                 <h3> Frozen</h3>
@@ -101,8 +137,8 @@
                 <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
         </div>
-        <!-- Add more movie cards as needed -->
-      </div>
+       
+      </div> -->
 
  <!-- Footer -->
  <div class="footer">

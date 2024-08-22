@@ -69,7 +69,7 @@
             <h6 style="color: #f3f1f1; margin-top: 20px; display: inline;">
              if not have account &nbsp;
            </h6>
-          <a href="./register.php" style="color: white; text-decoration: none; display: inline; margin-left: 5px;">
+          <a href=".\..\..\User\pages\registration.php" style="color: white; text-decoration: none; display: inline; margin-left: 5px;">
             Register
             </a>
         </form>
@@ -155,4 +155,45 @@
         });</script>
 </body>
 </html>
+
+
+
+
+<?php
+session_start();
+include('db_connect.php');
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Prevent SQL injection
+    $username = mysqli_real_escape_string($conn, $username);
+    $password = mysqli_real_escape_string($conn, $password);
+
+    // Hashing the password before checking (if the password is hashed in the database)
+    //$password = md5($password);
+
+    // Query to check if the user exists
+    $sql = "SELECT id, username FROM users WHERE username = '$username' AND password = '$password'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows == 1) {
+        // User exists, set session variables
+        $row = $result->fetch_assoc();
+        $_SESSION['userid'] = $row['id'];
+        $_SESSION['username'] = $row['username'];
+
+        // Redirect to index.php
+        header("Location: ./../../index1.php");
+        exit();
+    } else {
+        // If login fails
+        echo "<script>alert('Invalid Username or Password!'); window.location.href='login.php';</script>";
+    }
+}
+
+$conn->close();
+?>
+
 

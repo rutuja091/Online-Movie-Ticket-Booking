@@ -47,24 +47,63 @@
 </nav>
 
 <!-- end nav -->
-  <div class="centered-content">
-        <h3>Marathi Movies</h3>
+ 
+  
+<div class="centered-content">
+        <h3>Marathi Movies
+        </h3>
        
     </div>
-<div class="card-container">
+
+    <div class="card-container">
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+//Database connection 
+
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
+
+// Fetch data in descending order (lastest entry first)
+$sql = "SELECT * FROM movies WHERE category='Marathi Movie' ORDER BY id DESC ";
+$query_run=mysqli_query($con,$sql);
+$check_movie=mysqli_num_rows($query_run)>0;
+
+ if($check_movie)
+ {
+ while($row=mysqli_fetch_array($query_run))
+ {
+  ?>
+ 
+
         
         <div class="movie-card">
-            <img src="./../../Images/Movies/journy.jpg" alt="Movie 2">
+            <img src="./../../Images/Movies/double-life.jpg" alt="Movie 2">
             <div class="card-content">
-                <h3>जर्नी </h3>
-                <p> The Journey is an example of speculative historical fiction at its most entertaining.
-                    This is an actors' movie .</p>
-                    <p class="movie-genre">Show-time:9:00 to 12:00</p>
-                    <p class="movie-duration">price: ₹250</p>
+                <h3><?php echo $row['name'];?></h3>
+                <p><?php echo $row['description'];?></p>
+                    <p class="movie-genre"><?php echo $row['time'];?></p>
+                    <p class="movie-duration"><?php echo $row['price'];?></p>
                 <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
               </div>
+            
 
+  <?php
+
+ 
+
+}
+
+
+ 
+ }
+?>
+</div>
+
+<!-- 
         <div class="movie-card">
             <img src="./../../Images/Movies/kasturi.jpg" alt="Movie 2">
             <div class="card-content">
@@ -101,9 +140,9 @@
                 <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
         </div>
-        <!-- Add more movie cards as needed -->
+      
 
-   </div>
+   </div> -->
 
    <!-- Footer -->
    <div class="footer">

@@ -50,7 +50,68 @@
 <!-- end nav -->
 
 
-    <div class="centered-content">
+<div class="centered-content">
+        <h3>Comedy Show</h3>
+       
+    </div>
+
+    <div class="card-container">
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+//Database connection 
+
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
+
+// Fetch data in descending order (lastest entry first)
+$sql = "SELECT * FROM movies WHERE category='Comedy Movie' ORDER BY id DESC ";
+$query_run=mysqli_query($con,$sql);
+$check_movie=mysqli_num_rows($query_run)>0;
+
+ if($check_movie)
+ {
+ while($row=mysqli_fetch_array($query_run))
+ {
+  ?>
+ 
+
+        
+        <div class="movie-card">
+            <img src="./../../Images/Movies/double-life.jpg" alt="Movie 2">
+            <div class="card-content">
+                <h3><?php echo $row['name'];?></h3>
+                <p><?php echo $row['description'];?></p>
+                    <p class="movie-genre"><?php echo $row['time'];?></p>
+                    <p class="movie-duration"><?php echo $row['price'];?></p>
+                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
+            </div>
+              </div>
+            
+
+  <?php
+
+ 
+
+}
+
+
+ 
+ }
+?>
+</div>
+
+
+
+
+
+
+
+
+
+    <!-- <div class="centered-content">
         <h3>Comedy Show</h3>
        
     </div>
@@ -59,11 +120,10 @@
         <div class="movie-card">
             <img src="./../../Images/Movies/double-life.jpg" alt="Movie 2">
             <div class="card-content">
-                <h3> Double Life</h3>
-                <p>  Convoluted, clunky and increasingly implausible with waning suspense and poor use of exposition.
-                    </p>
-                    <p class="movie-genre">Show-time:9:00 to 12:00</p>
-                    <p class="movie-duration">price: ₹500</p>
+                <h3></h3>
+                <p></p>
+                    <p class="movie-genre"></p>
+                    <p class="movie-duration"></p>
                 <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
               </div>
@@ -103,10 +163,10 @@
                 <a href=".\movie-details.php" class="book-button">Book Ticket</a>
             </div>
         </div>
-        <!-- Add more movie cards as needed -->
+       
 
         
-    </div>
+    </div> -->
 
 
 
