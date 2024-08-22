@@ -1,3 +1,19 @@
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+//Database connection 
+
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
+
+// Fetch data in descending order (lastest entry first)
+$sql = "SELECT * FROM user_registration ORDER BY id DESC";
+ $query= $con->query($sql)
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +52,7 @@
                     <th>User Id</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>contact</th>
+                  
                     <th>Password</th>
                     <th>confirm Password</th>
                    
@@ -44,44 +60,38 @@
             </thead>
             <tbody>
             <tr>
-                    
-                    <td>1</td>
-                    <td>name</td>
-                    <td>abc@gmail.com</td>
-                    <td>1234567890</td>
-                    <td>pass123</td>
-                    <td>pass123</td>
-                   
-               
-                </tr>
+            <?php
 
-                <tr>
-                    
-                    <td>2</td>
-                    <td>tom</td>
-                    <td>tom@gmail.com</td>
-                    <td>1234567890</td>
-                    <td>tom6</td>
-                    <td>tom6</td>
-                  
-                 
-                </tr>
 
-                <tr>
-                    
-                    <td>3</td>
-                    <td>sai</td>
-                    <td>sai@gmail.com</td>
-                    <td>1234567890</td>
-                    <td>sai7</td>
-                    <td>sai7</td>
-                  
-                 
-                </tr>
-                <!-- Repeat <tr> for more rows -->
+// Fetch the next row of a result set as an associative array
+$i=0;
+while ($res = $query->fetch_assoc())
+ {
+  echo "<tr>";
+  echo" <td >".++$i."</td>";
+  echo "<td>".$res['user_name']."</td>";
+  echo "<td>".$res['email']."</td>";
+  echo "<td>".$res['password']."</td>";
+  echo "<td>".$res['confirm_password']."</td>";
+
+  echo "</tr>";
+}
+  
+?>
+
+  </tr>
+     <!-- Repeat <tr> for more rows -->
             </tbody>
         </table>
     </div>
+    <div class="script-container">
+                    <script>
+
+if (window.print) { 
+document.write('<form class=script-text>Click Here To Print Report 👉 ' + '<input  class=btn1  type=button name=print value="Print" ' + 'onClick="javascript:window.print()"> </form>'); 
+}
+</script>
+</div>
    
   <!-- Footer -->
       <div class="footer">

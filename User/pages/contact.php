@@ -57,7 +57,7 @@
 
 <div class="feedback-form">
         <h2>Give Feedback</h2>
-        <form>
+        <form action="" method="post">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -75,7 +75,7 @@
                 <textarea id="message" name="message" required></textarea>
             </div>
             <div class="form-group">
-                <button type="submit">Submit</button>
+                <button type="submit" name="submit">Submit</button>
             </div>
         </form>
 </div>
@@ -182,3 +182,34 @@
         });</script>
 </body>
 </html>
+<?php
+
+include("dbcon.php");
+
+if (isset($_POST['submit'])) {
+	
+	$name =  $_POST['name'];
+  $email =  $_POST['email'];
+  $subject =  $_POST['subject'];
+	$message =  $_POST['message'];
+	
+ 
+         
+		$sql= "INSERT INTO  user_feedback(`name`,`email`, `subject`, `message`)VALUES ('$name','$email', '$subject','$message')";
+		
+         if($con->query($sql))
+        {
+            echo    '<script type="text/javascript">
+                    alert ("Feedback send Successfully ..👍");
+                    window.location="contact.php";
+                    </script>';
+        }
+        else
+        {
+            echo    '<script type="text/javascript">
+            alert ("Feedback not send...!");
+            window.location="contact.php";
+            </script>';
+        }
+}
+?>
