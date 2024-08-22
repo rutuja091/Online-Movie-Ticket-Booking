@@ -237,7 +237,7 @@ if (isset($_POST['user_registration'])) {
         {
             echo    '<script type="text/javascript">
                     alert ("Registration Successfully Complete..👍");
-                    window.location="user_login.php";
+                    window.location="login.php";
                     </script>';
         }
         else

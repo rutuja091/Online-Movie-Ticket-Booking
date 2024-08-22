@@ -1,3 +1,18 @@
+
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+//Database connection 
+
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
+
+// Fetch data in descending order (lastest entry first)
+$sql = "SELECT * FROM user_registration ORDER BY id DESC";
+ $query= $con->query($sql)
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +51,7 @@
                     <th>User Id</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>contact</th>
+                 
                     <th>Password</th>
                     <th>confirm password</th>
                     
@@ -46,48 +61,36 @@
             <tbody>
                 <tr>
                     
-                    <td>1</td>
-                    <td>name</td>
-                    <td>abc@gmail.com</td>
-                    <td>1234567890</td>
-                    <td>pass123</td>
-                    <td>pass123</td>
-                    
-                    <td>
-                 <a href="./update-registration.php">   <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;"></a>
-                    <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
-                    </td>
-                </tr>
+                <?php
 
-                <tr>
-                    
-                    <td>2</td>
-                    <td>tom</td>
-                    <td>tom@gmail.com</td>
-                    <td>1234567890</td>
-                    <td>abc123</td>
-                    <td>abc123</td>
-                   
-                    <td>
-                 <a href="./update-registration.php">   <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;"></a>
-                    <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
-                    </td>
-                </tr>
 
-                <tr>
-                    
-                    <td>3</td>
-                    <td>sai</td>
-                    <td>sai@gmail.com</td>
-                    <td>1234567890</td>
-                    <td>sai7</td>
-                    <td>sai7</td>
-                   
+// Fetch the next row of a result set as an associative array
+$i=0;
+while ($res = $query->fetch_assoc())
+ {
+  echo "<tr>";
+  echo" <td >".++$i."</td>";
+  echo "<td>".$res['user_name']."</td>";
+  echo "<td>".$res['email']."</td>";
+  echo "<td>".$res['password']."</td>";
+  echo "<td>".$res['confirm_password']."</td>";
+  echo "<td>";
+  echo "<a href='./update-registration.php?id=".$res['id']."'>
+          <img src='.\..\..\Images\admin-images\edit2.png' alt='Edit' class='icon' style='height:40px;'>
+        </a>";
+  echo "<a href='./delete-registration.php?id=".$res['id']."'>
+          <img src='.\..\..\Images\admin-images\delete.png' alt='Delete' class='icon' style='height:40px;'>
+        </a>";
+  echo "</td>";
+  echo "</tr>";
+}
+  
+?>
                     <td>
                  <a href="./update-registration.php">   <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;"></a>
                     <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
                     </td>
-                </tr>
+
                 <!-- Repeat <tr> for more rows -->
             </tbody>
         </table>

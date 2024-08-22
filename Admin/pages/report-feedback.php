@@ -1,3 +1,20 @@
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+//Database connection 
+
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
+
+// Fetch data in descending order (lastest entry first)
+$sql = "SELECT * FROM user_feedback ORDER BY id DESC";
+ $query= $con->query($sql)
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,49 +61,44 @@
             </thead>
             <tbody>
                 <tr>
-                   <td>1</td>
-                    <td>name</td>
-                    <td>abc@gmail.com</td>
-                    <td>hello</td>
-                    <td>abc..</td>
+                <?php
+
+
+// Fetch the next row of a result set as an associative array
+$i=0;
+while ($res = $query->fetch_assoc())
+ {
+  echo "<tr>";
+  echo" <td >".++$i."</td>";
+  echo "<td>".$res['name']."</td>";
+  echo "<td>".$res['email']."</td>";
+  echo "<td>".$res['subject']."</td>";
+  //echo "<td>".$res['conf_user_password']."</td>";
+  echo "<td>".$res['message']."</td>";
+//echo "<td><a href=\"edit.php?id=$res[id]\">Edit</a></td>";
+
+
+		
+  echo "</tr>";	
+}
+  
+?>
                  
-                </tr>
+</tr>
 
-
-
-                <tr>
-                   <td>1</td>
-                    <td>name</td>
-                    <td>abc@gmail.com</td>
-                    <td>hello</td>
-                    <td>abc..</td>
-                   
-                  
-                </tr>
-
-                <tr>
-                   <td>1</td>
-                    <td>name</td>
-                    <td>abc@gmail.com</td>
-                    <td>hello</td>
-                    <td>abc..</td>
-                   
-                 
-                </tr>
-
-                <tr>
-                   <td>1</td>
-                    <td>name</td>
-                    <td>abc@gmail.com</td>
-                    <td>hello</td>
-                    <td>abc..</td>
-                   
-                  
-                </tr>
-                <!-- Repeat <tr> for more rows -->
+  <!-- Repeat <tr> for more rows -->
             </tbody>
         </table>
     </div>
+
+    <div class="script-container">
+                    <script>
+
+if (window.print) { 
+document.write('<form class=script-text>Click Here To Print Report 👉 ' + '<input  class=btn1  type=button name=print value="Print" ' + 'onClick="javascript:window.print()"> </form>'); 
+}
+</script>
+</div>
 
    
    <!-- Footer -->
