@@ -1,129 +1,126 @@
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+//Database connection 
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
+
+// Get id from URL parameter
+$id = $_GET['id'];
+
+// Select data associated with this particular id
+$sql = "SELECT * FROM user_registration WHERE id = $id";
+$query = $con->query($sql);
+
+// Fetch the next row of a result set as an associative array
+$resultData = $query->fetch_assoc();
+
+$user_name = $resultData['user_name'];
+$email = $resultData['email'];
+$password = $resultData['password'];
+$confirm_password = $resultData['confirm_password'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Ticket Booking</title>
-  
+    <title>Edit Registration</title>
     <link rel="stylesheet" href="./../css/registration.css">
     <link rel="stylesheet" href="./../css/addmovie.css">
-
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <!--- Header --->
+    <!-- Header -->
     <header class="header">
         <div class="logo"><img src=".\..\..\Images\logo2.png" class="logo-img"></div>
         <nav class="nav">
-        <ul>
-            <li><a href="./admin-dashboard.php" style="margin-right:50px; font-size:30px;" >Home</a></li>
-            
-            <div class="d-flex align-items-center">
-            <a href="./login.php" class="btn btn-outline-primary">
-        <i class="bi bi-person"></i><img src =".\..\..\Images\login.png" style="height:40px;"> 
-      </a>
-    </div>
+            <ul>
+                <li><a href="./admin-dashboard.php" style="margin-right:50px; font-size:30px;">Home</a></li>
+                <div class="d-flex align-items-center">
+                    <a href="./login.php" class="btn btn-outline-primary">
+                        <i class="bi bi-person"></i><img src=".\\..\\..\\Images\\login.png" style="height:40px;">
+                    </a>
+                </div>
             </ul>
         </nav>
     </header>
 
-        <!-- Main Content -->
-        <main>
-    <div class="container">
-        <form class="registration-form">
-            <h2>Register</h2>
-            <div class="form-group">
-                <label for="username" style="color=#ffffff;">Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div class="form-group">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
-            </div>
-            <button type="submit">Register</button>
-        </form>
-    </div>
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <form class="registration-form" action="Update_registration.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
+                <h2>Edit Registration</h2>
+                <div class="form-group">
+                    <label for="user_name" class="form-label">Username</label>
+                    <input type="text" id="user_name" class="form-control" name="user_name" value="<?php echo $user_name; ?>" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control" name="email" value="<?php echo $email; ?>" required>
+                </div>
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-control" name="password" value="<?php echo $password; ?>" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password" class="form-label">Confirm Password</label>
+                    <input type="password" id="confirm_password" class="form-control" name="confirm_password" value="<?php echo $confirm_password; ?>" required>
+                </div>
+                <div class="mt-4 pt-2">
+                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+                    <input type="submit" value="Update" class="bg-info py-2 px-3 border-0" name="user_register">
+                </div>
+            </form>
+        </div>
+
+        <?php
+        if (isset($_POST['user_register'])) {
+            $id = $_POST['id'];
+            $user_name = $_POST['user_name'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $confirm_password = $_POST['confirm_password'];
+
+            $sql = "UPDATE user_registration SET user_name = '$user_name', email = '$email', password = '$password', confirm_password = '$confirm_password' WHERE id = $id";
+
+            if ($con->query($sql)) {
+                echo '<script type="text/javascript">
+                        alert("Record Updated!!");
+                        window.location="manage-registration.php";
+                      </script>';
+            } else {
+                echo '<script type="text/javascript">
+                        alert("Record Not Updated");
+                        window.location="update-registration.php?id=$id";
+                      </script>';
+            }
+        }
+        ?>
     </main>
-   
-   <!-- Footer -->
-<div class="footer">
-    <div class="containers"style="background-color:black;">
-        <div class="row">
-            <div class="col-md-4">
-                <h3 class="footer-title">STARLIGHT CINEMA</h3>
-                <p>Buy movie tickets easily with Aovis system nationwide</p>
-                <a href="#" class="btn btn-warning">Get Your Ticket</a>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container" style="background-color:black;">
+            <div class="row">
+                <!-- Footer content here -->
             </div>
-            <div class="col-md-2">
-                <h5 class="footer-title">Movies</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Adventure</a></li>
-                    <li><a href="#">Animation</a></li>
-                    <li><a href="#">Comedy</a></li>
-                    <li><a href="#">Crime</a></li>
-                </ul>
+            <div class="text-center mt-4">
+                <p>&copy;Copyright 2023 by Ovatheme.com</p>
             </div>
-            <div class="col-md-2">
-                <h5 class="footer-title">Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">My Account</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Latest Events</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                </div>
-            <div class="col-md-4">
-                <h5 class="footer-title">Newsletter</h5>
-                <p>Subscribe to Leitmotif newsletter this very day.</p>
-                <div class="newsletter">
-                    <input type="email" class="form-control" placeholder="Email Address" style="width:350px">
-                    <button class="btn btn-warning mt-2" style="width:150px">Subscribe</button>
-                </div>
-                <div class="mt-2">
-                    <input type="checkbox" id="terms">
-                    <label for="terms">I agree to all terms and policies of the company</label>
-                </div>
-                <div class="social-icons mt-3">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-4">
-            <p> &copy;Copyright 2023 by Ovatheme.com</p>
         </div>
     </div>
-</div>
 
-
-
-<!-- Font Awesome for social media icons -->
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-  <!-- Font Awesome CDN for social media icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
