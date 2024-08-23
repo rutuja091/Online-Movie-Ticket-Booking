@@ -169,3 +169,17 @@ body {
     font-weight: bold;
     text-align: center;
 }
+
+.centered-content {
+    text-align: center;
+    margin-top: 50px;
+}
+.card-container{
+    
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    display:flex;
+    
+}
