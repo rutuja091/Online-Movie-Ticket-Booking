@@ -80,7 +80,8 @@ $check_movie=mysqli_num_rows($query_run)>0;
 
         
         <div class="movie-card">
-            <img src="./../../Images/Movies/double-life.jpg" alt="Movie 2">
+            <img src="./../../Images/Movies/<?php echo $row['image'];?>" alt="Movie 2">
+         
             <div class="card-content">
                 <h3><?php echo $row['name'];?></h3>
                 <p><?php echo $row['description'];?></p>

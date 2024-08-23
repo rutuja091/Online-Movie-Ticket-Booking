@@ -166,8 +166,9 @@ $con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseN
 
 $msg = "";
 if(isset($_POST["submit"]))
-{    $image = $_FILES['image']['name'];
-  $target = "images/".basename($image);
+{ 
+  $image = $_FILES['image']['name'];
+  $target = "Images/".basename($image);
 
     
      $name =$_POST["name"];
@@ -185,7 +186,8 @@ mysqli_query($con, $sql);
  
 if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
   $msg = "Image uploaded successfully";
-}else{
+}
+else{
   $msg = "Failed to upload image";
 }
 
