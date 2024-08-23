@@ -82,17 +82,23 @@ $check_movie=mysqli_num_rows($query_run)>0;
  {
   ?>
  
-
-        
-        <div class="gallery-item">
+       <div class="gallery-item">
             <img src="./../../Images/User-images/gallery/<?php echo $row['image'];?>" alt="Movie 2">
-         
+            <div class="overlay">
             <div class="text">
                 <h3><?php echo $row['name'];?></h3>
+            </div >
               
             </div>
-              </div>
+              </div> 
+
+        
+
             
+
+             
+         
+           
 
   <?php
 
