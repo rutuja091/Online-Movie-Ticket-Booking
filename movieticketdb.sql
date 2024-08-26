@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 22, 2024 at 07:58 PM
+-- Generation Time: Aug 26, 2024 at 06:04 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -24,6 +24,30 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id` int(11) NOT NULL,
+  `image` text NOT NULL,
+  `name` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `image`, `name`) VALUES
+(1, 'img12.jpeg', 'show'),
+(2, 'img1.jpg', 'front area'),
+(3, 'img4.jpg', 'Light'),
+(4, 'img3.jpg', 'stage'),
+(5, 'img9.jpg', 'theater'),
+(6, 'img5.jpg', 'stage');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `movies`
 --
 
@@ -34,15 +58,18 @@ CREATE TABLE `movies` (
   `description` text NOT NULL,
   `time` text NOT NULL,
   `price` text NOT NULL,
-  `category` text NOT NULL
+  `category` text NOT NULL,
+  `duration` text NOT NULL,
+  `date` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `movies`
 --
 
-INSERT INTO `movies` (`id`, `image`, `name`, `description`, `time`, `price`, `category`) VALUES
-(1, '', 'abc', 'asd', '2024-08-29T23:27', '123', 'Marathi Movie');
+INSERT INTO `movies` (`id`, `image`, `name`, `description`, `time`, `price`, `category`, `duration`, `date`) VALUES
+(1, '', 'abc', 'asd', '2024-08-29T23:27', '123', 'Marathi Movie', '', ''),
+(3, '[value-2]', '[value-3]', '[value-4]', '[value-5]', '[value-6]', '[value-7]', '', '');
 
 -- --------------------------------------------------------
 
@@ -95,6 +122,12 @@ INSERT INTO `user_registration` (`id`, `user_name`, `email`, `password`, `confir
 --
 
 --
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `movies`
 --
 ALTER TABLE `movies`
@@ -117,10 +150,16 @@ ALTER TABLE `user_registration`
 --
 
 --
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user_feedback`
