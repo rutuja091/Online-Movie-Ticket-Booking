@@ -111,38 +111,51 @@
     <h5>Watch new movies</h5>
     <h2>Movie Now Playing</h2>
 </div>
+
 <div class="card-container">
-    <div class="movie-card">
-        <img src=".\homepage\kill.jpg" alt="Auron Mein Kahan Dum Tha">
-        <div class="card-content">
-            <h3>Kill</h3>
-            <p>Army commando Amrit (Lakshya) finds out his true love Tulika (Tanya Maniktala) is en-route, he boards a New Delhi-bound train in a daring quest to derail the their eventual seperation.</p>
-            <div class="movie-details">
-                <p><strong>Release Date:</strong> August 15, 2024</p>
-                <p><strong>Duration:</strong> 120 min</p>
-                
-                <p><strong>Showtimes:</strong> 2:00 PM, 5:00 PM, 8:00 PM</p>
-            </div>
-            <a href="#" class="book-button">Book Ticket</a>
-        </div>
-    </div>
 
-    <div class="movie-card">
-        <img src=".\homepage\golmal.jpg" alt="Maidan">
-        <div class="card-content">
-            <h3>Golmal</h3>
-            <p>Gopal`s life hits choppy waters when he gets stuck on a boat one night after saving a woman from goons. Now his wife suspects he`s having an affair and a policeman is on his tail.</p>
-            <div class="movie-details">
-                <p><strong>Release Date:</strong> August 22, 2024</p>
-                <p><strong>Duration:</strong> 150 min</p>
-                
-                <p><strong>Showtimes:</strong> 1:00 PM, 4:00 PM, 7:00 PM</p>
-            </div>
-            <a href="#" class="book-button">Book Ticket</a>
-        </div>
-    </div>
+   
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
 
-    <div class="movie-card">
+//Database connection 
+
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
+
+// Fetch data in descending order (lastest entry first)
+$sql = "SELECT * FROM movies WHERE category='Now Playing' ORDER BY id DESC ";
+$query_run=mysqli_query($con,$sql);
+$check_movie=mysqli_num_rows($query_run)>0;
+
+ if($check_movie)
+ {
+ while($row=mysqli_fetch_array($query_run))
+ {
+  ?>    
+  <div class="movie-card">
+        <img src=".\Images\homepage\<?php echo $row['image'];?>" alt="Maidan">
+        <div class="card-content">
+            <h3><?php echo $row['name'];?></h3>
+            <p><?php echo $row['description'];?></p>
+            <div class="movie-details">
+                <p><strong>Release Date:</strong> <?php echo $row['date'];?></p>
+                <p><strong>Duration:</strong> <?php echo $row['duration'];?></p>
+                
+                <p><strong>Showtimes:</strong><?php echo $row['time'];?></p>
+            </div>
+            <?php  echo "<a href='.\movie-details.php?id=$row[id]' class='book-button'>Book Ticket</a>";?>
+        </div>
+        </div>
+        <?php
+}
+ }
+?>
+</div>
+
+     <!--  <div class="movie-card">
         <img src=".\homepage\sarfira.jpg" alt="Do Aur Do Pyaar">
         <div class="card-content">
             <h3>Safira</h3>
@@ -171,10 +184,10 @@
             <a href="#" class="book-button">Book Ticket</a>
         </div>
     </div>
-    <!-- Add more movie cards as needed -->
+    
 </div>
 
-
+ -->
 
 
 
@@ -183,22 +196,40 @@
         <h2>Movies Coming Soon</h2>
     </div>
     <div class="card-container">
+
+        <?php
+    $sql = "SELECT * FROM movies WHERE category='Comming Soon' ORDER BY id DESC ";
+$query_run=mysqli_query($con,$sql);
+$check_movie=mysqli_num_rows($query_run)>0;
+
+ if($check_movie)
+ {
+ while($row=mysqli_fetch_array($query_run))
+ {
+  ?>  
+  
+  
+ 
     <div class="movie-card">
-        <img src=".\homepage\auro-me-kaha-dum-tha.jpg" alt="Auron Mein Kahan Dum Tha">
+        <img src=".\Images\homepage\<?php echo $row['image'];?>" alt="Auron Mein Kahan Dum Tha">
         <div class="card-content">
-            <h3>Auron Mein Kahan Dum Tha</h3>
-            <p>Auron Mein Kaha Dum Tha', is an epic love story that chronicles the life of Krishna and Vasudha as their fledgling relationship faces a lot of hardship and eventually...</p>
+            <h3><?php echo $row['name'];?></h3>
+            <p><?php echo $row['description'];?></p>
             <div class="movie-details">
-                <p><strong>Release Date:</strong> August 15, 2024</p>
-                <p><strong>Duration:</strong> 120 min</p>
+                <p><strong>Release Date:</strong>  <?php echo $row['date'];?></p>
+                <p><strong>Duration:</strong> <?php echo $row['duration'];?></p>
                 
-                <p><strong>Showtimes:</strong> 2:00 PM, 5:00 PM, 8:00 PM</p>
+                <p><strong>Showtimes:</strong> <?php echo $row['time'];?></p>
             </div>
-            <a href="#" class="book-button">Book Ticket</a>
+            <?php  echo "<a href='.\movie-details.php?id=$row[id]' class='book-button'>Book Ticket</a>";?>
         </div>
+        <?php
+}
+ }
+?>
     </div>
 
-    <div class="movie-card">
+    <!-- <div class="movie-card">
         <img src=".\homepage\maidan.jpeg" alt="Maidan">
         <div class="card-content">
             <h3>Maidan</h3>
@@ -242,8 +273,8 @@
             <a href="#" class="book-button">Book Ticket</a>
         </div>
     </div>
-    <!-- Add more movie cards as needed -->
-</div>
+  
+</div> -->
 
     <div class="cards-container">
         <h2 class="section-title">Top Featured Movies</h2>

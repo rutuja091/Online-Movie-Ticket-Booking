@@ -42,6 +42,15 @@
             <label for="description">Movie Description:</label>
             <textarea id="description" name="description" rows="4" required></textarea>
         </div>
+       <div class="form-group">
+            <label for="date">Release Date</label>
+            <input type="date" id="date" name="date">
+        </div>
+        <div class="form-group">
+            <label for="duration">Duration</label>
+            <input type="text" id="duration" name="duration" >
+        </div>
+
         <div class="form-group">
             <label for="price">Ticket Price:</label>
             <input type="number" id="price" name="price" step="0.01" required>
@@ -179,10 +188,12 @@ if(isset($_POST["submit"]))
      $time=$_POST["time"];
      $price=$_POST["price"];
      $category=$_POST["category"];
+     $duration=$_POST["duration"];
+     $date=$_POST["date"];
     
 
-     $sql = "INSERT INTO movies(`image`, `name`, `description`, `time`, `price`, `category`)
-     VALUES ('$image', '$name', '$description', '$time', '$price', '$category')";
+     $sql = "INSERT INTO movies(`image`, `name`, `description`, `time`, `price`, `category`,`duration`,`date`)
+     VALUES ('$image','$name', '$description', '$time', '$price', '$category','$duration','$date')";
 
 		
 mysqli_query($con, $sql); 
