@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 22, 2024 at 07:58 PM
+-- Generation Time: Aug 26, 2024 at 05:45 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `movieticketdb`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id` int(11) NOT NULL,
+  `image` text NOT NULL,
+  `name` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `image`, `name`) VALUES
+(1, 'img12.jpeg', 'show'),
+(2, 'img1.jpg', 'front area'),
+(3, 'img4.jpg', 'Light'),
+(4, 'img3.jpg', 'stage'),
+(5, 'img9.jpg', 'theater'),
+(6, 'img5.jpg', 'stage');
 
 -- --------------------------------------------------------
 
@@ -95,6 +119,12 @@ INSERT INTO `user_registration` (`id`, `user_name`, `email`, `password`, `confir
 --
 
 --
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `movies`
 --
 ALTER TABLE `movies`
@@ -115,6 +145,12 @@ ALTER TABLE `user_registration`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `movies`
