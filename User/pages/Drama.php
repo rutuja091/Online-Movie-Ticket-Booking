@@ -87,7 +87,7 @@ $check_movie=mysqli_num_rows($query_run)>0;
                 <p><?php echo $row['description'];?></p>
                     <p class="movie-genre"><?php echo $row['time'];?></p>
                     <p class="movie-duration"><?php echo $row['price'];?></p>
-                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
+                    <?php  echo "<a href='.\movie-details.php?id=$row[id]' class='book-button'>Book Ticket</a>";?>
             </div>
               </div>
   <?php

@@ -63,6 +63,9 @@
                      <option>Comedy Movie</option>
                      <option>Kids Movie</option>
                      <option>Drama</option>
+                     <option>Now Playing</option>
+                     <option>Comming Soon</option>
+                    
                      </select>
                         
                     
