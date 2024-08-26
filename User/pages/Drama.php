@@ -57,6 +57,8 @@
     </div>
 
     <div class="card-container">
+
+     
 <?php
 $databaseHost = "localhost";
 $databaseName = "movieticketdb";
@@ -76,32 +78,25 @@ $check_movie=mysqli_num_rows($query_run)>0;
  {
  while($row=mysqli_fetch_array($query_run))
  {
-  ?>
- 
-
-        
+  ?>    
         <div class="movie-card">
-            <img src="./../../Images/Movies/double-life.jpg" alt="Movie 2">
+            <img src="./../../Images/Movies/<?php echo $row['image'];?>" alt="Movie 2">
+         
             <div class="card-content">
                 <h3><?php echo $row['name'];?></h3>
                 <p><?php echo $row['description'];?></p>
                     <p class="movie-genre"><?php echo $row['time'];?></p>
                     <p class="movie-duration"><?php echo $row['price'];?></p>
-                <a href=".\movie-details.php" class="book-button">Book Ticket</a>
+                    <?php  echo "<a href='.\movie-details.php?id=$row[id]' class='book-button'>Book Ticket</a>";?>
             </div>
               </div>
-            
-
   <?php
-
- 
-
 }
-
-
- 
  }
 ?>
+
+
+</div>
 </div>
 
 

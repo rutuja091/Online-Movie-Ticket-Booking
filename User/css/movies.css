@@ -135,6 +135,7 @@ body {
 
 .movie-button {
     background-color: #ff5722;
+    text-decoration: none;
     border: none;
     border-radius: 5px;
     color: white;
@@ -142,6 +143,7 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+     
 }
 
 .movie-button:hover {
