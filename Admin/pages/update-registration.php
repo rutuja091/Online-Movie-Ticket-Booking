@@ -12,7 +12,7 @@ if ($con->connect_error) {
 }
 
 // Get id from URL parameter
-$id = $_GET['id'];
+$id=$_GET['id'];
 
 // Select data associated with this particular id
 $sql = "SELECT * FROM user_registration WHERE id = $id";

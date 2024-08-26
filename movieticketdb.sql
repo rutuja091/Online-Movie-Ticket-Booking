@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 26, 2024 at 05:45 PM
+-- Generation Time: Aug 26, 2024 at 06:04 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -58,15 +58,18 @@ CREATE TABLE `movies` (
   `description` text NOT NULL,
   `time` text NOT NULL,
   `price` text NOT NULL,
-  `category` text NOT NULL
+  `category` text NOT NULL,
+  `duration` text NOT NULL,
+  `date` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `movies`
 --
 
-INSERT INTO `movies` (`id`, `image`, `name`, `description`, `time`, `price`, `category`) VALUES
-(1, '', 'abc', 'asd', '2024-08-29T23:27', '123', 'Marathi Movie');
+INSERT INTO `movies` (`id`, `image`, `name`, `description`, `time`, `price`, `category`, `duration`, `date`) VALUES
+(1, '', 'abc', 'asd', '2024-08-29T23:27', '123', 'Marathi Movie', '', ''),
+(3, '[value-2]', '[value-3]', '[value-4]', '[value-5]', '[value-6]', '[value-7]', '', '');
 
 -- --------------------------------------------------------
 
@@ -156,7 +159,7 @@ ALTER TABLE `gallery`
 -- AUTO_INCREMENT for table `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user_feedback`
