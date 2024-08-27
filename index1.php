@@ -136,7 +136,9 @@ $check_movie=mysqli_num_rows($query_run)>0;
  {
   ?>    
   <div class="movie-card">
-        <img src=".\Images\homepage\<?php echo $row['image'];?>" alt="Maidan">
+  <div class="img-cont" style="height:350px with:100%;padding:5px">
+        <img src=".\Images\homepage\<?php echo $row['image'];?>" style="height:300px; width :100%" alt="Maidan">
+ </div>
         <div class="card-content">
             <h3><?php echo $row['name'];?></h3>
             <p><?php echo $row['description'];?></p>
@@ -146,7 +148,7 @@ $check_movie=mysqli_num_rows($query_run)>0;
                 
                 <p><strong>Showtimes:</strong><?php echo $row['time'];?></p>
             </div>
-            <?php  echo "<a href='.\movie-details.php?id=$row[id]' class='book-button'>Book Ticket</a>";?>
+          <?php /* echo "<a href='.\User\pages\movie-details.php?id=$row[id]' class='book-button'>Book Ticket</a>";*/?> 
         </div>
         </div>
         <?php
@@ -197,8 +199,19 @@ $check_movie=mysqli_num_rows($query_run)>0;
     </div>
     <div class="card-container">
 
-        <?php
-    $sql = "SELECT * FROM movies WHERE category='Comming Soon' ORDER BY id DESC ";
+   
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+//Database connection 
+
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
+
+// Fetch data in descending order (lastest entry first)
+$sql = "SELECT * FROM movies WHERE category='Comming Soon' ORDER BY id DESC ";
 $query_run=mysqli_query($con,$sql);
 $check_movie=mysqli_num_rows($query_run)>0;
 
@@ -206,29 +219,29 @@ $check_movie=mysqli_num_rows($query_run)>0;
  {
  while($row=mysqli_fetch_array($query_run))
  {
-  ?>  
-  
-  
- 
-    <div class="movie-card">
-        <img src=".\Images\homepage\<?php echo $row['image'];?>" alt="Auron Mein Kahan Dum Tha">
+  ?>    
+  <div class="movie-card">
+    <div class="img-cont" style="height:350px with:100%;padding:5px;">
+        <img src=".\Images\homepage\<?php echo $row['image'];?>" style="height:300px; width :100%" alt="Maidan">
+ </div>
         <div class="card-content">
             <h3><?php echo $row['name'];?></h3>
             <p><?php echo $row['description'];?></p>
             <div class="movie-details">
-                <p><strong>Release Date:</strong>  <?php echo $row['date'];?></p>
+                <p><strong>Release Date:</strong> <?php echo $row['date'];?></p>
                 <p><strong>Duration:</strong> <?php echo $row['duration'];?></p>
                 
-                <p><strong>Showtimes:</strong> <?php echo $row['time'];?></p>
+                <p><strong>Showtimes:</strong><?php echo $row['time'];?></p>
             </div>
-            <?php  echo "<a href='.\movie-details.php?id=$row[id]' class='book-button'>Book Ticket</a>";?>
+            <?php /* echo "<a href='.\User\pages\movie-details.php?id=$row[id]' class='book-button'>Book Ticket</a>";*/?>
+            
+        </div>
         </div>
         <?php
 }
  }
 ?>
-    </div>
-
+</div>
     <!-- <div class="movie-card">
         <img src=".\homepage\maidan.jpeg" alt="Maidan">
         <div class="card-content">

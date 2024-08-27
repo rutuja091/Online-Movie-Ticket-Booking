@@ -102,7 +102,9 @@
                     <li><a href="#">Marathi Movies</a></li>
                     <li><a href="#">Hindi Movies</a></li>
                     <li><a href="#">English Movies</a></li>
+                    
                 </ul>
+
             </div>
             <div class="col-md-2">
                 <h5 class="footer-title">Links</h5>
