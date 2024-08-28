@@ -19,7 +19,7 @@ $sql = "SELECT * FROM user_registration WHERE id = $id";
 $query = $con->query($sql);
 
 // Fetch the next row of a result set as an associative array
-$resultData = $query->fetch_assoc();
+$row = $result->fetch_assoc();
 
 $user_name = $resultData['user_name'];
 $email = $resultData['email'];
@@ -33,8 +33,8 @@ $confirm_password = $resultData['confirm_password'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Registration</title>
-    <link rel="stylesheet" href="./../css/registration.css">
-    <link rel="stylesheet" href="./../css/addmovie.css">
+    <link rel="stylesheet" href=" ./../css/gallery.css">
+    <link rel="stylesheet" href=" ./../css/registration.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -60,36 +60,47 @@ $confirm_password = $resultData['confirm_password'];
                 <h2>Edit Registration</h2>
                 <div class="form-group">
                     <label for="user_name" class="form-label">Username</label>
-                    <input type="text" id="user_name" class="form-control" name="user_name" value="<?php echo $user_name; ?>" required>
+                    <input type="text" id="user_name"
+                    placeholder="enter your user name" autocomplete="off" required="required"
+                     class="form-control" name="user_name" value="<?php echo $user_name; ?>" required>
                 </div>
                 <div class="form-group">
                     <label for="email" class="form-label">Email</label>
-                    <input type="email" id="email" class="form-control" name="email" value="<?php echo $email; ?>" required>
+                    <input type="email" id="email" 
+                    placeholder="enter your user email" autocomplete="off"
+                    class="form-control" name="email" value="<?php echo $email; ?>" required>
                 </div>
                 <div class="form-group">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" id="password" class="form-control" name="password" value="<?php echo $password; ?>" required>
+                    <input type="password" id="password"
+                     placeholder="password" autocomplete="off"
+                     class="form-control" name="password" value="<?php echo $password; ?>" required>
                 </div>
                 <div class="form-group">
                     <label for="confirm_password" class="form-label">Confirm Password</label>
-                    <input type="password" id="confirm_password" class="form-control" name="confirm_password" value="<?php echo $confirm_password; ?>" required>
+                    <input type="password" id="confirm_password" 
+                     placeholder=" confirm  password" autocomplete="off"
+                    class="form-control" name="confirm_password" value="<?php echo $confirm_password; ?>" required>
                 </div>
                 <div class="mt-4 pt-2">
-                    <input type="hidden" name="id" value="<?php echo $id; ?>">
-                    <input type="submit" value="Update" class="bg-info py-2 px-3 border-0" name="user_register">
+                <input type="hidden"  class="bg-info py-2 px-3 border-0 " name="id"  value="<?php echo $id;?>"> 
+                </div>
+
+                <div class="mt-4 pt-2">
+                <input type="submit" value="Update" class="bg-info py-2 px-3 border-0 " name="user_registration" > 
                 </div>
             </form>
         </div>
 
         <?php
-        if (isset($_POST['user_register'])) {
+        if (isset($_POST['user_registration'])) {
             $id = $_POST['id'];
             $user_name = $_POST['user_name'];
             $email = $_POST['email'];
             $password = $_POST['password'];
             $confirm_password = $_POST['confirm_password'];
 
-            $sql = "UPDATE user_registration SET user_name = '$user_name', email = '$email', password = '$password', confirm_password = '$confirm_password' WHERE id = $id";
+            $sql = "UPDATE user_registration SET `user_name` = '$user_name', `email` = '$email', `password` = '$password', `confirm_password` = '$confirm_password' WHERE `id` = $id";
 
             if ($con->query($sql)) {
                 echo '<script type="text/javascript">
@@ -122,5 +133,74 @@ $confirm_password = $resultData['confirm_password'];
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<?php
+// Include the database connection file
+
+
+
+if (isset($_POST['user_registration'])) 
+{
+
+	// Escape special characters in a string for use in an SQL statement
+	$id = $_POST['id'];
+
+	$user_name = $_POST['user_name'];
+
+	$email =  $_POST['email'];
+
+	$password =  $_POST['password'];
+	
+	$confirm_password=  $_POST['confirm_password'];
+	
+	
+
+		
+	 
+	$sql = "UPDATE user_register SET `user_name` = '$user_name',`email` = '$email', 
+	`password` = '$password',`confirm_password` = '$confirm_password'
+	  WHERE `id` = $id";
+		
+if($con->query($sql))
+        {
+            echo    '<script type="text/javascript">
+                    alert ("Record Updated!!");
+                    window.location="manage-registration.php";
+                    </script>';
+        }
+        else
+        {
+            echo    '<script type="text/javascript">
+            alert ("Record Not Update");
+            window.location="update-registration.php?id=$id";
+            </script>';
+        }
+}
+
+?>
+</head>
+
+<!---last child--->
+<div class="bg-info p-3 text-center">
+    Developed by:-<br>
+Gaikwad Rutuja ,
+Nimse Nikita 
+</div>
+</div>
+<!--bootstarap js link-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+ </script>
+ </body>
+</html>
+      
 </body>
 </html>

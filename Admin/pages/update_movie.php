@@ -1,3 +1,46 @@
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+//Database connection 
+
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
+
+
+// Get id from URL parameter
+
+$id=$_GET['id'];
+
+// Select data associated with this particular id
+
+	$sql=  "SELECT * FROM movies WHERE id = $id";
+
+
+ 	$query= $con->query($sql);
+	// Fetch the next row of a result set as an associative array
+
+	$resultData = $query->fetch_assoc();
+
+
+   $image= $resultData['image'];
+
+	$name = $resultData['name'];
+
+	$description = $resultData['description'];
+	
+	$time = $resultData['time'];
+	
+	$price = $resultData['price'];
+
+    $category = $resultData['category'];
+
+    $duration = $resultData['duration'];
+
+	
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,30 +72,101 @@
        <!-- Main Content -->
        <div class="container1">
     
-    <form class="movie-form" action="/submit-movie" method="POST" enctype="multipart/form-data">
+    <!--<form class="movie-form" action="/submit-movie" method="POST" enctype="multipart/form-data"> -->
+    <form action="" method="post" enctype="multipart/form-data">
         <h2> Update Movie Details</h2>
         <div class="form-group">
-            <label for="movie-image">Movie Image:</label>
-            <input type="file" id="movie-image" name="movie-image" accept="image/*" required>
+            <label for="image">Movie Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" 
+            autocomplete="off" 
+            value="<?php  echo $image; ?>" required />
         </div>
         <div class="form-group">
-            <label for="movie-name">Movie Name:</label>
-            <input type="text" id="movie-name" name="movie-name" required>
+            <label for="name">Movie Name:</label>
+            <input type="text" id="name" name="name" 
+            autocomplete="off" 
+            value="<?php  echo $name; ?>"  required />
         </div>
         <div class="form-group">
-            <label for="movie-description">Movie Description:</label>
-            <textarea id="movie-description" name="movie-description" rows="4" required></textarea>
+            <label for="description">Movie Description:</label>
+            <textarea id="description" name="description" rows="4"
+            autocomplete="off" 
+            value="<?php  echo $description; ?>" required></textarea>
         </div>
         <div class="form-group">
-            <label for="ticket-price">Ticket Price:</label>
-            <input type="number" id="ticket-price" name="ticket-price" step="0.01" required>
+            <label for="time">Show Time:</label>
+            <input type="datetime-local" id="time" name="time" 
+            autocomplete="off" 
+            value="<?php  echo $time; ?>" required/>
         </div>
         <div class="form-group">
-            <label for="show-time">Show Time:</label>
-            <input type="datetime-local" id="show-time" name="show-time" required>
+            <label for="price">Ticket Price:</label>
+            <input type="number" id="price" name="price" step="0.01" 
+            autocomplete="off" 
+            value="<?php  echo $price; ?>" required />
         </div>
-        <button type="submit" class="button1">Add Movie</button>
+        <div class="form-group">
+              <label for="category">Product Category</label>
+              <input type="text"id="category"
+              autocomplete="off"
+              required="required" name="category" value="<?php echo $category; ?>">
+       </div>
+
+     
+      
+        <button type="submit" class="button1" value="updaye" name="movie_update">Update Movie</button>
     </form>
+</div>
+
+
+<?php
+// Include the database connection file
+
+
+
+if (isset($_POST['product_update'])) 
+{
+
+	// Escape special characters in a string for use in an SQL statement
+
+  $id = $_POST['id'];
+	$image= $_POST['image'];
+
+	$name =$_POST['name'];
+
+	$description = $_POST['description'];
+	
+	$time = $_POST['time'];
+	
+	$price= $_POST['price'];
+	
+	$sql = "UPDATE add_product SET  `image` = '$image',  `name` = '$name', 
+	`description` = '$description',`time` = '$time',
+	`price` = '$price', `category` = '$category', `duration`='$duration',  WHERE `id` = $id";
+		
+if($con->query($sql))
+        {
+            echo    '<script type="text/javascript">
+                    alert ("Record Updated!!");
+                    window.location="manage-movie.php";
+                    </script>';
+        }
+        else
+        {
+            echo    '<script type="text/javascript">
+            alert ("Record Not Update");
+            window.location="update-movie.php"; ;
+            </script>';
+        }
+}
+
+?>
+
+
+
+
+
+
 </div>
 
 
