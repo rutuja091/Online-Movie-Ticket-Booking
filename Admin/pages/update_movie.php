@@ -89,9 +89,8 @@ $id=$_GET['id'];
         </div>
         <div class="form-group">
             <label for="description">Movie Description:</label>
-            <textarea id="description" name="description" rows="4"
-            autocomplete="off" 
-            value="<?php  echo $description; ?>" required></textarea>
+            <textarea id="description" name="description" rows="4" autocomplete="off" required><?php echo $description; ?></textarea>
+
         </div>
         <div class="form-group">
             <label for="time">Show Time:</label>
@@ -142,7 +141,7 @@ if (isset($_POST['product_update']))
 	
 	$sql = "UPDATE add_product SET  `image` = '$image',  `name` = '$name', 
 	`description` = '$description',`time` = '$time',
-	`price` = '$price', `category` = '$category', `duration`='$duration',  WHERE `id` = $id";
+	`price` = '$price', `category` = '$category', `duration`='$duration'  WHERE `id` = $id";
 		
 if($con->query($sql))
         {
