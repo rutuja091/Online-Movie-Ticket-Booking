@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 26, 2024 at 06:04 PM
+-- Generation Time: Aug 29, 2024 at 11:21 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -68,8 +68,9 @@ CREATE TABLE `movies` (
 --
 
 INSERT INTO `movies` (`id`, `image`, `name`, `description`, `time`, `price`, `category`, `duration`, `date`) VALUES
-(1, '', 'abc', 'asd', '2024-08-29T23:27', '123', 'Marathi Movie', '', ''),
-(3, '[value-2]', '[value-3]', '[value-4]', '[value-5]', '[value-6]', '[value-7]', '', '');
+(5, 'Dora.jpg', 'Dora', 'this is a movie for kids', '2024-09-06T19:29', '150', 'Kids Movie', '2', '2024-08-07'),
+(6, 'googleaai.jpg', 'Google Aai', 'This is Marathi Movie . it is based on online concept.', '2024-08-16T14:32', '110', 'Marathi Movie', '2', '2024-08-30'),
+(7, 'hashyajatra.jpg', 'Hashya Jatra', 'Hashya jatra is marathi Comedy show.it complete 5 year of success.', '2024-09-06T14:34', '300', 'Comedy Movie', '', '2024-08-21');
 
 -- --------------------------------------------------------
 
@@ -114,8 +115,8 @@ CREATE TABLE `user_registration` (
 
 INSERT INTO `user_registration` (`id`, `user_name`, `email`, `password`, `confirm_password`) VALUES
 (1, 'gauri', 'g@gmail.com', 'g123', 'g123'),
-(2, 'Rutuja', 'Rutu@gmail.com', 'r123', 'r123'),
-(3, 'Sai', 'si@gmail.com', 's234', 's234');
+(2, 'Rutuja', 'Rutuja@gmail.com', 'r123', 'r123'),
+(3, 'Sai', 'sai@gmail.com', 's234', 's234');
 
 --
 -- Indexes for dumped tables
@@ -159,7 +160,7 @@ ALTER TABLE `gallery`
 -- AUTO_INCREMENT for table `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user_feedback`

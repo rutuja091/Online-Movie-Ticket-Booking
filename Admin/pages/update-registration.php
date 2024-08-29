@@ -4,36 +4,27 @@ $databaseName = "movieticketdb";
 $databaseUsername = "root";
 $databasePassword = "";
 
-//Database connection 
+// Database connection 
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
-$con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
-
+// Check connection
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
 
 // Get id from URL parameter
+$id = $_GET['id'];
 
-$id=$_GET['id'];
+// Fetch the data associated with this particular id
+$sql = "SELECT * FROM user_registration WHERE id = $id";
+$query = $con->query($sql);
 
-// Select data associated with this particular id
-
-	$sql=  "SELECT * FROM user_registration WHERE id = $id";
-
-
- 	$query= $con->query($sql);
-	// Fetch the next row of a result set as an associative array
-
-	$resultData = $query->fetch_assoc();
-
-    $user_name= $resultData['user_name'];
-
-   $email= $resultData['email'];
-
-   $password = $resultData['password'];
-	
-	$confirm_password = $resultData['confirm_password'];
-	
-
-
-	
+// Fetch the next row of a result set as an associative array
+$resultData = $query->fetch_assoc();
+$user_name = $resultData['user_name'];
+$email = $resultData['email'];
+$password = $resultData['password'];
+$confirm_password = $resultData['confirm_password'];
 ?>
 
 <!DOCTYPE html>
@@ -53,99 +44,85 @@ $id=$_GET['id'];
         <nav class="nav">
             <ul>
                 <li><a href="#">Home</a></li>
-             
                 <div class="d-flex align-items-center">
-            <a href="./login.php" class="btn btn-outline-primary">
-        <i class="bi bi-person"></i><img src =".\..\..\Images\login.png" style="height:40px;"> 
-      </a>
-    </div>
+                    <a href="./login.php" class="btn btn-outline-primary">
+                        <img src =".\..\..\Images\login.png" style="height:40px;">
+                    </a>
+                </div>
             </ul>
         </nav>
     </header>
 
-
-       <!-- Main Content -->
-       <div class="container1">
-    
-    <!--<form class="movie-form" action="/submit-movie" method="POST" enctype="multipart/form-data"> -->
-    <form action="" method="post" enctype="multipart/form-data">
-        <h2> Update Registration Details</h2>
-   
-        <div class="form-group">
-            <label for="user_name">Name:</label>
-            <input type="text" id="user_name" name="user_name" 
-            autocomplete="off" 
-            value="<?php  echo $user_name; ?>" required/>
-        </div>
-      
-        <div class="form-group">
-            <label for="email">Show Time:</label>
-            <input type="text" id="email" name="email" 
-            autocomplete="off" 
-            value="<?php  echo $email; ?>" required/>
-        </div>
-        <div class="form-group">
-            <label for="password">password:</label>
-            <input type="password" id="password" name="password" 
-            autocomplete="off" 
-            value="<?php  echo $password; ?>" required />
-        </div>
-        <div class="form-group">
-              <label for="confirm_password">confirm_password</label>
-              <input type="confirm_password"id="confirm_password"
-              autocomplete="off"
-              required="required" name="confirm_password" value="<?php echo $confirm_password; ?>">
-       </div>
-
-     
-      
-        <button type="submit" class="button1" value="update-reg" name="reg_update">Update Registration</button>
-    </form>
-</div>
-
+    <!-- Main Content -->
+    <div class="container1">
+        <form action="" method="post" enctype="multipart/form-data">
+            <h2>Update Registration Details</h2>
+            <div class="form-group">
+                <label for="user_name">Name:</label>
+                <input type="text" id="user_name" name="user_name" autocomplete="off" value="<?php echo $user_name; ?>" required/>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" autocomplete="off" value="<?php echo $email; ?>" required/>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" autocomplete="off" value="<?php echo $password; ?>" required/>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" autocomplete="off" value="<?php echo $confirm_password; ?>" required/>
+            </div>
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
+            <input type="submit" class="button1" value="Update" name="update">
+        </form>
+    </div>
 
 <?php
-// Include the database connection file
+if (isset($_POST['update'])) {
+    // Get form data
+    $id = $_POST['id'];
+    $user_name = $_POST['user_name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $confirm_password = $_POST['confirm_password'];
 
+    // Update query
+    $sql = "UPDATE user_registration SET 
+            user_name = '$user_name', 
+            email = '$email', 
+            password = '$password', 
+            confirm_password = '$confirm_password' 
+            WHERE id = $id";
 
-
-if (isset($_POST['update-reg'])) 
-{
-
-	// Escape special characters in a string for use in an SQL statement
-
-  $id = $_POST['id'];
-	
-
-	$user_name=$_POST['user_name'];
-
-	$email = $_POST['description'];
-	
-	$password = $_POST['password'];
-	
-	$confirm_password= $_POST['confirm_password'];
-	
-	$sql = "UPDATE add_product SET    `user_name` = '$user_name', 
-	`email` = '$email',`password` = '$password',
-	`confirm_password` = '$confirm_password'  WHERE `id` = $id";
-		
-if($con->query($sql))
-        {
-            echo    '<script type="text/javascript">
-                    alert ("Record Updated!!");
-                    window.location="manage-registration.php";
-                    </script>';
-        }
-        else
-        {
-            echo    '<script type="text/javascript">
-            alert ("Record Not Update");
-            window.location="update-registration.php"; ;
-            </script>';
-        }
+    // Execute query
+    if ($con->query($sql)) {
+        echo '<script type="text/javascript">
+                alert("Record Updated Successfully!");
+                window.location="manage-registration.php";
+              </script>';
+    } else {
+        echo '<script type="text/javascript">
+                alert("Error Updating Record: ' . $con->error . '");
+                window.location="update-registration.php";
+              </script>';
+    }
 }
-
 ?>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <!-- Footer content -->
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
 
 
 

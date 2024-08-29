@@ -37,7 +37,7 @@ $query = $con->query($sql);
             <li><a href="./admin-dashboard.php" style="margin-right:50px; font-size:30px;">Home</a></li>
             <div class="d-flex align-items-center">
                 <a href="./login.php" class="btn btn-outline-primary">
-                    <img src=".\\..\\..\\Images\\login.png" style="height:40px;"> 
+                    <img src=".\..\..\Images\login.png" style="height:40px;"> 
                 </a>
             </div>
         </ul>
