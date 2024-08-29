@@ -1,3 +1,5 @@
+   
+     
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,17 +52,39 @@
 
     <!--- Main Content --->
     <main>
+        
+     
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+//Database connection 
+
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
+
+// Fetch data in descending order (lastest entry first)
+$sql = "SELECT * FROM user_register WHERE  ORDER BY id DESC ";
+$query_run=mysqli_query($con,$sql);
+$check_movie=mysqli_num_rows($query_run)>0;
+
+ if($check_movie)
+ {
+ while($row=mysqli_fetch_array($query_run))
+ {
+  ?> 
    
     <div class="container">
         <div class="payment-container">
             <h2 style="color:#ff5500;">Payment Details</h2>
             <form>
                 <div class="form-group">
-                    <label for="customerName">Customer Name</label>
+                    <label for="customerName"><?php echo $row['name'];?></label>
                     <input type="text" class="form-control" id="customerName" placeholder="Enter your name" required>
                 </div>
                 <div class="form-group">
-                    <label for="customerEmail">Email</label>
+                    <label for="customerEmail"><?php echo $row['email'];?></label>
                     <input type="email" class="form-control" id="customerEmail" placeholder="Enter your email" required>
                 </div>
                 <div class="form-group">
@@ -69,7 +93,7 @@
                 </div>
                 <h3 style="color:#ff5500;">Payment Details</h3>
                 <div class="form-group">
-                    <label for="productName">Product Name</label>
+                    <label for="productName">Movie Name</label>
                     <input type="text" class="form-control" id="productName" placeholder="Enter product name" required>
                 </div>
                 <div class="form-group">
@@ -93,6 +117,10 @@
         </div>
     </div>
 
+    <?php
+}
+ }
+?>
 
     </main>
 

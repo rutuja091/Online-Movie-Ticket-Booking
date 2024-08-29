@@ -26,9 +26,7 @@ $stmt->execute();
 $query = $stmt->get_result();
 
 if ($query->num_rows > 0) {
-    // Fetch the next row of a result set as an associative array
     $resultData = $query->fetch_assoc();
-
     $image = $resultData['image'];
     $name = $resultData['name'];
     $description = $resultData['description'];
@@ -42,6 +40,9 @@ if ($query->num_rows > 0) {
 $stmt->close();
 $con->close();
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -93,28 +94,36 @@ $con->close();
 </nav>
 
 
+<!-- Navbar and other content remain unchanged -->
 
 <!-- Main Content -->
+
 <main>
     <div class="containers">
         <div class="movie-image">
             <img src="./../../Images/movies/<?php echo htmlspecialchars($image); ?>" alt="Movie Image">
         </div>
         <div class="movie-details">
-            <h1><?php echo htmlspecialchars($name); ?></h1>
+            <h1 id="name"><?php echo htmlspecialchars($name); ?></h1>
             <p>Rating: ⭐⭐⭐⭐☆</p>
-            
-            <p><?php echo htmlspecialchars($description); ?></p>
+            <p id="description"><?php echo htmlspecialchars($description); ?></p>
             <div class="ticket-quantity">
                 <button onclick="decrement()">-</button>
                 <input type="text" id="quantity" value="1" readonly>
                 <button onclick="increment()">+</button>
             </div>
             <p style="color: red;">Price: ₹<?php echo htmlspecialchars($price); ?> per ticket</p>
-            <p>Total Price: ₹<span id="total-price"><?php echo htmlspecialchars($price); ?></span></p>
-            <a href=".\payment.php" class="buy-button" onclick="buyTicket()">Buy Ticket</a>
+            <p>Total Price: ₹<span id="total_price"><?php echo htmlspecialchars($price); ?></span></p>
+
+            <form action="#" method="POST">
+                <input type="hidden" name="movie_id" value="<?php echo $id; ?>">
+                <input type="hidden" name="name" value="<?php echo htmlspecialchars($name); ?>">
+                <input type="hidden" name="quantity" id="form_quantity" value="1">
+                <input type="hidden" name="total_price" id="form_total_price" value="<?php echo htmlspecialchars($price); ?>">
+                <input type="submit" name="submit" value="Book Ticket" class="buy-button">
+            </form>
         </div>
-    </div> 
+    </div>
 
     <script>
         let quantity = 1;
@@ -123,6 +132,7 @@ $con->close();
         function increment() {
             quantity++;
             document.getElementById('quantity').value = quantity;
+            document.getElementById('form_quantity').value = quantity;
             updatePrice();
         }
 
@@ -130,21 +140,18 @@ $con->close();
             if (quantity > 1) {
                 quantity--;
                 document.getElementById('quantity').value = quantity;
+                document.getElementById('form_quantity').value = quantity;
                 updatePrice();
             }
         }
 
         function updatePrice() {
             const totalPrice = quantity * pricePerTicket;
-            document.getElementById('total-price').textContent = totalPrice;
-        }
-
-        function buyTicket() {
-            alert(`You have bought ${quantity} ticket(s) for ₹${quantity * pricePerTicket}.`);
+            document.getElementById('total_price').textContent = totalPrice;
+            document.getElementById('form_total_price').value = totalPrice;
         }
     </script>
-   </main>
-
+</main>
 
 <!-- Footer -->
 <div class="footer">
@@ -225,3 +232,40 @@ $con->close();
      });</script>
 </body>
 </html>
+
+
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+// Database connection
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
+
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $quantity = $_POST['quantity'];
+    $total_price = $_POST['total_price'];
+
+    // Corrected SQL query
+    $sql = "INSERT INTO ticket (`name`,`quantity`,`total_price`)
+     VALUES ('$name','$quantity','$total_price')";
+
+    if ($con->query($sql) === TRUE) {
+        echo '<script type="text/javascript">
+              alert("Ticket booked successfully!");
+              </script>';
+    } else {
+        echo '<script type="text/javascript">
+              alert("Error booking ticket: ' . $con->error . '");
+              </script>';
+    }
+}
+
+$con->close();
+?>
