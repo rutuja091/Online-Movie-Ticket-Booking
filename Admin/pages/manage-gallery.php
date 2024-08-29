@@ -13,7 +13,7 @@ if ($con->connect_error) {
 }
 
 // Fetch data in descending order (latest entry first)
-$sql = "SELECT * FROM movies ORDER BY id DESC";
+$sql = "SELECT * FROM gallery ORDER BY id DESC";
 $query = $con->query($sql);
 ?>
 
@@ -45,16 +45,13 @@ $query = $con->query($sql);
     </header>
 
     <div class="containers">
-        <h2>Manage Movie Details</h2>
+        <h2>Manage Gallery Details</h2>
         <table class="movie-table">
             <thead>
                 <tr>
-                    <th>Movie Picture</th>
+                    <th>Movie Image</th>
                     <th>Name</th>
-                    <th>Description</th>
-                    <th>Ticket Price</th>
-                    <th>Show Time</th>
-                    <th>Category</th>
+                 
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -64,14 +61,11 @@ $query = $con->query($sql);
                 if ($query->num_rows > 0) {
                     while ($row = $query->fetch_assoc()) {
                         echo "<tr>";
-                        echo "<td><img src='./../../Images/Movies/" . $row['image'] . "' alt='Movie Image' style='width:100px; height:100px;'></td>";
+                        echo "<td><img src='./../../Images/User-images/gallery/" . $row['image'] . "' alt='Movie Image' style='width:100px; height:100px;'></td>";
                         echo "<td>" . $row['name'] . "</td>";
-                        echo "<td>" . $row['description'] . "</td>";
-                        echo "<td>" . $row['price'] . "</td>";
-                        echo "<td>" . $row['time'] . "</td>";
-                        echo "<td>" . $row['category'] . "</td>";
-                        echo "<td><a href='update_movie.php?id=" . $row['id'] . "'>Edit</a> | ";
-                        echo "<a href='delete-movie.php?id=" . $row['id'] . "' onClick=\"return confirm('Are you sure, you want to delete?')\">Delete</a></td>";
+                      
+                        echo "<td><a href='update-gallery.php?id=" . $row['id'] . "'>Edit</a> | ";
+                        echo "<a href='delete-gallery.php?id=" . $row['id'] . "' onClick=\"return confirm('Are you sure, you want to delete?')\">Delete</a></td>";
                         echo "</tr>";
                     }
                 } else {

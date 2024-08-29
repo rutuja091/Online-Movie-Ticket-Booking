@@ -74,22 +74,26 @@ while ($res = $query->fetch_assoc())
   echo "<td>".$res['subject']."</td>";
  
   echo "<td>".$res['message']."</td>";
-//echo "<td><a href=\"edit.php?id=$res[id]\">Edit</a></td>";
-echo "<td ><a href=\"delete-feedback-fetch.php?id=$res[id]\" onClick=\"return confirm('Are you sure ,you want to delete?')\">
-Delete
-</a></td>";
+
+  echo "<td>";
+
+  echo "<a href='.\delete-feedback.php?id=".$res['id']."'>
+          <img src='.\..\..\Images\admin-images\delete.png' alt='Delete' class='icon' style='height:40px;'>
+        </a>";
+
+      
+  echo "</td>";
+  echo "</tr>";
+}
+
 
 
 		
  
-}
+
   
 ?>
-<td>
-<img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;">
-<img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
-</td>
-</tr>
+
                    
                 
 

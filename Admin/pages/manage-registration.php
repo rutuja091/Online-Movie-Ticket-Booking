@@ -76,20 +76,19 @@ while ($res = $query->fetch_assoc())
   echo "<td>".$res['confirm_password']."</td>";
   echo "<td>";
   echo "<a href='./update-registration.php?id=".$res['id']."'>
-          <img src='.\..\..\Images\admin-images\edit2.png' alt='Edit' class='icon' style='height:40px;'>
+          <img src='./../../Images/admin-images/edit2.png' alt='Edit' class='icon' style='height:40px;'>
         </a>";
-  echo "<a href='./delete-registration.php?id=".$res['id']."'>
+  echo "<a href='.\delete-reg.php?id=".$res['id']."'>
           <img src='.\..\..\Images\admin-images\delete.png' alt='Delete' class='icon' style='height:40px;'>
         </a>";
+
+      
   echo "</td>";
   echo "</tr>";
 }
   
 ?>
-                    <td>
-                 <a href="./update-registration.php">   <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;"></a>
-                    <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
-                    </td>
+           
 
                 <!-- Repeat <tr> for more rows -->
             </tbody>
