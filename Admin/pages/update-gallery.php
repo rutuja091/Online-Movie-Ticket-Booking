@@ -11,16 +11,13 @@ $con = new mysqli($databaseHost, $databaseUsername, $databasePassword, $database
 $id = $_GET['id'];
 
 // Select data associated with this particular id
-$sql = "SELECT * FROM movies WHERE id = $id";
+$sql = "SELECT * FROM gallery WHERE id = $id";
 $query = $con->query($sql);
 $resultData = $query->fetch_assoc();
 
 $image = $resultData['image'];
 $name = $resultData['name'];
-$description = $resultData['description'];
-$time = $resultData['time'];
-$price = $resultData['price'];
-$category = $resultData['category'];
+
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +48,7 @@ $category = $resultData['category'];
     <!-- Main Content -->
     <div class="container1">
         <form action="" method="post" enctype="multipart/form-data">
-            <h2>Update Movie Details</h2>
+            <h2>Update Gallery Details</h2>
 
             <div class="form-group">
                 <label for="image">Movie Image:</label>
@@ -62,36 +59,19 @@ $category = $resultData['category'];
                 <label for="name">Movie Name:</label>
                 <input type="text" id="name" name="name" autocomplete="off" value="<?php echo $name; ?>" required>
             </div>
-            <div class="form-group">
-                <label for="description">Movie Description:</label>
-                <textarea id="description" name="description" rows="4" autocomplete="off" required><?php echo $description; ?></textarea>
-            </div>
-            <div class="form-group">
-                <label for="time">Show Time:</label>
-                <input type="datetime-local" id="time" name="time" autocomplete="off" value="<?php echo $time; ?>" required>
-            </div>
-            <div class="form-group">
-                <label for="price">Ticket Price:</label>
-                <input type="number" id="price" name="price" step="0.01" autocomplete="off" value="<?php echo $price; ?>" required>
-            </div>
-            <div class="form-group">
-                <label for="category">Category:</label>
-                <input type="text" id="category" name="category" autocomplete="off" value="<?php echo $category; ?>" required>
-            </div>
+          
+         
 
             <input type="hidden" name="id" value="<?php echo $id; ?>">
-            <input type="submit" class="button1" value="Update" name="movie_update">
+            <input type="submit" class="button1" value="Update" name="gallery_update">
         </form>
     </div>
 
 <?php
-if (isset($_POST['movie_update'])) {
+if (isset($_POST['gallery_update'])) {
     $id = $_POST['id'];
     $name = $_POST['name'];
-    $description = $_POST['description'];
-    $time = $_POST['time'];
-    $price = $_POST['price'];
-    $category = $_POST['category'];
+ 
 
     // Handle image upload
     if (isset($_FILES['image']['name']) && $_FILES['image']['name'] != "") {
@@ -105,17 +85,17 @@ if (isset($_POST['movie_update'])) {
     }
 
     // Update query
-    $sql = "UPDATE movies SET image = '$image', name = '$name', description = '$description', time = '$time', price = '$price', category = '$category' WHERE id = $id";
+    $sql = "UPDATE gallery SET image = '$image', name = '$name' WHERE id = $id";
 
     if ($con->query($sql)) {
         echo '<script type="text/javascript">
                 alert("Record Updated!");
-                window.location="manage-movie.php";
+                window.location="manage-gallery.php";
               </script>';
     } else {
         echo '<script type="text/javascript">
                 alert("Record Not Updated!");
-                window.location="update-movie.php";
+                window.location="update-gallery.php";
               </script>';
     }
 }
