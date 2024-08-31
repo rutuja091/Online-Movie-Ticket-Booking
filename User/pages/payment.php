@@ -1,4 +1,38 @@
-   
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
+
+// Check if id is set and is a valid number
+if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+    $id = $_GET['id'];
+
+    // Select data associated with this particular id
+    $sql = "SELECT * FROM ticket WHERE id = $id";
+    $query = $con->query($sql);
+
+    if ($query) {
+        $resultData = $query->fetch_assoc();
+        $name = $resultData['name'];
+        $quantity = $resultData['quantity'];
+        $total_price = $resultData['total_price'];
+    } else {
+        // Handle query error
+        die("Error retrieving data: " . $con->error);
+    }
+} else {
+    // Redirect or display an error if id is not set or invalid
+    die("Invalid request. ID is not set or invalid.");
+}
+?>
+
+
      
 <!DOCTYPE html>
 <html lang="en">
@@ -50,55 +84,37 @@
 </nav>
 
 
-    <!--- Main Content --->
-    <main>
-        
-     
-<?php
-$databaseHost = "localhost";
-$databaseName = "movieticketdb";
-$databaseUsername = "root";
-$databasePassword = "";
-
-//Database connection 
-
-$con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
-
-// Fetch data in descending order (lastest entry first)
-$sql = "SELECT * FROM user_register WHERE  ORDER BY id DESC ";
-$query_run=mysqli_query($con,$sql);
-$check_movie=mysqli_num_rows($query_run)>0;
-
- if($check_movie)
- {
- while($row=mysqli_fetch_array($query_run))
- {
-  ?> 
-   
+   <!-- Main Content -->
+<main>
     <div class="container">
         <div class="payment-container">
             <h2 style="color:#ff5500;">Payment Details</h2>
-            <form>
+            <form method="POST" action="payment.php">
+
                 <div class="form-group">
-                    <label for="customerName"><?php echo $row['name'];?></label>
-                    <input type="text" class="form-control" id="customerName" placeholder="Enter your name" required>
+                    <label for="customerName">Name </label>
+                    <input type="text" class="form-control" id="customerName" name="name" placeholder="Enter your name" required>
                 </div>
+
                 <div class="form-group">
-                    <label for="customerEmail"><?php echo $row['email'];?></label>
-                    <input type="email" class="form-control" id="customerEmail" placeholder="Enter your email" required>
+                    <label for="customerEmail">Email</label>
+                    <input type="email" class="form-control" id="customerEmail" name="email" placeholder="Enter your email" required>
                 </div>
+
                 <div class="form-group">
                     <label for="customerMobile">Mobile No</label>
-                    <input type="tel" class="form-control" id="customerMobile" placeholder="Enter your mobile number" required>
+                    <input type="tel" class="form-control" id="customerMobile" name="mobile_no" placeholder="Enter your mobile number" required>
                 </div>
+
                 <h3 style="color:#ff5500;">Payment Details</h3>
                 <div class="form-group">
                     <label for="productName">Movie Name</label>
-                    <input type="text" class="form-control" id="productName" placeholder="Enter product name" required>
+                    <input type="text" class="form-control" value="<?php echo $name; ?>" id="productName" name="movie_name" placeholder="Enter movie name" required>
                 </div>
+
                 <div class="form-group">
                     <label for="paymentMode">Select Payment Mode</label>
-                    <select class="form-control" id="paymentMode" required>
+                    <select class="form-control" id="paymentMode" name="payment_mode" required>
                         <option value="">Select Payment Mode</option>
                         <option value="creditCard">Credit Card</option>
                         <option value="debitCard">Debit Card</option>
@@ -106,23 +122,18 @@ $check_movie=mysqli_num_rows($query_run)>0;
                 </div>
                 <div class="form-group">
                     <label for="cardNumber">Card Number</label>
-                    <input type="text" class="form-control" id="cardNumber" placeholder="Enter card number" required>
+                    <input type="text" class="form-control" id="cardNumber" name="card_number" placeholder="Enter card number" required>
                 </div>
                 <div class="form-group">
                     <label for="totalPrice">Total Price</label>
-                    <input type="text" class="form-control" id="totalPrice" placeholder="Enter total price" required>
+                    <input type="text" class="form-control" value="<?php echo $total_price; ?>" id="totalPrice" name="total_price" placeholder="Enter total price" required>
                 </div>
-                <a href=".\ticket.php" type="submit" class="btn btn-primary btn-block">Make Payment</a>
+                <button type="submit" name="submit" class="btn btn-primary btn-block">Make Payment</button>
             </form>
         </div>
     </div>
+</main>
 
-    <?php
-}
- }
-?>
-
-    </main>
 
    <!-- Footer -->
    <div class="footer">
@@ -204,3 +215,37 @@ $check_movie=mysqli_num_rows($query_run)>0;
 </body>
 </html>
 
+<?php
+
+
+if (isset($_POST['submit'])) { 
+	$name =  $_POST['name'];
+  $email =  $_POST['email'];
+ 	$mobile_no =  $_POST['mobile_no'];
+     $movie_name=  $_POST['movie_name'];
+  $payment_mode	=  $_POST['payment_mode'];
+  $card_number	 =  $_POST['card_number'];
+   $total_price	 =  $_POST['total_price'];
+  
+     
+		$sql = "INSERT INTO payment  (`name`,`email`,`mobile_no`,`movie_name`,`payment_mode`,`card_number`,`total_price`)
+    VALUES ('$name','$email',  '$mobile_no','$movie_name', '$payment_mode','$card_number','$total_price')";
+		
+       if($con->query($sql))
+        {
+            echo    '<script type="text/javascript">
+                    alert ("Your Payment is  Done..👍");
+                    window.location="ticket.php";
+                    </script>';
+        }
+        else
+        {
+            echo    '<script type="text/javascript">
+            alert ("payment Not Done...!");
+            window.location="payment.php";
+            </script>';
+        }
+      }
+      ?>
+
+       

@@ -206,10 +206,6 @@ if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
 else{
   $msg = "Failed to upload image";
 }
-
-
 $result = mysqli_query($con, "SELECT * FROM movies");
-
-
 }
 ?>

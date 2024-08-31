@@ -7,42 +7,37 @@ $databasePassword = "";
 // Database connection
 $con = new mysqli($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
+// Check for connection errors
 if ($con->connect_error) {
     die("Connection failed: " . $con->connect_error);
 }
 
-// Ensure ID is passed and is a valid integer
-if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
-    echo "Invalid or missing movie ID.";
-    exit();
-}
+// Get the maximum ID from the table
+$query = "SELECT MAX(id) AS max_id FROM ticket";
+$result = mysqli_query($con, $query);
+$row = mysqli_fetch_assoc($result);
+$maxId = $row['max_id'];
 
-$id = intval($_GET['id']);
+// Fetch ticket details (name, quantity, and total_price) for the max ID
+$ticketQuery = "SELECT name, quantity, total_price FROM ticket WHERE id = $maxId";
+$ticketResult = mysqli_query($con, $ticketQuery);
 
-// Fetch data associated with this particular ID using a prepared statement
-$stmt = $con->prepare("SELECT * FROM movies WHERE id = ?");
-$stmt->bind_param("i", $id);
-$stmt->execute();
-$query = $stmt->get_result();
-
-if ($query->num_rows > 0) {
-    $resultData = $query->fetch_assoc();
-    $image = $resultData['image'];
-    $name = $resultData['name'];
-    $description = $resultData['description'];
-    $time = $resultData['time'];
-    $price = $resultData['price'];
+if (mysqli_num_rows($ticketResult) > 0) {
+    // Fetch the data
+    $ticketData = mysqli_fetch_assoc($ticketResult);
+    $name = $ticketData['name'];
+    $quantity = $ticketData['quantity'];
+    $totalPrice = $ticketData['total_price'];
 } else {
-    echo "No movie found with ID: $id";
-    exit();
+    // If no data found, set default values
+    $name = "Unknown";
+    $quantity = 0;
+    $totalPrice = 0.00;
 }
 
-$stmt->close();
-$con->close();
+// Close the database connection
+mysqli_close($con);
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,6 +51,75 @@ $con->close();
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+    .card-body{
+      font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background-color: #f5f5f5;
+    }
+.ticket-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 400px;
+}
+.ticket-container:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movie-details {
+    padding: 20px;
+}
+
+.movie-name {
+    font-size: 40px;
+    font-weight:bold;
+    margin: 0;
+    color: blue;
+}
+
+.ticket-quantity,
+.total-price {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #666;
+    justify-content:center;
+}
+
+.make-payment-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    decoration:none;
+}
+
+.make-payment-button:hover {
+    background-color: #218838;
+}
+
+.movie-poster {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: -10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+      </style>
 </head>
 <body>
 
@@ -98,61 +162,22 @@ $con->close();
 
 <!-- Main Content -->
 
-<main>
-    <div class="containers">
-        <div class="movie-image">
-            <img src="./../../Images/movies/<?php echo htmlspecialchars($image); ?>" alt="Movie Image">
-        </div>
-        <div class="movie-details">
-            <h1 id="name"><?php echo htmlspecialchars($name); ?></h1>
-            <p>Rating: ⭐⭐⭐⭐☆</p>
-            <p id="description"><?php echo htmlspecialchars($description); ?></p>
-            <div class="ticket-quantity">
-                <button type="button" onclick="decrement()">-</button>
-                <input type="text" id="quantity" value="1" readonly>
-                <button type="button" onclick="increment()">+</button>
-            </div>
-            <p style="color: red;">Price: ₹<?php echo htmlspecialchars($price); ?> per ticket</p>
-            <p>Total Price: ₹<span id="total_price"><?php echo htmlspecialchars($price); ?></span></p>
 
-            <form action="" method="POST">
-                <input type="hidden" name="movie_id" value="<?php echo htmlspecialchars($id); ?>">
-                <input type="hidden" name="name" value="<?php echo htmlspecialchars($name); ?>">
-                <input type="hidden" name="image" value="./../../Images/movies/<?php echo htmlspecialchars($image); ?>">
-                <input type="hidden" name="quantity" id="form_quantity" value="1">
-                <input type="hidden" name="total_price" id="form_total_price" value="<?php echo htmlspecialchars($price); ?>">
-                <input type="submit" name="submit" value="Book Ticket" class="buy-button">
-            </form>
+<main>
+    <div class="card-body">
+        <div class="ticket-container">
+            <div class="movie-details">
+                <h2 class="movie-name"><?php echo $name; ?></h2>
+                <p style="color:red;font-weight:bold" class="ticket-quantity">Booked Tickets: <?php echo $quantity; ?></p>
+                <p class="total-price">Pay <b style="color:black;">₹<?php echo number_format($totalPrice, 2); ?></b></p>
+                <a href="payment.php?id=<?php echo $maxId; ?>" class="make-payment-button">Make Payment</a>
+            </div>
         </div>
     </div>
 
-    <script>
-        let quantity = 1;
-        const pricePerTicket = <?php echo $price; ?>;
 
-        function increment() {
-            quantity++;
-            document.getElementById('quantity').value = quantity;
-            document.getElementById('form_quantity').value = quantity;
-            updatePrice();
-        }
-
-        function decrement() {
-            if (quantity > 1) {
-                quantity--;
-                document.getElementById('quantity').value = quantity;
-                document.getElementById('form_quantity').value = quantity;
-                updatePrice();
-            }
-        }
-
-        function updatePrice() {
-            const totalPrice = quantity * pricePerTicket;
-            document.getElementById('total_price').textContent = totalPrice;
-            document.getElementById('form_total_price').value = totalPrice;
-        }
-    </script>
 </main>
+
 
 <!-- Footer -->
 <div class="footer">
@@ -233,46 +258,3 @@ $con->close();
      });</script>
 </body>
 </html>
-
-<?php
-$databaseHost = "localhost";
-$databaseName = "movieticketdb";
-$databaseUsername = "root";
-$databasePassword = "";
-
-// Database connection
-$con = new mysqli($databaseHost, $databaseUsername, $databasePassword, $databaseName);
-
-if ($con->connect_error) {
-    die("Connection failed: " . $con->connect_error);
-}
-
-if (isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $image = $_POST['image'];
-    $quantity = $_POST['quantity'];
-    $total_price = $_POST['total_price'];
-
-    // Prepare and bind
-    $stmt = $con->prepare("INSERT INTO ticket (`name`, `image`, `quantity`, `total_price`) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssii", $name, $image, $quantity, $total_price);
-
-    // Execute the prepared statement
-    if ($stmt->execute()) {
-        echo '<script type="text/javascript">
-              alert("Ticket booked successfully!");
-              window.location.href = "booked-ticket.php";
-              </script>';
-    } else {
-        echo '<script type="text/javascript">
-              alert("Error booking ticket:'.$stmt->error.'");
-              </script>';
-    }
-
-    // Close the statement
-    $stmt->close();
-}
-
-// Close the database connection
-$con->close();
-?>
