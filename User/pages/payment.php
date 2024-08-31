@@ -22,15 +22,11 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         $name = $resultData['name'];
         $quantity = $resultData['quantity'];
         $total_price = $resultData['total_price'];
-    } else {
-        // Handle query error
-        die("Error retrieving data: " . $con->error);
+
+        }    
     }
-} else {
-    // Redirect or display an error if id is not set or invalid
-    die("Invalid request. ID is not set or invalid.");
-}
 ?>
+
 
 
      
