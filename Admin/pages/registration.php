@@ -69,7 +69,7 @@
                 <label for="confirm-password">Confirm Password</label>
                 <input type="password" id="confirm-password" name="confirm-password" required>
             </div>
-            <button type="submit">Register</button>
+          <a href="./login.php">  <button type="submit">Register</button> </a>
            <!-- <h6 style="color: #f3f1f1; margin-top:10px;">if you apready have an account? </h6><a href="./login.php"> login </a> -->
 
            <h6 style="color: #f3f1f1; margin-top: 20px; display: inline;">

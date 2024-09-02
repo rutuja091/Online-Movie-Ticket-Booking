@@ -46,6 +46,9 @@ $sql = "SELECT * FROM user_registration ORDER BY id DESC";
 
     <div class="containers">
         <h2>  User Registration Report</h2>
+        <div class="header-btn">
+            <a href="./manage-registration.php"><button >Manage Data</button></a>
+        </div>
         <table class="movie-table">
             <thead>
                 <tr>
@@ -125,7 +128,7 @@ document.write('<form class=script-text>Click Here To Print Report 👉 ' + '<in
                 </div>
                 
             <div class="col-md-4">
-                <h5 class="footer-title">Newsletter</h5>
+                
                 <p>Subscribe to STARLIGHT CINEMA .</p>
                 <div class="newsletter">
                     <input type="email" class="form-control" placeholder="Email Address">

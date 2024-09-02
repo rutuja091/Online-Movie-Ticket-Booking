@@ -28,6 +28,9 @@
 
  <div class="containers">
         <h2> Payment Report </h2>
+        <div class="header-btn">
+            <a href="./manage-payment.php"><button >Manage Data</button></a>
+        </div>
         <table class="movie-table">
             <thead>
                 <tr>
@@ -109,7 +112,7 @@
                 </div>
                 
             <div class="col-md-4">
-                <h5 class="footer-title">Newsletter</h5>
+                
                 <p>Subscribe to STARLIGHT CINEMA .</p>
                 <div class="newsletter">
                     <input type="email" class="form-control" placeholder="Email Address">

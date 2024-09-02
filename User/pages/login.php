@@ -1,3 +1,48 @@
+
+<?php
+session_start();
+
+// Database connection
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+// Create connection
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+
+// Check connection
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
+
+// Check if login form is submitted
+if (isset($_POST['login'])) {
+    $user_name = mysqli_real_escape_string($con, $_POST['user_name']);
+    $password = mysqli_real_escape_string($con, $_POST['password']);
+
+    // Check if the user exists
+    $sql = "SELECT * FROM user_registration WHERE `user_name`='$user_name' AND `password`='$password'";
+    $result = mysqli_query($con, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        // Set session variables
+        $_SESSION['user_name'] = $user_name;
+
+        // Redirect to index1.php
+        header("Location: ./../../index1.php");
+        exit(); // Always exit after a header redirect to stop further script execution
+    } else {
+        // Invalid login, redirect to login page with error message
+        echo "<script>alert('Invalid username or password!');</script>";
+        echo "<script>window.location.href = './login.php';</script>";
+    }
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,19 +98,20 @@
 
     <div class="containers1">
        
-        <form  class="login-form">
+        
+        <form action="" method="post"  class="login-form" enctype="multipart/form-data">
         <h2>Login</h2>
             <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+                <label for="user_name">Username</label>
+                <input type="text" id="user_name" name="user_name" required>
             </div>
             
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            
-            <button type="submit">Login</button>
+            <input type="submit" name="login" value="login" />
+           <!-- <button type="submit" name="login">Login</button> -->
             <h6 style="color: #f3f1f1; margin-top: 20px; display: inline;">
              if not have account &nbsp;
            </h6>
@@ -108,7 +154,7 @@
                 </div>
                 
             <div class="col-md-4">
-                <h5 class="footer-title">Newsletter</h5>
+             
                 <p>Subscribe to STARLIGHT CINEMA .</p>
                 <div class="newsletter">
                     <input type="email" class="form-control" placeholder="Email Address">
@@ -157,43 +203,5 @@
 </html>
 
 
-
-
-<?php
-session_start();
-include('db_connect.php');
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    // Prevent SQL injection
-    $username = mysqli_real_escape_string($conn, $username);
-    $password = mysqli_real_escape_string($conn, $password);
-
-    // Hashing the password before checking (if the password is hashed in the database)
-    //$password = md5($password);
-
-    // Query to check if the user exists
-    $sql = "SELECT id, username FROM users WHERE username = '$username' AND password = '$password'";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows == 1) {
-        // User exists, set session variables
-        $row = $result->fetch_assoc();
-        $_SESSION['userid'] = $row['id'];
-        $_SESSION['username'] = $row['username'];
-
-        // Redirect to index.php
-        header("Location: ./../../index1.php");
-        exit();
-    } else {
-        // If login fails
-        echo "<script>alert('Invalid Username or Password!'); window.location.href='login.php';</script>";
-    }
-}
-
-$conn->close();
-?>
 
 
