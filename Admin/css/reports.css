@@ -146,3 +146,10 @@ body {
 .movie-button:hover {
     background-color: rgb(61, 59, 173);
 }
+
+.header-btn{
+    margin-left:1070px;
+    margin-top:1px;
+    margin-bottom: 5px;
+    
+ }

@@ -97,6 +97,14 @@
                     <a href="./report-ticket.php"> <button class="movie-button">View Ticket Report</button> </a>
                 </div>
             </div> 
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img src=".\..\..\Images\admin-images\gallery.jpg" alt="Movie 3">
+                    <a href="./report-gallery.php"> <button class="movie-button">View Gallery Report</button> </a>
+                </div>
+            </div> 
+
                  
         </div>
 

@@ -46,6 +46,9 @@ $query = $con->query($sql);
 
     <div class="containers">
         <h2>Manage Gallery Details</h2>
+        <div class="header-btn">
+            <a href="./manage-gallery.php"><button >Manage Data</button></a>
+        </div>
         <table class="movie-table">
             <thead>
                 <tr>
@@ -107,7 +110,7 @@ $query = $con->query($sql);
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h5 class="footer-title">Newsletter</h5>
+                   
                     <p>Subscribe to STARLIGHT CINEMA.</p>
                     <div class="newsletter">
                         <input type="email" class="form-control" placeholder="Email Address">

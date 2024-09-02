@@ -12,9 +12,6 @@ $con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseN
 $sql = "SELECT * FROM user_feedback ORDER BY id DESC";
  $query= $con->query($sql)
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,6 +44,9 @@ $sql = "SELECT * FROM user_feedback ORDER BY id DESC";
 
     <div class="containers">
         <h2  >User Feedback report</h2>
+        <div class="header-btn">
+            <a href="./manage-feedback.php"><button >Manage Data</button></a>
+        </div>
         <table class="movie-table">
             <thead>
                 <tr>
@@ -107,7 +107,7 @@ document.write('<form class=script-text>Click Here To Print Report 👉 ' + '<in
         <div class="row">
             <div class="col-md-4">
                 <h3 class="footer-title">STARLIGHT CINEMA</h3>
-                <p>Buy movie tickets easily with Aovis system nationwide</p>
+                <p>Buy movie tickets easily with Starlight system nationwide</p>
                 <a href="#" class="btn btn-warning">Get Your Ticket</a>
             </div>
             <div class="col-md-2">
@@ -131,8 +131,8 @@ document.write('<form class=script-text>Click Here To Print Report 👉 ' + '<in
                 </ul>
                 </div>
             <div class="col-md-4">
-                <h5 class="footer-title">Newsletter</h5>
-                <p>Subscribe to Leitmotif newsletter this very day.</p>
+               
+                <p>Subscribe to our Starlight cinema</p>
                 <div class="newsletter">
                     <input type="email" class="form-control" placeholder="Email Address">
                     <button class="btn btn-warning mt-2">Subscribe</button>
@@ -150,7 +150,7 @@ document.write('<form class=script-text>Click Here To Print Report 👉 ' + '<in
             </div>
         </div>
         <div class="text-center mt-4">
-            <p> &copy;Copyright 2023 by Ovatheme.com</p>
+            <p> &copy;Copyright 2023 by Starlight.com</p>
         </div>
     </div>
 </div>
