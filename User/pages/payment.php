@@ -105,7 +105,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                 <h3 style="color:#ff5500;">Payment Details</h3>
                 <div class="form-group">
                     <label for="productName">Movie Name</label>
-                    <input type="text" class="form-control" value="<?php echo $name; ?>" id="productName" name="movie_name" placeholder="Enter movie name" required>
+                    <input type="text" class="form-control" value="<?php echo $name; ?>" id="productName" name="movie_name" placeholder="Enter movie name" required readonly>
                 </div>
 
                 <div class="form-group">
@@ -122,7 +122,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                 </div>
                 <div class="form-group">
                     <label for="totalPrice">Total Price</label>
-                    <input type="text" class="form-control" value="<?php echo $total_price; ?>" id="totalPrice" name="total_price" placeholder="Enter total price" required>
+                    <input type="text" class="form-control" value="<?php echo $total_price; ?>" id="totalPrice" name="total_price" placeholder="Enter total price" required readonly>
                 </div>
                 <button type="submit" name="submit" class="btn btn-primary btn-block">Make Payment</button>
             </form>
@@ -231,7 +231,7 @@ if (isset($_POST['submit'])) {
         {
             echo    '<script type="text/javascript">
                     alert ("Your Payment is  Done..👍");
-                    window.location="ticket.php";
+                    window.location="view-ticket.php";
                     </script>';
         }
         else

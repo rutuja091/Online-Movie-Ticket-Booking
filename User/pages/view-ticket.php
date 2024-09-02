@@ -1,3 +1,26 @@
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+
+//Database connection 
+
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
+$query = "SELECT MAX(id) AS max_id FROM payment";
+$result = mysqli_query($con, $query);
+$row = mysqli_fetch_assoc($result);
+$maxId = $row['max_id'];
+
+// Close the database connection
+mysqli_close($con);
+
+// Pass the value to the button on the next page
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +28,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
     <link rel="stylesheet" href=" ./../css/gallery.css">
-    <link rel="stylesheet" href=" ./../css/ticket.css">
+    <link rel="stylesheet" href=" ./../css/payment.css">
    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+ .payment-success {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+header h1 {
+  color: #4CAF50;
+  font-size: 24px;
+  font-weight:bold;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #666;
+  font-size: 18px;
+}
+
+.confirmation-icon img {
+  width: 80px;
+  margin: 20px 0;
+}
+
+.summary-box {
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.summary-box h2 {
+  color: #333;
+  font-size: 20px;
+}
+
+.summary-box p {
+  color: #444;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.additional-info {
+  font-size: 16px;
+  color: #777;
+  margin: 10px 0;
+}
+
+.get-ticket-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom:40px;
+}
+
+.get-ticket-btn:hover {
+  background-color: #45a049;
+}
+
+footer a {
+  color: blue;
+  font-size: 14px;
+  margin: 0 10px;
+ 
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: none;
+  font-weight:bold;
+
+}
+
+        </style>
 </head>
 <body>
 
@@ -48,41 +151,57 @@
 </nav>
 
 
+   <!-- Main Content -->
+<main>
+
+<div class="payment-success">
+  <header>
+    <h1>Your Payment is Successful!</h1>
+    <p>Thank you for your purchase.</p>
+  </header>
+  
+  <div class="confirmation-icon">
+    <!-- Icon could be an image or an SVG -->
+    <img src="./../../Images/checked.png" alt="Success">
+  </div>
+
+  <!-- <div class="summary-box">
+    <h2>Transaction Summary</h2>
+    <p><strong>Movie:</strong> Starlight Cinema</p>
+    <p><strong>Date & Time:</strong> 10th September, 7:00 PM</p>
+    <p><strong>Theater:</strong> Galaxy Cinema, Screen 2</p>
+    <p><strong>Seats:</strong> A12, A13</p>
+    <p><strong>Amount Paid:</strong> $25.00</p>
+  </div> -->
+  
+  <div class="additional-info">
+    <!-- <p>Your ticket has been sent to your email.</p> -->
+    <p>You can also download your ticket below.</p>
+  </div>
+  
+  <div class="action-section">
+
+  <div class="action-section">
+  <a href="ticket.php?id=<?php echo $maxId; ?>" style="color:white;text-decoration:none;">
+    <button class="get-ticket-btn">
+   Get Your Ticket
+       </button>
+       </a>
+  </div>
+
+   
+   
+  </div>
+  
+  <footer>
+    <a href="home.html">Back to Home</a> | 
+    <a href="contact-support.html">Contact Support</a>
+  </footer>
+</div>
 
 
-    <!--- Main Content --->
-    <main>
-        <div class="main-ticket">
-    <div class="ticket">
-        <div class="left">
-            <div class="logo">
-                <img src="./../../Images/logo2.png" style="height:90px;"alt="Starlight Cinema Logo">
-            </div>
-            <div class="cinema">STARLIGHT CINEMA</div>
-            <div class="details">THEATER: 03</div>
-            <div class="details">SEAT: S16</div>
-            <div class="details">DATE: 10/07/2022</div>
-            <div class="details">TIME: 11:45 PM</div>
-        </div>
-        <div class="center">
-            <div class="movie-title">MOVIE 3D</div>
-            <div class="details">PRICE: 10 USD</div>
-            <div class="details">STANDARD</div>
-            <div class="details">3D</div>
-        </div>
-        <div class="right">
-            <div class="barcode">
-                <img src="https://dummyimage.com/150x50/000/fff&text=Barcode" alt="Barcode">
-                <div class="barcode-text">NO: 0123456987</div>
-            </div>
-            <div class="details">NO: 00000000000000</div>
-        </div>
-    </div>
-    </div>
 
-    </main>
-
-
+</main>
    <!-- Footer -->
    <div class="footer">
     <div class="container">
@@ -162,4 +281,3 @@
         });</script>
 </body>
 </html>
-

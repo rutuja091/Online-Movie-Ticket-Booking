@@ -119,6 +119,20 @@ mysqli_close($con);
     margin-top: -10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+.get-ticket-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  
+}
+
+.get-ticket-btn:hover {
+  background-color: #45a049;
+}
       </style>
 </head>
 <body>
@@ -170,7 +184,15 @@ mysqli_close($con);
                 <h2 class="movie-name"><?php echo $name; ?></h2>
                 <p style="color:red;font-weight:bold" class="ticket-quantity">Booked Tickets: <?php echo $quantity; ?></p>
                 <p class="total-price">Pay <b style="color:black;">₹<?php echo number_format($totalPrice, 2); ?></b></p>
-                <a href="payment.php?id=<?php echo $maxId; ?>" class="make-payment-button">Make Payment</a>
+
+              
+
+                <a href="payment.php?id=<?php echo $maxId; ?>" style="color:white;text-decoration:none;">
+    <button class="get-ticket-btn">
+    Make Payment
+       </button>
+
+       </a>
             </div>
         </div>
     </div>
