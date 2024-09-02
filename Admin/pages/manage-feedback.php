@@ -40,12 +40,16 @@ $sql = "SELECT * FROM user_feedback ORDER BY id DESC";
         <i class="bi bi-person"></i><img src =".\..\..\Images\login.png" style="height:40px;"> 
       </a>
     </div>
-            </ul>
+     </ul>
         </nav>
     </header>
+   
 
     <div class="containers">
         <h2  > Manage User Feedback</h2>
+        <div class="header-btn">
+            <a href="./report-feedback.php"><button >View Report</button></a>
+         </div>
         <table class="movie-table">
             <thead>
                 <tr>
@@ -54,7 +58,6 @@ $sql = "SELECT * FROM user_feedback ORDER BY id DESC";
                     <th>Email</th>
                     <th>subject</th>
                     <th>message</th>
-                    
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -81,7 +84,6 @@ while ($res = $query->fetch_assoc())
           <img src='.\..\..\Images\admin-images\delete.png' alt='Delete' class='icon' style='height:40px;'>
         </a>";
 
-      
   echo "</td>";
   echo "</tr>";
 }
@@ -112,7 +114,7 @@ while ($res = $query->fetch_assoc())
         <div class="row">
             <div class="col-md-4">
                 <h3 class="footer-title">STARLIGHT CINEMA</h3>
-                <p>Buy movie tickets easily with Aovis system nationwide</p>
+                <p>Buy movie tickets easily with Starlight system nationwide</p>
                 <a href="#" class="btn btn-warning">Get Your Ticket</a>
             </div>
             <div class="col-md-2">
@@ -136,7 +138,7 @@ while ($res = $query->fetch_assoc())
                 </ul>
                 </div>
             <div class="col-md-4">
-                <h5 class="footer-title">Newsletter</h5>
+                
                 <p>Subscribe to Leitmotif newsletter this very day.</p>
                 <div class="newsletter">
                     <input type="email" class="form-control" placeholder="Email Address">

@@ -65,7 +65,7 @@
                 <input type="password" id="password" name="password" required>
             </div>
             
-            <button type="submit">Login</button>
+             <a href="./admin-dashboard.php"><button type="submit">Login</button> </a>
             <h6 style="color: #f3f1f1; margin-top: 20px; display: inline;">
              if not have account &nbsp;
            </h6>

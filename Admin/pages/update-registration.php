@@ -43,7 +43,7 @@ $confirm_password = $resultData['confirm_password'];
         <div class="logo"><img src=".\..\..\Images\logo2.png" class="logo-img"></div>
         <nav class="nav">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="./admin-dashboard.php">Home</a></li>
                 <div class="d-flex align-items-center">
                     <a href="./login.php" class="btn btn-outline-primary">
                         <img src =".\..\..\Images\login.png" style="height:40px;">
@@ -109,14 +109,12 @@ if (isset($_POST['update'])) {
     }
 }
 ?>
-
-    <!-- Footer -->
+   <!-- Footer -->
     <div class="footer">
         <div class="container">
             <!-- Footer content -->
         </div>
     </div>
-
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
@@ -124,16 +122,9 @@ if (isset($_POST['update'])) {
 </body>
 </html>
 
-
-
-
-
-
 </div>
 
-
-
-      <!-- Footer -->
+ <!-- Footer -->
       <div class="footer">
     <div class="container">
         <div class="row">
@@ -165,7 +156,7 @@ if (isset($_POST['update'])) {
                 </div>
                 
             <div class="col-md-4">
-                <h5 class="footer-title">Newsletter</h5>
+              
                 <p>Subscribe to STARLIGHT CINEMA .</p>
                 <div class="newsletter">
                     <input type="email" class="form-control" placeholder="Email Address">
