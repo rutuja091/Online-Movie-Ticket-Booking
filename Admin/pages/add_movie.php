@@ -48,7 +48,7 @@
         </div>
         <div class="form-group">
             <label for="duration">Duration</label>
-            <input type="text" id="duration" name="duration" >
+            <input type="number" id="duration" name="duration" >
         </div>
 
         <div class="form-group">
@@ -56,9 +56,14 @@
             <input type="number" id="price" name="price" step="0.01" required>
         </div>
         <div class="form-group">
-            <label for="time">Show Time:</label>
-            <input type="datetime-local" id="time" name="time" required>
-        </div>
+    <label for="show_date">Show Date:</label>
+    <input type="date" id="show_date" name="show_date" required>
+</div>
+
+<div class="form-group">
+    <label for="show_time">Show Time:</label>
+    <input type="time" id="show_time" name="show_time" required>
+</div>
          
         <div class="form-group">
                     <label for="category" class="form-label">Movie Category</label>
@@ -164,48 +169,57 @@
 </html>
 
 
-
 <?php
-
-
 $databaseHost = "localhost";
 $databaseName = "movieticketdb";
 $databaseUsername = "root";
 $databasePassword = "";
 
-//Database connection 
+// Database connection 
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
-$con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
-
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
 
 $msg = "";
-if(isset($_POST["submit"]))
-{ 
-  $image = $_FILES['image']['name'];
-  $target = "Images/".basename($image);
+if (isset($_POST["submit"])) {
+    $image = $_FILES['image']['name'];
+    $target = "Images/" . basename($image);
 
-    
-     $name =$_POST["name"];
-	   $description=$_POST["description"];
-     $time=$_POST["time"];
-     $price=$_POST["price"];
-     $category=$_POST["category"];
-     $duration=$_POST["duration"];
-     $date=$_POST["date"];
-    
+    $name = $_POST["name"];
+    $description = $_POST["description"];
+    $price = $_POST["price"];
+    $category = $_POST["category"];
+    $duration = $_POST["duration"];
+    $date = $_POST["date"];
+    $show_date = $_POST["show_date"];
+    $show_time = $_POST["show_time"];
 
-     $sql = "INSERT INTO movies(`image`, `name`, `description`, `time`, `price`, `category`,`duration`,`date`)
-     VALUES ('$image','$name', '$description', '$time', '$price', '$category','$duration','$date')";
+    // Debugging: print out the SQL query
+    $sql = "INSERT INTO movies (image, name, description, price, category, duration, date, show_date, show_time)
+            VALUES ('$image', '$name', '$description', '$price', '$category', '$duration', '$date', '$show_date', '$show_time')";
 
-		
-mysqli_query($con, $sql); 
- 
-if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-  $msg = "Image uploaded successfully";
+    echo $sql; // Print the SQL query for debugging
+
+    if (mysqli_query($con, $sql)) {
+        $msg = "Movie added successfully.";
+    } else {
+        $msg = "Error: " . mysqli_error($con); // Display SQL error
+    }
+
+    if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+        $msg .= " Image uploaded successfully.";
+    } else {
+        $msg .= " Failed to upload image.";
+    }
+
+    // For debugging: Print result of the select query
+    $result = mysqli_query($con, "SELECT * FROM movies");
+    while ($row = mysqli_fetch_assoc($result)) {
+        print_r($row); // Print out the records to verify insertion
+    }
 }
-else{
-  $msg = "Failed to upload image";
-}
-$result = mysqli_query($con, "SELECT * FROM movies");
-}
+
+mysqli_close($con);
 ?>
