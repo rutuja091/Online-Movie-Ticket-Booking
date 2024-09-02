@@ -233,7 +233,6 @@ $con->close();
      });</script>
 </body>
 </html>
-
 <?php
 $databaseHost = "localhost";
 $databaseName = "movieticketdb";
@@ -248,29 +247,39 @@ if ($con->connect_error) {
 }
 
 if (isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $image = $_POST['image'];
-    $quantity = $_POST['quantity'];
-    $total_price = $_POST['total_price'];
+    // Check the current number of records in the 'ticket' table
+    $result = $con->query("SELECT COUNT(*) as count FROM ticket");
+    $row = $result->fetch_assoc();
+    
+    if ($row['count'] < 10) {
+        $name = $_POST['name'];
+        $image = $_POST['image'];
+        $quantity = $_POST['quantity'];
+        $total_price = $_POST['total_price'];
 
-    // Prepare and bind
-    $stmt = $con->prepare("INSERT INTO ticket (`name`, `image`, `quantity`, `total_price`) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssii", $name, $image, $quantity, $total_price);
+        // Prepare and bind
+        $stmt = $con->prepare("INSERT INTO ticket (`name`, `image`, `quantity`, `total_price`) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssii", $name, $image, $quantity, $total_price);
 
-    // Execute the prepared statement
-    if ($stmt->execute()) {
-        echo '<script type="text/javascript">
-              alert("Ticket booked successfully!");
-              window.location.href = "booked-ticket.php";
-              </script>';
+        // Execute the prepared statement
+        if ($stmt->execute()) {
+            echo '<script type="text/javascript">
+                  alert("Ticket booked successfully!");
+                  window.location.href = "booked-ticket.php";
+                  </script>';
+        } else {
+            echo '<script type="text/javascript">
+                  alert("Error booking ticket: ' . $stmt->error . '");
+                  </script>';
+        }
+
+        // Close the statement
+        $stmt->close();
     } else {
         echo '<script type="text/javascript">
-              alert("Error booking ticket:'.$stmt->error.'");
+              alert("Booking limit reached. Only 10 tickets can be booked.");
               </script>';
     }
-
-    // Close the statement
-    $stmt->close();
 }
 
 // Close the database connection
