@@ -1,4 +1,21 @@
 
+<?php
+session_start(); // Start the session
+
+// Check if the user is logged in
+if(!isset($_SESSION['user_id'])) {
+    // Redirect to login page if not logged in
+    header("Location: ./User/pages/login.php");
+    exit;
+}
+
+// Fetch user data (optional)
+$user_id = $_SESSION['user_id'];
+$user_name = $_SESSION['user_name']; // Assuming you store the user's name in the session
+
+// Rest of your page code goes here
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +23,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
-    <link rel="stylesheet" href="./index1.css">
+    <link rel="stylesheet" href="./index.css">
    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -372,7 +389,7 @@ $check_movie=mysqli_num_rows($query_run)>0;
                 </div>
                 
             <div class="col-md-4">
-                <h5 class="footer-title">Newsletter</h5>
+               
                 <p>Subscribe to STARLIGHT CINEMA .</p>
                 <div class="newsletter">
                     <input type="email" class="form-control" placeholder="Email Address">
@@ -419,4 +436,3 @@ $check_movie=mysqli_num_rows($query_run)>0;
         });</script>
 </body>
 </html>
-
