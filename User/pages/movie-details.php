@@ -30,7 +30,8 @@ if ($query->num_rows > 0) {
     $image = $resultData['image'];
     $name = $resultData['name'];
     $description = $resultData['description'];
-    $time = $resultData['time'];
+    $show_time = $resultData['show_time'];
+    $show_date = $resultData['show_date'];
     $price = $resultData['price'];
 } else {
     echo "No movie found with ID: $id";
@@ -56,6 +57,38 @@ $con->close();
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+.show-date-time {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust spacing between date and time sections */
+}
+
+.show-date-time label {
+    margin-right: 5px; /* Space between label and input */
+    font-weight: bold; /* Make label text bold */
+    color: #333; /* Dark grey color for labels */
+    text-decoration: none; /* Remove text decoration */
+}
+
+.show-date-time input {
+    border: none; /* Remove border */
+    background: none; /* Remove background */
+    font-size: 14px; /* Adjust font size */
+    color: #333; /* Text color */
+    padding: 0; /* Remove padding */
+    width: auto; /* Adjust width to fit content */
+    cursor: default; /* Change cursor to default (not editable) */
+    display: inline; /* Keep inputs inline with labels */
+    text-align: center; /* Center text inside the input */
+}
+
+.show-date-time input[readonly] {
+    background-color: #f9f9f9; /* Light background color for readability */
+    color: #333; /* Text color */
+}
+
+    </style>
 </head>
 <body>
 
@@ -97,7 +130,6 @@ $con->close();
 <!-- Navbar and other content remain unchanged -->
 
 <!-- Main Content -->
-
 <main>
     <div class="containers">
         <div class="movie-image">
@@ -107,7 +139,19 @@ $con->close();
             <h1 id="name"><?php echo htmlspecialchars($name); ?></h1>
             <p>Rating: ⭐⭐⭐⭐☆</p>
             <p id="description"><?php echo htmlspecialchars($description); ?></p>
-            <div class="ticket-quantity">
+
+            <!-- Date and Time Inputs -->
+      <!-- Date and Time Inputs -->
+      <div class="show-date-time">
+    <label for="visible_show_date"><strong>Date:</strong></label>
+    <input type="date" id="visible_show_date" name="show_dates" value="<?php echo htmlspecialchars($show_date); ?>" required readonly>
+
+    <label for="visible_show_time"><strong>Time:</strong></label>
+    <input type="time" id="visible_show_time" name="show_times" value="<?php echo htmlspecialchars($show_time); ?>" required readonly>
+</div>
+
+
+            <div class="ticket-quantity" style="margin-top:20px">
                 <button type="button" onclick="decrement()">-</button>
                 <input type="text" id="quantity" value="1" readonly>
                 <button type="button" onclick="increment()">+</button>
@@ -121,6 +165,11 @@ $con->close();
                 <input type="hidden" name="image" value="./../../Images/movies/<?php echo htmlspecialchars($image); ?>">
                 <input type="hidden" name="quantity" id="form_quantity" value="1">
                 <input type="hidden" name="total_price" id="form_total_price" value="<?php echo htmlspecialchars($price); ?>">
+                
+                <!-- Hidden Date and Time Inputs for Form Submission -->
+                <input type="hidden" name="show_date" id="form_show_date">
+                <input type="hidden" name="show_time" id="form_show_time">
+
                 <input type="submit" name="submit" value="Book Ticket" class="buy-button">
             </form>
         </div>
@@ -151,8 +200,15 @@ $con->close();
             document.getElementById('total_price').textContent = totalPrice;
             document.getElementById('form_total_price').value = totalPrice;
         }
+
+        // Update hidden inputs with visible date and time inputs before form submission
+        document.querySelector('form').addEventListener('submit', function() {
+            document.getElementById('form_show_date').value = document.getElementById('visible_show_date').value;
+            document.getElementById('form_show_time').value = document.getElementById('visible_show_time').value;
+        });
     </script>
 </main>
+
 
 <!-- Footer -->
 <div class="footer">
@@ -255,11 +311,13 @@ if (isset($_POST['submit'])) {
         $name = $_POST['name'];
         $image = $_POST['image'];
         $quantity = $_POST['quantity'];
+        $show_date = $_POST['show_date'];
+        $show_time = $_POST['show_time'];
         $total_price = $_POST['total_price'];
 
         // Prepare and bind
-        $stmt = $con->prepare("INSERT INTO ticket (`name`, `image`, `quantity`, `total_price`) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssii", $name, $image, $quantity, $total_price);
+        $stmt = $con->prepare("INSERT INTO ticket (`name`, `image`, `quantity`, `total_price`, `show_date`, `show_time`) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssisss", $name, $image, $quantity, $total_price, $show_date, $show_time);
 
         // Execute the prepared statement
         if ($stmt->execute()) {
@@ -285,3 +343,4 @@ if (isset($_POST['submit'])) {
 // Close the database connection
 $con->close();
 ?>
+
