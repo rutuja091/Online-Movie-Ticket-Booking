@@ -1,3 +1,18 @@
+
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+//Database connection 
+
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
+
+// Fetch data in descending order (lastest entry first)
+$sql = "SELECT * FROM ticket ORDER BY id DESC";
+ $query= $con->query($sql)
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
     <link rel="stylesheet" href="./../css/addmovie.css">
-    <link rel="stylesheet" href="./../css/manage-movie.css">
+    <link rel="stylesheet" href="./../css/manage-registration.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -28,54 +43,50 @@
 
 
 
-      
-   <div class="containers">
-        <h2> Ticket Reports</h2>
+    <div class="containers">
+        <h2> Ticket Report</h2>
         <div class="header-btn">
-            <a href="./manage-ticket.php"><button >Manage Data</button></a>
-        </div>
+            <a href="./manage-ticket.php"><button >Manage</button></a>
+         </div>
         <table class="movie-table">
             <thead>
                 <tr>
-                <th>User Name</th>
-                    <th>Movie Name</th>
-                    <th>Seat No</th>
-                    <th>Ticket Price</th>
-                    <th>Show Time</th>
+                    <th>User Id</th>
+                    <th>Name</th>
+                    <th>total_price</th>
+                 
+                   
+                    
+                  
                 </tr>
-          
-        
             </thead>
             <tbody>
                 <tr>
-                    <td>jerry</td>
-                    <td>Movie Name</td>
-                    <td>0012</td>
-                    <td>Rs.100</td>
-                    <td>2024-07-31 19:00</td>
-             
-                </tr>
-                <tr>
-                    <td>jon</td>
-                    <td>Movie Name</td>
-                    <td>0012</td>
-                    <td>Rs.100</td>
-                    <td>2024-07-31 19:00</td>
-                 
-                </tr>
-                <tr>
-                    <td>sai</td>
-                    <td>Movie Name</td>
-                    <td>0012</td>
-                    <td>Rs.100</td>
-                    <td>2024-07-31 19:00</td>
-                   
-                </tr>
+                    
+                <?php
+
+
+// Fetch the next row of a result set as an associative array
+$i=0;
+while ($res = $query->fetch_assoc())
+ {
+  echo "<tr>";
+  echo" <td >".++$i."</td>";
+  echo "<td>".$res['name']."</td>";
+  echo "<td>".$res['total_price']."</td>";
+  
+
+  echo "</tr>";
+}
+  
+?>
+           
+
                 <!-- Repeat <tr> for more rows -->
             </tbody>
         </table>
     </div>
-
+   
   
      <!-- Footer -->
      <div class="footer bg-dark text-light py-4">

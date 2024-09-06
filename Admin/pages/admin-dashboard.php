@@ -95,7 +95,7 @@
               <div class="col-md-6 col-lg-4">
                 <div class="card">
                     <img src=".\..\..\Images\admin-images\tickets.png" alt="Movie 3">
-                    <button class="movie-button">View Tickets</button>
+                    <a href =".\manage-ticket.php">   <button class="movie-button">View Tickets</button></a>
                 </div>
             </div> 
             
