@@ -1,3 +1,18 @@
+
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+//Database connection 
+
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
+
+// Fetch data in descending order (lastest entry first)
+$sql = "SELECT * FROM payment ORDER BY id DESC";
+ $query= $con->query($sql)
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
     <link rel="stylesheet" href="./../css/addmovie.css">
-    <link rel="stylesheet" href="./../css/manage-feedback.css">
+    <link rel="stylesheet" href="./../css/manage-registration.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -28,9 +43,8 @@
 
 
 
-      
     <div class="containers">
-        <h2> Manage Payment Details</h2>
+        <h2> Manage Payment</h2>
         <div class="header-btn">
             <a href="./report-payment.php"><button >View Report</button></a>
          </div>
@@ -39,68 +53,59 @@
                 <tr>
                     <th>User Id</th>
                     <th>Name</th>
-                    <th>Email</th>
-                    <th>mobile no</th>
-                    <th>product Name</th>
-                    <th>card no </th>
-                    <th>total price</th>
-                    <th>Action</th>
+                    <th>email</th>
+                    <th>mobile_no</th>
+                    <th>movie_name</th>
+                    <th>payment_mode</th>
+                    <th>card_number</th>
+                    <th>total_price</th>
+                 
+                   
+                    
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     
-                    <td>1</td>
-                    <td>name</td>
-                    <td>abc@gmail.com</td>
-                    <td>1234567890</td>
-                    <td>ticket</td>
-                    <td>1234</td>
-                    <td>500</td>
-                    <td>
-                    <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;">
-                    <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
-                    </td>
-                </tr>
-                <tr>
-                    
-                    <td>2</td>
-                    <td>jon</td>
-                    <td>jon@gmail.com</td>
-                    <td>1265456780</td>
-                    <td>ticket</td>
-                    <td>1240</td>
-                    <td>300</td>
-                    <td>
-                    <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;">
-                    <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
-                    </td>
-                </tr>
-                <tr>
-                    
-                    <td>3</td>
-                    <td>jerry</td>
-                    <td>abc@gmail.com</td>
-                    <td>1289567890</td>
-                    <td>ticket</td>
-                    <td>1204</td>
-                    <td>200</td>
-                    <td>
-                    <img src=".\..\..\Images\admin-images\edit2.png" alt="Movie 1" class="icon" style="height:40px;">
-                    <img src=".\..\..\Images\admin-images\delete.png" alt="Movie 1" class="icon" style="height:40px;">
-                    </td>
-                </tr>
+                <?php
+
+
+// Fetch the next row of a result set as an associative array
+$i=0;
+while ($res = $query->fetch_assoc())
+ {
+  echo "<tr>";
+  echo" <td >".++$i."</td>";
+  echo "<td>".$res['name']."</td>";
+  echo "<td>".$res['email']."</td>";
+  echo "<td>".$res['mobile_no']."</td>";
+  echo "<td>".$res['movie_name']."</td>";
+  echo "<td>".$res['payment_mode']."</td>";
+  echo "<td>".$res['card_number']."</td>";
+
+  echo "<td>".$res['total_price']."</td>";
+  
+  echo "<td>";
+ 
+  echo "<a href='.\delete-payment.php?id=".$res['id']."'>
+          <img src='.\..\..\Images\admin-images\delete.png' alt='Delete' class='icon' style='height:40px;'>
+        </a>";
+
+      
+  echo "</td>";
+  echo "</tr>";
+}
+  
+?>
+           
+
                 <!-- Repeat <tr> for more rows -->
             </tbody>
         </table>
     </div>
-
+   
   
-
-
-
-
-     
      <!-- Footer -->
      <div class="footer bg-dark text-light py-4">
     <div class="container">
@@ -159,3 +164,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+  
+
+
+
+
+     

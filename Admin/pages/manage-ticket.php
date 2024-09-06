@@ -10,7 +10,7 @@ $databasePassword = "";
 $con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
 
 // Fetch data in descending order (lastest entry first)
-$sql = "SELECT * FROM user_registration ORDER BY id DESC";
+$sql = "SELECT * FROM ticket ORDER BY id DESC";
  $query= $con->query($sql)
 ?>
 <!DOCTYPE html>
@@ -44,19 +44,18 @@ $sql = "SELECT * FROM user_registration ORDER BY id DESC";
 
 
     <div class="containers">
-        <h2> Manage User Registration</h2>
+        <h2> Manage Ticket</h2>
         <div class="header-btn">
-            <a href="./report-registration.php"><button >View Report</button></a>
+            <a href="./report-ticket.php"><button >View Report</button></a>
          </div>
         <table class="movie-table">
             <thead>
                 <tr>
                     <th>User Id</th>
                     <th>Name</th>
-                    <th>Email</th>
+                    <th>total_price</th>
                  
-                    <th>Password</th>
-                    <th>confirm password</th>
+                   
                     
                     <th>Actions</th>
                 </tr>
@@ -73,15 +72,12 @@ while ($res = $query->fetch_assoc())
  {
   echo "<tr>";
   echo" <td >".++$i."</td>";
-  echo "<td>".$res['user_name']."</td>";
-  echo "<td>".$res['email']."</td>";
-  echo "<td>".$res['password']."</td>";
-  echo "<td>".$res['confirm_password']."</td>";
+  echo "<td>".$res['name']."</td>";
+  echo "<td>".$res['total_price']."</td>";
+  
   echo "<td>";
-  echo "<a href='./update-registration.php?id=".$res['id']."'>
-          <img src='./../../Images/admin-images/edit2.png' alt='Edit' class='icon' style='height:40px;'>
-        </a>";
-  echo "<a href='.\delete-reg.php?id=".$res['id']."'>
+ 
+  echo "<a href='.\delete-ticket.php?id=".$res['id']."'>
           <img src='.\..\..\Images\admin-images\delete.png' alt='Delete' class='icon' style='height:40px;'>
         </a>";
 
