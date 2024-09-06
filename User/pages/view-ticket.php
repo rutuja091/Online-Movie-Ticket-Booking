@@ -8,7 +8,7 @@ $databasePassword = "";
 //Database connection 
 
 $con = new mysqli($databaseHost, $databaseUsername, $databasePassword,$databaseName)or die($conn->connect_error());
-$query = "SELECT MAX(id) AS max_id FROM payment";
+$query = "SELECT MAX(id) AS max_id FROM ticket";
 $result = mysqli_query($con, $query);
 $row = mysqli_fetch_assoc($result);
 $maxId = $row['max_id'];
@@ -202,8 +202,8 @@ footer a:hover {
 
 
 </main>
-   <!-- Footer -->
-   <div class="footer">
+     <!-- Footer -->
+     <div class="footer">
     <div class="container">
         <div class="row">
             <div class="col-md-4">

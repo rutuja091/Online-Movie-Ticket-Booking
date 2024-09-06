@@ -289,6 +289,9 @@ $con->close();
      });</script>
 </body>
 </html>
+
+
+
 <?php
 $databaseHost = "localhost";
 $databaseName = "movieticketdb";

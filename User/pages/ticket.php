@@ -1,3 +1,55 @@
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+
+// Check connection
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
+
+// Check if id is set and is a valid number
+if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+    $id = $_GET['id'];
+
+    // Prepare SQL statement
+    $sql = "SELECT * FROM ticket WHERE id = ?";
+    $stmt = $con->prepare($sql);
+    
+    if ($stmt === false) {
+        die("Prepare failed: " . $con->error);
+    }
+
+    // Bind parameters and execute statement
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        $resultData = $result->fetch_assoc();
+        $name = $resultData['name'] ?? 'N/A';
+        $quantity = $resultData['quantity'] ?? 'N/A';
+        $name= $resultData['name'] ?? 'N/A';
+        $total_price = $resultData['total_price'] ?? 'N/A';
+        $show_time = $resultData['show_time'] ?? 'N/A';
+        $show_date = $resultData['show_date'] ?? 'N/A';
+    } else {
+        echo "No record found with ID $id.";
+        exit; // Exit if no record is found
+    }
+
+    $stmt->close();
+} else {
+    echo "Invalid ID.";
+    exit; // Exit if ID is not valid
+}
+
+$con->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +62,44 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+ .center {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.center .movie-name {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'PT Serif', serif; /* PT Serif font */
+    color: #000000; /* Black color */
+    margin-bottom: 10px;
+}
+.center {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.center .movie-title {
+    font-size: 28px;
+    font-weight: bold;
+   
+}
+.center .details {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000; /* Black color */
+    margin-bottom: 8px;
+}
+
+.center .details.price {
+    color: #000000; /* Black color for total price */
+}
+
+
+        </style>
 </head>
 <body>
 
@@ -53,35 +143,41 @@
     <!--- Main Content --->
     <main>
         <div class="main-ticket">
-    <div class="ticket">
+    <div class="ticket"style="height:auto; padding: 5px;">
         <div class="left">
             <div class="logo">
                 <img src="./../../Images/logo2.png" style="height:90px;"alt="Starlight Cinema Logo">
             </div>
             <div class="cinema">STARLIGHT CINEMA</div>
             <div class="details">THEATER: 03</div>
-            <div class="details">SEAT: S16</div>
-            <div class="details">DATE: 10/07/2022</div>
-            <div class="details">TIME: 11:45 PM</div>
+            
+            
+           
         </div>
         <div class="center">
-            <div class="movie-title">MOVIE 3D</div>
-            <div class="details">PRICE: 10 USD</div>
-            <div class="details">STANDARD</div>
-            <div class="details">3D</div>
+            <div class="movie-title" style="font-size:20px; margin-bottom:10px; color:black; text-decoration: underline;">MOVIE TICKET</div>
+          
+            
+            <div class="details movie-name" style="font-weight:bold;font-size:40px; color:red;">&quot;<?php echo htmlspecialchars($name); ?>&quot;</div>
+            <div class="details">Total Tickets: &nbsp;&nbsp;<?php echo htmlspecialchars($quantity); ?></div>
+            <div class="details">Total Price:&nbsp;&nbsp;<?php echo htmlspecialchars($total_price); ?></div>
+            
         </div>
         <div class="right">
-            <div class="barcode">
-                <img src="https://dummyimage.com/150x50/000/fff&text=Barcode" alt="Barcode">
-                <div class="barcode-text">NO: 0123456987</div>
-            </div>
-            <div class="details">NO: 00000000000000</div>
-        </div>
+    <div class="details">
+        <strong>Show Date:</strong> <?php echo date('F j, Y', strtotime($show_date)); ?>
+    </div>
+    <div class="details">
+        <strong>Show Time:&nbsp;&nbsp;&nbsp;&nbsp;</strong> <?php echo date('h:i A', strtotime($show_time)); ?>
+
+    </div>
+    <div class="details"style="font-weight:bold;color:#e041b1;">STANDARD 3D MOVIES</div>
+</div>
+
     </div>
     </div>
 
     </main>
-
 
    <!-- Footer -->
    <div class="footer">
@@ -162,4 +258,3 @@
         });</script>
 </body>
 </html>
-
