@@ -347,7 +347,7 @@ $check_movie=mysqli_num_rows($query_run)>0;
             <div class="col-md-4">
                 <h3 class="footer-title">STARLIGHT CINEMA</h3>
                 <p>Buy movie tickets easily with Starlight Cinema system nationwide</p>
-                <a href="#" class="btn btn-warning">Get Your Ticket</a>
+                <a href="#" class="btn btn-warning">Get more information</a>
             </div>
             <div class="col-md-2">
                 <h5 class="footer-title">Movies</h5>
@@ -371,13 +371,12 @@ $check_movie=mysqli_num_rows($query_run)>0;
                 </ul>
                 </div>
                 
-            <div class="col-md-4">
-                <h5 class="footer-title">Newsletter</h5>
-                <p>Subscribe to STARLIGHT CINEMA .</p>
-                <div class="newsletter">
-                    <input type="email" class="form-control" placeholder="Email Address">
-                    <button class="btn btn-warning mt-2">Subscribe</button>
-                </div>
+                <div class="col-md-4">
+    <h5 class="footer-title">About STARLIGHT CINEMA</h5>
+    <p>At STARLIGHT CINEMA, we aim to provide a unique and seamless movie-going experience with our advanced ticket booking system, top-tier cinema facilities, and a wide variety of movie options. Whether it's the latest blockbusters, classics, or indie films, we have something for every movie lover. Join us for an unforgettable cinematic experience.</p>
+    <p>Our goal is to make your movie experience memorable with comfort, convenience, and entertainment all in one place.</p>
+  
+</div>
                 <div class="mt-2">
                     <input type="checkbox" id="terms">
                     <label for="terms">I agree to all terms and policies of the company</label>
