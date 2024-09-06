@@ -85,14 +85,14 @@ mysqli_close($con);
     font-size: 40px;
     font-weight:bold;
     margin: 0;
-    color: blue;
+    color: red;
 }
 
 .ticket-quantity,
 .total-price {
     font-size: 1.2em;
     margin: 10px 0;
-    color: #666;
+    color: black;
     justify-content:center;
 }
 
@@ -181,8 +181,8 @@ mysqli_close($con);
     <div class="card-body">
         <div class="ticket-container">
             <div class="movie-details">
-                <h2 class="movie-name"><?php echo $name; ?></h2>
-                <p style="color:red;font-weight:bold" class="ticket-quantity">Booked Tickets: <?php echo $quantity; ?></p>
+                <h2 class="movie-name" style="text-decoration:underline;">&quot;<?php echo $name; ?>&quot;</h2>
+                <p style="color:black;font-weight:bold" class="ticket-quantity">Booked Tickets: <?php echo $quantity; ?></p>
                 <p class="total-price">Pay <b style="color:black;">₹<?php echo number_format($totalPrice, 2); ?></b></p>
 
               
