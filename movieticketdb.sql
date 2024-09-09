@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 02, 2024 at 06:24 PM
+-- Generation Time: Sep 09, 2024 at 11:05 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -109,7 +109,16 @@ INSERT INTO `payment` (`id`, `name`, `email`, `mobile_no`, `movie_name`, `paymen
 (2, 'rutuja', 'rutuja@gmail.com', '9322856447', 'HasyaYatra', 'debitCard', '132324', '1400'),
 (3, 'rutuja', 'rutuja@gmail.com', '9322856447', 'Google Aai', 'creditCard', '132324', '1200'),
 (4, 'vaishnavi', 'v@gmail.com', '9322856447', 'Google Aai', 'creditCard', '132324', '3600'),
-(5, 'vaishnavi', 'v@gmail.com', '9322856447', 'Google Aai', 'debitCard', '132324', '3600');
+(5, 'vaishnavi', 'v@gmail.com', '9322856447', 'Google Aai', 'debitCard', '132324', '3600'),
+(6, 'Children Party', 'r@gmail.com', '9322856447', 'Hamlet', 'debitCard', '1234', '200'),
+(7, 'Children Party', 'r@gmail.com', '9322856447', 'Hamlet', 'creditCard', '123', '200'),
+(8, 'Children Party', 'r@gmail.com', '9322856447', 'Hamlet', 'creditCard', '1234', '200'),
+(9, 'Children Party', 'r@gmail.com', '9322856447', 'Hamlet', 'creditCard', '1234', '200'),
+(10, 'Children Party', 'r@gmail.com', '9322856447', 'Hamlet', 'debitCard', '1234', '200'),
+(11, 'Children Party', 'r@gmail.com', '9322856447', 'Hamlet', 'debitCard', '1234', '200'),
+(12, 'Ram', 'r@gmail.com', '987656467', 'double life', 'creditCard', '1234', '780'),
+(13, 'abc', 'r@gmail.com', '9322856447', 'double life', 'creditCard', '1234', '780'),
+(14, 'rutuja', 'r@gmail.com', '987656467', 'Samantar', 'creditCard', '1234', '900');
 
 -- --------------------------------------------------------
 
@@ -122,68 +131,26 @@ CREATE TABLE `ticket` (
   `name` text NOT NULL,
   `quantity` text NOT NULL,
   `total_price` text NOT NULL,
-  `image` text NOT NULL
+  `image` text NOT NULL,
+  `show_date` text NOT NULL,
+  `show_time` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `ticket`
 --
 
-INSERT INTO `ticket` (`id`, `name`, `quantity`, `total_price`, `image`) VALUES
-(2, 'Samantar', '4', '3560', ''),
-(3, 'HasyaYatra', '2', '1400', ''),
-(4, 'HasyaYatra', '2', '1400', ''),
-(5, 'Mahi', '1', '700', ''),
-(6, 'Painter', '4', '3560', ''),
-(7, 'HasyaYatra', '2', '1400', ''),
-(8, 'HasyaYatra', '1', '700', ''),
-(9, 'Painter', '2', '1780', ''),
-(10, 'Painter', '2', '1780', ''),
-(11, 'Painter', '2', '1780', ''),
-(12, 'Painter', '2', '1780', ''),
-(13, 'HasyaYatra', '2', '1400', ''),
-(14, 'HasyaYatra', '1', '700', ''),
-(15, 'HasyaYatra', '1', '700', ''),
-(16, 'HasyaYatra', '1', '700', ''),
-(17, 'HasyaYatra', '1', '700', ''),
-(18, 'HasyaYatra', '1', '700', ''),
-(19, 'HasyaYatra', '1', '700', ''),
-(20, 'HasyaYatra', '1', '700', ''),
-(21, 'HasyaYatra', '2', '1400', ''),
-(22, 'HasyaYatra', '2', '1400', ''),
-(23, 'HasyaYatra', '1', '700', ''),
-(24, 'HasyaYatra', '1', '700', ''),
-(25, 'HasyaYatra', '2', '1400', ''),
-(26, 'HasyaYatra', '1', '700', ''),
-(27, 'HasyaYatra', '1', '700', ''),
-(28, 'HasyaYatra', '1', '700', ''),
-(29, 'HasyaYatra', '1', '700', ''),
-(30, 'HasyaYatra', '1', '700', ''),
-(31, 'HasyaYatra', '1', '700', ''),
-(32, 'Google Aai', '2', '1200', ''),
-(33, 'Mahi', '1', '700', ''),
-(34, 'Samantar', '2', '1800', ''),
-(35, 'Google Aai', '2', '1200', ''),
-(36, 'Google Aai', '4', '2400', ''),
-(37, 'Samantar', '1', '900', ''),
-(38, 'Samantar', '1', '900', './../../Images/movies/samantar.jpg'),
-(39, 'Samantar', '2', '1800', './../../Images/movies/samantar.jpg'),
-(40, 'Samantar', '1', '900', './../../Images/movies/samantar.jpg'),
-(41, 'Samantar', '10', '9000', './../../Images/movies/samantar.jpg'),
-(42, 'Samantar', '2', '1800', './../../Images/movies/samantar.jpg'),
-(43, 'Google Aai', '2', '1200', './../../Images/movies/googleaai.jpg'),
-(44, 'Samantar', '1', '900', './../../Images/movies/samantar.jpg'),
-(45, 'Samantar', '1', '900', './../../Images/movies/samantar.jpg'),
-(46, 'Samantar', '4', '3600', './../../Images/movies/samantar.jpg'),
-(47, 'Samantar', '2', '1800', './../../Images/movies/samantar.jpg'),
-(48, 'Samantar', '2', '1800', './../../Images/movies/samantar.jpg'),
-(49, 'Samantar', '4', '3600', './../../Images/movies/samantar.jpg'),
-(50, 'HasyaYatra', '2', '1400', './../../Images/movies/hashyajatra.jpg'),
-(51, 'HasyaYatra', '1', '700', './../../Images/movies/hashyajatra.jpg'),
-(52, 'Google Aai', '2', '1200', './../../Images/movies/googleaai.jpg'),
-(53, 'HasyaYatra', '10', '7000', './../../Images/movies/hashyajatra.jpg'),
-(54, 'Google Aai', '6', '3600', './../../Images/movies/googleaai.jpg'),
-(55, 'Painter', '5', '4450', './../../Images/movies/painter.jpg');
+INSERT INTO `ticket` (`id`, `name`, `quantity`, `total_price`, `image`, `show_date`, `show_time`) VALUES
+(48, 'Samantar', '2', '1800', './../../Images/movies/samantar.jpg', '', ''),
+(49, 'Samantar', '4', '3600', './../../Images/movies/samantar.jpg', '', ''),
+(50, 'HasyaYatra', '2', '1400', './../../Images/movies/hashyajatra.jpg', '', ''),
+(51, 'HasyaYatra', '1', '700', './../../Images/movies/hashyajatra.jpg', '', ''),
+(58, 'Hamlet', '2', '400', './../../Images/movies/hamlet.jpg', '', ''),
+(60, 'Hamlet', '1', '200', './../../Images/movies/hamlet.jpg', '2024-09-18', '01:51'),
+(65, 'double life', '1', '780', './../../Images/movies/double-life.jpg', '', ''),
+(66, 'double life', '2', '1560', './../../Images/movies/double-life.jpg', '', ''),
+(67, 'Samantar', '2', '1800', './../../Images/movies/samantar.jpg', '', ''),
+(68, 'Samantar', '1', '900', './../../Images/movies/samantar.jpg', '', '');
 
 -- --------------------------------------------------------
 
@@ -230,7 +197,8 @@ CREATE TABLE `user_registration` (
 INSERT INTO `user_registration` (`id`, `user_name`, `email`, `password`, `confirm_password`) VALUES
 (1, 'gauri', 'g@gmail.com', 'g123', 'g123'),
 (2, 'Rutuja', 'Rutu@gmail.com', 'r123', 'r123'),
-(3, 'Sai', 'si@gmail.com', 's234', 's234');
+(3, 'Sai', 'si@gmail.com', 's234', 's234'),
+(4, 'rutuja91', 'rutuja91@gmail.com', '123', '123');
 
 --
 -- Indexes for dumped tables
@@ -292,13 +260,13 @@ ALTER TABLE `movies`
 -- AUTO_INCREMENT for table `payment`
 --
 ALTER TABLE `payment`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `ticket`
 --
 ALTER TABLE `ticket`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
 -- AUTO_INCREMENT for table `user_feedback`
@@ -310,7 +278,7 @@ ALTER TABLE `user_feedback`
 -- AUTO_INCREMENT for table `user_registration`
 --
 ALTER TABLE `user_registration`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
