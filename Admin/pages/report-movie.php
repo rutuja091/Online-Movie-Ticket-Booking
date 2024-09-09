@@ -27,6 +27,26 @@ $query = $con->query($sql);
     <link rel="stylesheet" href="./../css/manage-movie.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        /* Print styles */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            .print-container, .print-container * {
+                visibility: visible;
+            }
+
+            .print-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <!--- Header --->
@@ -44,7 +64,7 @@ $query = $con->query($sql);
         </nav>
     </header>
 
-    <div class="containers">
+    <div class="containers print-container">
         <h2>Manage Movie Details</h2>
        
         <table class="movie-table">
@@ -83,7 +103,10 @@ $query = $con->query($sql);
             </tbody>
         </table>
     </div>
-
+    <div style="text-align: center;">
+    Click Here To Print Report 👉
+    <button  onclick="window.print()" style="color: white; text-align: center; background-color:#4CAF50;">  Print Report</button>
+</div>
    
      <!-- Footer -->
      <div class="footer bg-dark text-light py-4">
@@ -141,5 +164,9 @@ $query = $con->query($sql);
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>

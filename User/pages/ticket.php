@@ -99,6 +99,37 @@ $con->close();
 }
 
 
+
+
+
+
+    @media print {
+        /* Hide the header and footer */
+        header, .footer {
+            display: none !important;
+        }
+        
+        /* Hide the print button */
+        button {
+            display: none !important;
+        }
+        
+        /* You can further customize what to show or hide */
+        .navbar, .rating, .nav, .col-md-4 {
+            display: none !important;
+        }
+
+        /* Adjust the main content to fit the page */
+        .main-ticket {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+</style>
+
+
+
         </style>
 </head>
 <body>
@@ -176,6 +207,10 @@ $con->close();
 
     </div>
     </div>
+    <div style="text-align: center; margin-top: 20px;">
+          <span>  Click Here To Print ticket 👉 </span>
+            <button onclick="printReport()" style="color: white; text-align: center; background-color:#4CAF50;">Print Ticket</button>
+        </div>
 
     </main>
 
@@ -254,5 +289,39 @@ $con->close();
 <script>  document.querySelector('.nav').addEventListener('click', function() {
             this.querySelector('ul').classList.toggle('show');
         });</script>
+
+
+
+
+<script>
+        function printReport() {
+            window.print();
+        }
+    </script>
+
+    <!-- Print-specific CSS -->
+    <style>
+        @media print {
+            header, .footer {
+                display: none !important;
+            }
+
+            button {
+                display: none !important;
+            }
+
+            .navbar, .rating, .nav, .col-md-4 {
+                display: none !important;
+            }
+
+            .main-ticket {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    </style>
+
+
 </body>
 </html>

@@ -27,6 +27,27 @@ $query = $con->query($sql);
     <link rel="stylesheet" href="./../css/manage-movie.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    
+    <style>
+        /* Print styles */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            .print-container, .print-container * {
+                visibility: visible;
+            }
+
+            .print-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <!--- Header --->
@@ -44,8 +65,8 @@ $query = $con->query($sql);
         </nav>
     </header>
 
-    <div class="containers">
-        <h2>Manage Gallery Details</h2>
+    <div class="containers print-container">
+        <h2> Gallery Reports</h2>
      
         <table class="movie-table">
             <thead>
@@ -71,6 +92,10 @@ $query = $con->query($sql);
             </tbody>
         </table>
     </div>
+    <div style="text-align: center;">
+    Click Here To Print Report 👉
+    <button  onclick="window.print()" style="color: white; text-align: center; background-color:#4CAF50;">  Print Report</button>
+</div>
 
 
      <!-- Footer -->
