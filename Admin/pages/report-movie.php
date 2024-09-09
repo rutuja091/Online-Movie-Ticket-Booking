@@ -1,3 +1,22 @@
+<?php
+$databaseHost = "localhost";
+$databaseName = "movieticketdb";
+$databaseUsername = "root";
+$databasePassword = "";
+
+//Database connection
+$con = new mysqli($databaseHost, $databaseUsername, $databasePassword, $databaseName);
+
+// Check connection
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
+
+// Fetch data in descending order (latest entry first)
+$sql = "SELECT * FROM movies ORDER BY id DESC";
+$query = $con->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,25 +34,19 @@
         <div class="logo"><img src=".\..\..\Images\logo2.png" class="logo-img"></div>
         <nav class="nav">
         <ul>
-            <li><a href="./admin-dashboard.php" style="margin-right:50px; font-size:30px;" >Home</a></li>
-            
+            <li><a href="./admin-dashboard.php" style="margin-right:50px; font-size:30px;">Home</a></li>
             <div class="d-flex align-items-center">
-            <a href="./login.php" class="btn btn-outline-primary">
-        <i class="bi bi-person"></i><img src =".\..\..\Images\login.png" style="height:40px;"> 
-      </a>
-    </div>
-            </ul>
+                <a href="./login.php" class="btn btn-outline-primary">
+                    <img src=".\..\..\Images\login.png" style="height:40px;"> 
+                </a>
+            </div>
+        </ul>
         </nav>
     </header>
 
-
-
-      
-   <div class="containers">
-        <h2>  Movie Report</h2>
-        <div class="header-btn">
-            <a href="./manage-movie.php"><button >Manage Data</button></a>
-        </div>
+    <div class="containers">
+        <h2>Manage Movie Details</h2>
+       
         <table class="movie-table">
             <thead>
                 <tr>
@@ -41,43 +54,37 @@
                     <th>Name</th>
                     <th>Description</th>
                     <th>Ticket Price</th>
+                    <th>Show date</th>
                     <th>Show Time</th>
+                    <th>Category</th>
                    
                 </tr>
             </thead>
             <tbody>
-            <tr>
-                    <td><img src="./../../Images/Movies/maidan.jpg" alt="Movie Image" class="movie-image"></td>
-                    <td>Movie Name</td>
-                    <td>Movie Description</td>
-                    <td>Rs200</td>
-                    <td>2024-07-31 19:00</td>
-                 
-                </tr>
-
-                <tr>
-                    <td><img src="./../../Images/Movies/Frozen.jpg" alt="Movie Image" class="movie-image"></td>
-                    <td>Frozen</td>
-                    <td>Movie Description</td>
-                    <td>Rs150</td>
-                    <td>2024-07-31 19:00</td>
-                   
-                </tr>
-                <tr>
-                    <td><img src="./../../Images/Movies/childrenparty.jpg" alt="Movie Image" class="movie-image"></td>
-                    <td>chillar party</td>
-                    <td>Movie Description</td>
-                    <td>Rs180</td>
-                    <td>2024-07-31 19:00</td>
-                   
-                </tr>
-
-                <!-- Repeat <tr> for more rows -->
+                <?php
+                // Loop through query result and populate table
+                if ($query->num_rows > 0) {
+                    while ($row = $query->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td><img src='./../../Images/Movies/" . $row['image'] . "' alt='Movie Image' style='width:100px; height:100px;'></td>";
+                        echo "<td>" . $row['name'] . "</td>";
+                        echo "<td>" . $row['description'] . "</td>";
+                        echo "<td>" . $row['price'] . "</td>";
+                        echo "<td>" . $row['show_date'] . "</td>";
+                        echo "<td>" . $row['show_time'] . "</td>";
+                        echo "<td>" . $row['category'] . "</td>";
+                      
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='7'>No movies found</td></tr>";
+                }
+                ?>
             </tbody>
         </table>
     </div>
 
- 
+   
      <!-- Footer -->
      <div class="footer bg-dark text-light py-4">
     <div class="container">

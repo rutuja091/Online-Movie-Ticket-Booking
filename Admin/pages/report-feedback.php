@@ -43,10 +43,7 @@ $sql = "SELECT * FROM user_feedback ORDER BY id DESC";
     </header>
 
     <div class="containers">
-        <h2  >User Feedback report</h2>
-        <div class="header-btn">
-            <a href="./manage-feedback.php"><button >Manage Data</button></a>
-        </div>
+      
         <table class="movie-table">
             <thead>
                 <tr>
@@ -92,7 +89,7 @@ while ($res = $query->fetch_assoc())
     </div>
 
     <div class="script-container">
-                    <script>
+   <script>
 
 if (window.print) { 
 document.write('<form class=script-text>Click Here To Print Report 👉 ' + '<input  class=btn1  type=button name=print value="Print" ' + 'onClick="javascript:window.print()"> </form>'); 

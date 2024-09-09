@@ -45,8 +45,8 @@ $sql = "SELECT * FROM ticket ORDER BY id DESC";
 
     <div class="containers">
         <h2> Manage Ticket</h2>
-        <div class="header-btn">
-            <a href="./report-ticket.php"><button >View Report</button></a>
+        <div >
+            <a href="./report-ticket.php"><button  style="color:white; background-color:#4CAF50;margin-left:1070px;margin-top:1px;margin-bottom: 5px;">View Report</button></a>
          </div>
         <table class="movie-table">
             <thead>

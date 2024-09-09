@@ -47,8 +47,8 @@ $sql = "SELECT * FROM user_feedback ORDER BY id DESC";
 
     <div class="containers">
         <h2  > Manage User Feedback</h2>
-        <div class="header-btn">
-            <a href="./report-feedback.php"><button >View Report</button></a>
+        <div >
+            <a href="./report-feedback.php"><button  style="color:white; background-color:#4CAF50;margin-left:1070px;margin-top:1px;margin-bottom: 5px;">View Report</button></a>
          </div>
         <table class="movie-table">
             <thead>

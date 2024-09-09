@@ -46,8 +46,8 @@ $query = $con->query($sql);
 
     <div class="containers">
         <h2>Manage Gallery Details</h2>
-        <div class="header-btn">
-            <a href="./report-gallery.php"><button >View Report</button></a>
+        <div >
+            <a href="./report-gallery.php"><button  style="color:white; background-color:#4CAF50;margin-left:1070px;margin-top:1px;margin-bottom: 5px;">View Report</button></a>
          </div>
         <table class="movie-table">
             <thead>

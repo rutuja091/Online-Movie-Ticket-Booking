@@ -46,8 +46,8 @@ $query = $con->query($sql);
 
     <div class="containers">
         <h2>Manage Movie Details</h2>
-        <div class="header-btn">
-            <a href="./report-movie.php"><button >View Report</button></a>
+        <div >
+            <a href="./report-movie.php"><button  style="color:white; background-color:#4CAF50;margin-left:1070px;margin-top:1px;margin-bottom: 5px;">View Report</button></a>
          </div>
         <table class="movie-table">
             <thead>
@@ -56,6 +56,7 @@ $query = $con->query($sql);
                     <th>Name</th>
                     <th>Description</th>
                     <th>Ticket Price</th>
+                    <th>Show date</th>
                     <th>Show Time</th>
                     <th>Category</th>
                     <th>Actions</th>
@@ -71,10 +72,22 @@ $query = $con->query($sql);
                         echo "<td>" . $row['name'] . "</td>";
                         echo "<td>" . $row['description'] . "</td>";
                         echo "<td>" . $row['price'] . "</td>";
-                        echo "<td>" . $row['time'] . "</td>";
+                        echo "<td>" . $row['show_date'] . "</td>";
+                        echo "<td>" . $row['show_time'] . "</td>";
                         echo "<td>" . $row['category'] . "</td>";
-                        echo "<td><a href='update_movie.php?id=" . $row['id'] . "'>Edit</a> | ";
-                        echo "<a href='delete-movie.php?id=" . $row['id'] . "' onClick=\"return confirm('Are you sure, you want to delete?')\">Delete</a></td>";
+
+                        echo "<td>";
+                        echo "<a href='./update_movie.php?id=".$row['id']."'>
+                                <img src='./../../Images/admin-images/edit2.png' alt='Edit' class='icon' style='height:40px;'>
+                              </a>";
+                        echo "<a href='.\delete-movie.php?id=".$row['id']."'>
+                                <img src='.\..\..\Images\admin-images\delete.png' alt='Delete' class='icon' style='height:40px;'>
+                              </a>";
+                      
+                            
+                        echo "</td>";
+
+                       
                         echo "</tr>";
                     }
                 } else {

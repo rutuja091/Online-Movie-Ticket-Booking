@@ -45,9 +45,7 @@ $sql = "SELECT * FROM payment ORDER BY id DESC";
 
     <div class="containers">
         <h2> Payment Report</h2>
-        <div class="header-btn">
-            <a href="./manage-payment.php"><button >Manage</button></a>
-         </div>
+       
         <table class="movie-table">
             <thead>
                 <tr>

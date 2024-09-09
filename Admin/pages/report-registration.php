@@ -46,9 +46,7 @@ $sql = "SELECT * FROM user_registration ORDER BY id DESC";
 
     <div class="containers">
         <h2>  User Registration Report</h2>
-        <div class="header-btn">
-            <a href="./manage-registration.php"><button >Manage Data</button></a>
-        </div>
+    
         <table class="movie-table">
             <thead>
                 <tr>
