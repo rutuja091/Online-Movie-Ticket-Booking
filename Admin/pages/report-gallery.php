@@ -46,17 +46,13 @@ $query = $con->query($sql);
 
     <div class="containers">
         <h2>Manage Gallery Details</h2>
-        <div class="header-btn">
-            <a href="./manage-gallery.php"><button >Manage Data</button></a>
-        </div>
+     
         <table class="movie-table">
             <thead>
                 <tr>
                     <th>Movie Image</th>
                     <th>Name</th>
-                 
-                   
-                </tr>
+                 </tr>
             </thead>
             <tbody>
                 <?php
@@ -66,9 +62,6 @@ $query = $con->query($sql);
                         echo "<tr>";
                         echo "<td><img src='./../../Images/User-images/gallery/" . $row['image'] . "' alt='Movie Image' style='width:100px; height:100px;'></td>";
                         echo "<td>" . $row['name'] . "</td>";
-                      
-                     
-                     
                         echo "</tr>";
                     }
                 } else {

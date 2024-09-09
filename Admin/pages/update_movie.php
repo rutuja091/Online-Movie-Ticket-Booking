@@ -18,7 +18,7 @@ $resultData = $query->fetch_assoc();
 $image = $resultData['image'];
 $name = $resultData['name'];
 $description = $resultData['description'];
-$time = $resultData['time'];
+$show_time = $resultData['show_time'];
 $price = $resultData['price'];
 $category = $resultData['category'];
 ?>
@@ -68,7 +68,7 @@ $category = $resultData['category'];
             </div>
             <div class="form-group">
                 <label for="time">Show Time:</label>
-                <input type="datetime-local" id="time" name="time" autocomplete="off" value="<?php echo $time; ?>" required>
+                <input type="datetime-local" id="show_time" name="show_time" autocomplete="off" value="<?php echo $show_time; ?>" required>
             </div>
             <div class="form-group">
                 <label for="price">Ticket Price:</label>
@@ -89,7 +89,7 @@ if (isset($_POST['movie_update'])) {
     $id = $_POST['id'];
     $name = $_POST['name'];
     $description = $_POST['description'];
-    $time = $_POST['time'];
+    $show_time= $_POST['show_time'];
     $price = $_POST['price'];
     $category = $_POST['category'];
 
@@ -105,7 +105,7 @@ if (isset($_POST['movie_update'])) {
     }
 
     // Update query
-    $sql = "UPDATE movies SET image = '$image', name = '$name', description = '$description', time = '$time', price = '$price', category = '$category' WHERE id = $id";
+    $sql = "UPDATE movies SET image = '$image', name = '$name', description = '$description', show_time = '$show_time', price = '$price', category = '$category' WHERE id = $id";
 
     if ($con->query($sql)) {
         echo '<script type="text/javascript">
