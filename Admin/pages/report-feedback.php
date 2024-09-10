@@ -24,6 +24,27 @@ $sql = "SELECT * FROM user_feedback ORDER BY id DESC";
 
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    
+    <style>
+        /* Print styles */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            .print-container, .print-container * {
+                visibility: visible;
+            }
+
+            .print-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <!--- Header --->
@@ -42,7 +63,8 @@ $sql = "SELECT * FROM user_feedback ORDER BY id DESC";
         </nav>
     </header>
 
-    <div class="containers">
+    <div class="containers print-container">
+    <h2> Feedback Reports</h2>
       
         <table class="movie-table">
             <thead>
@@ -88,13 +110,9 @@ while ($res = $query->fetch_assoc())
         </table>
     </div>
 
-    <div class="script-container">
-   <script>
-
-if (window.print) { 
-document.write('<form class=script-text>Click Here To Print Report 👉 ' + '<input  class=btn1  type=button name=print value="Print" ' + 'onClick="javascript:window.print()"> </form>'); 
-}
-</script>
+    <div style="text-align: center;">
+    Click Here To Print Report 👉
+    <button  onclick="window.print()" style="color: white; text-align: center; background-color:#4CAF50;">  Print Report</button>
 </div>
 
    

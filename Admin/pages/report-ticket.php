@@ -23,6 +23,27 @@ $sql = "SELECT * FROM ticket ORDER BY id DESC";
     <link rel="stylesheet" href="./../css/manage-registration.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    
+    <style>
+        /* Print styles */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            .print-container, .print-container * {
+                visibility: visible;
+            }
+
+            .print-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <!--- Header --->
@@ -43,7 +64,7 @@ $sql = "SELECT * FROM ticket ORDER BY id DESC";
 
 
 
-    <div class="containers">
+    <div class="containers print-container">
         <h2> Ticket Report</h2>
        
         <table class="movie-table">
@@ -84,6 +105,10 @@ while ($res = $query->fetch_assoc())
             </tbody>
         </table>
     </div>
+    <div style="text-align: center;">
+    Click Here To Print Report 👉
+    <button  onclick="window.print()" style="color: white; text-align: center; background-color:#4CAF50;">  Print Report</button>
+</div>
    
   
      <!-- Footer -->

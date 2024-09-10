@@ -4,34 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
-
-    <link rel="stylesheet" href="./../css/feedback.css">
-   
+    <link rel="stylesheet" href="./../css/drama.css">
+    <link rel="stylesheet" href="./../css/contact.css">
    
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-
-
-
     <!-- Header -->
-    <header class="header">
-        <div class="logo"><img src=".\..\..\Images\logo2.png" class="logo-img"></div>
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Movies</a></li>
-            </ul>
-        </nav>
-    </header>
+    
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <div class="logo"><img src="./../../Images/logo2.png" class="logo-img" alt="Logo"></div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+      <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href=".\..\..\index1.php">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href=".\..\..\User\pages\movies.php">Movies</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            View More
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href=".\..\..\User\pages\about.php">About Us</a></li>
+            <li><a class="dropdown-item" href=".\..\..\User\pages\contact.php">Contact Us</a></li>
+            <li><a class="dropdown-item" href=".\..\..\User\pages\gallery.php">Gallery</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="d-flex align-items-center">
+      <a href="#" class="btn btn-outline-primary">
+      <i class="bi bi-person"></i> <img src =".\..\..\Images\login.png" style="height:40px;">
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- end nav -->
 
     <div class="feedback-form">
         <h2>Feedback Form</h2>
-        <form>
+        <!-- Updated form with action and method POST -->
+        <form action="" method="POST">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -52,11 +73,8 @@
                 <button type="submit" name="submit">Submit</button>
             </div>
         </form>
-</div>
+    </div>
 
-
-
-      <!-- Footer -->
   <!-- Footer -->
   <div class="footer bg-dark text-light py-4">
     <div class="container">
@@ -114,34 +132,38 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<?php
 
-include("dbcon.php");
 
-if (isset($_POST['submit'])) {
-	
-	$name =  $_POST['name'];
-  $email =  $_POST['email'];
-  $subject =  $_POST['subject'];
-	$message =  $_POST['message'];
-	
- 
-         
-		$sql= "INSERT INTO  user_feedback(`name`,`email`, `subject`, `message`)VALUES ('$name','$email', '$subject','$message')";
-		
-         if($con->query($sql))
-        {
-            echo    '<script type="text/javascript">
-                    alert ("Feedback send Successfully ..👍");
+    <?php
+    include("dbcon.php");
+
+    if (isset($_POST['submit'])) {
+        // Use isset() to check if the variables are set
+        $name = isset($_POST['name']) ? $_POST['name'] : '';
+        $email = isset($_POST['email']) ? $_POST['email'] : '';
+        $subject = isset($_POST['subject']) ? $_POST['subject'] : '';
+        $message = isset($_POST['message']) ? $_POST['message'] : '';
+
+        // Use a prepared statement to avoid SQL injection
+        $stmt = $con->prepare("INSERT INTO user_feedback (`name`, `email`, `subject`, `message`) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $name, $email, $subject, $message);
+
+        // Execute the query and check for success
+        if ($stmt->execute()) {
+            echo '<script type="text/javascript">
+                    alert("Feedback sent successfully! 👍");
                     window.location="feedback.php";
-                    </script>';
+                  </script>';
+        } else {
+            echo '<script type="text/javascript">
+                    alert("Failed to send feedback.");
+                    window.location="feedback.php";
+                  </script>';
         }
-        else
-        {
-            echo    '<script type="text/javascript">
-            alert ("Feedback not send...!");
-            window.location="feedback.php";
-            </script>';
-        }
-}
-?>
+
+        // Close the statement
+        $stmt->close();
+    }
+    ?>
+</body>
+</html>
