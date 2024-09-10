@@ -247,7 +247,7 @@ $con->close();
 
     <div class="seat-info">
       <p style="color: red;">Price: ₹<?php echo htmlspecialchars($price); ?> per ticket</p>
-        <span>Selected Seats: <b id="quantity">0</b></span>
+        <span>Selected Seats: <b id="selectedseats">0</b></span>
  <!--  <span>Total Price: ₹<b id="form_total_price">0</b></span> -->
        
      <p>Total Price: ₹<span id="total_price"><?php echo htmlspecialchars($price); ?> </span></p>
@@ -257,7 +257,7 @@ $con->close();
 
 <script>
     const seats = document.querySelectorAll('.seat:not(.occupied)');
-    const selectedSeatsElement = document.getElementById('quantity');
+    const selectedSeatsElement = document.getElementById('selectedseatsgit');
     const totalPriceElement = document.getElementById('total_price');
     const ticketPrice = <?php echo $price; ?>;
 
