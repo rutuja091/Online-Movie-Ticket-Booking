@@ -55,9 +55,10 @@
   
    <div class="bodycontent">
 
-<div class="feedback-form">
-        <h2>Give Feedback</h2>
-        <form action="" method="post">
+   <div class="feedback-form">
+        <h2>Feedback Form</h2>
+        <!-- Updated form with action and method POST -->
+        <form action="" method="POST">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required>
@@ -78,7 +79,7 @@
                 <button type="submit" name="submit">Submit</button>
             </div>
         </form>
-</div>
+    </div>
 
 
 <div class="contact-card">
@@ -163,3 +164,42 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<?php
+    include("dbcon.php");
+
+    if (isset($_POST['submit'])) {
+        // Use isset() to check if the variables are set
+        $name = isset($_POST['name']) ? $_POST['name'] : '';
+        $email = isset($_POST['email']) ? $_POST['email'] : '';
+        $subject = isset($_POST['subject']) ? $_POST['subject'] : '';
+        $message = isset($_POST['message']) ? $_POST['message'] : '';
+
+        // Use a prepared statement to avoid SQL injection
+        $stmt = $con->prepare("INSERT INTO user_feedback (`name`, `email`, `subject`, `message`) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $name, $email, $subject, $message);
+
+        // Execute the query and check for success
+        if ($stmt->execute()) {
+            echo '<script type="text/javascript">
+                    alert("Feedback sent successfully! 👍");
+                    window.location="feedback.php";
+                  </script>';
+        } else {
+            echo '<script type="text/javascript">
+                    alert("Failed to send feedback.");
+                    window.location="feedback.php";
+                  </script>';
+        }
+
+        // Close the statement
+        $stmt->close();
+    }
+    ?>
+
+
+
+
+</body>
+</html>

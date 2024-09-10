@@ -2,63 +2,32 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: darkorange;
-    padding: 20px 40px;
+/* Navbar Styling */
+.navbar {
+    background-color:   #ff5500; /* White background for the navbar */
+    width: 100%;
 }
 
-.logo-img {
-    height: 120px;
-    /* Adjust the height as needed */
-    width: auto;
-    /* Maintain aspect ratio */
-}
-
-.nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 30px;
-}
-
-.nav ul li {
-    margin: 0;
-}
-
-.nav ul li a {
-    text-decoration: none;
-    color: white;
+.navbar-nav .nav-link {
+    color: #000000; /* Black color for the navigation links */
     font-size: 20px;
-    /* Increased font size */
+    font-family: Arial, sans-serif;
     font-weight: bold;
-    /* Made text bold */
-    padding: 10px 15px;
-    /* Added padding for larger clickable area */
-
-
 }
 
-.nav ul li a:hover {
+.navbar-nav .nav-link:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    .nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.navbar-toggler {
+    border: none;
 }
 
+/* Logo Styling */
+.logo-img {
+    height: 100px;
+    width: auto;
+}
 /*footer*/
 
 .footer {

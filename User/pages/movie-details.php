@@ -88,6 +88,72 @@ $con->close();
     color: #333; /* Text color */
 }
 
+
+
+
+
+
+
+
+        .container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .screen {
+            width: 50%;
+            height: 50px;
+            background-color: #ccc;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .row-seat {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 5px;
+        }
+
+        .seat {
+            width: 50px;
+            height: 50px;
+            background-color: #444;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .seat.selected {
+            background-color: #6c63ff;
+        }
+
+        .seat.occupied {
+            background-color: #f78a8a;;
+            cursor: not-allowed;
+        }
+
+        .seat:hover:not(.occupied) {
+            background-color: #28a745;
+        }
+
+        .seat-info {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .seat-info span {
+            margin-left: 5px;
+        }
+    </style>
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -151,19 +217,89 @@ $con->close();
 </div>
 
 
+
+
+
+
+<div class="container">
+    <div class="screen">select Seat</div>
+
+    <div class="row-seat">
+        <div class="seat" data-seat="A1"></div>
+        <div class="seat occupied" data-seat="A2"></div>
+        <div class="seat" data-seat="A3"></div>
+        <div class="seat" data-seat="A4"></div>
+    </div>
+
+    <div class="row-seat">
+        <div class="seat" data-seat="B1"></div>
+        <div class="seat" data-seat="B2"></div>
+        <div class="seat" data-seat="B3"></div>
+        <div class="seat occupied" data-seat="B4"></div>
+    </div>
+
+    <div class="row-seat">
+        <div class="seat" data-seat="C1"></div>
+        <div class="seat occupied" data-seat="C2"></div>
+        <div class="seat" data-seat="C3"></div>
+        <div class="seat" data-seat="C4"></div>
+    </div>
+
+    <div class="seat-info">
+      <p style="color: red;">Price: ₹<?php echo htmlspecialchars($price); ?> per ticket</p>
+        <span>Selected Seats: <b id="quantity">0</b></span>
+ <!--  <span>Total Price: ₹<b id="form_total_price">0</b></span> -->
+       
+     <p>Total Price: ₹<span id="total_price"><?php echo htmlspecialchars($price); ?> </span></p>
+    </div>
+
+</div>
+
+<script>
+    const seats = document.querySelectorAll('.seat:not(.occupied)');
+    const selectedSeatsElement = document.getElementById('quantity');
+    const totalPriceElement = document.getElementById('total_price');
+    const ticketPrice = <?php echo $price; ?>;
+
+    seats.forEach(seat => {
+        seat.addEventListener('click', () => {
+            seat.classList.toggle('selected');
+            updateSelectedCount();
+        });
+    });
+
+    function updateSelectedCount() {
+        const selectedSeats = document.querySelectorAll('.seat.selected');
+        const selectedSeatsCount = selectedSeats.length;
+        selectedSeatsElement.innerText = selectedSeatsCount;
+        totalPriceElement.innerText = selectedSeatsCount * <?php echo $price; ?>;
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
             <div class="ticket-quantity" style="margin-top:20px">
                 <button type="button" onclick="decrement()">-</button>
                 <input type="text" id="quantity" value="1" readonly>
                 <button type="button" onclick="increment()">+</button>
             </div>
             <p style="color: red;">Price: ₹<?php echo htmlspecialchars($price); ?> per ticket</p>
-            <p>Total Price: ₹<span id="total_price"><?php echo htmlspecialchars($price); ?></span></p>
+           <!-- <p>Total Price: ₹<span id="total_price"><?php /*echo htmlspecialchars($price);*/ ?></span></p>-->
+           
 
             <form action="" method="POST">
                 <input type="hidden" name="movie_id" value="<?php echo htmlspecialchars($id); ?>">
                 <input type="hidden" name="name" value="<?php echo htmlspecialchars($name); ?>">
                 <input type="hidden" name="image" value="./../../Images/movies/<?php echo htmlspecialchars($image); ?>">
                 <input type="hidden" name="quantity" id="form_quantity" value="1">
+               
                 <input type="hidden" name="total_price" id="form_total_price" value="<?php echo htmlspecialchars($price); ?>">
                 
                 <!-- Hidden Date and Time Inputs for Form Submission -->
