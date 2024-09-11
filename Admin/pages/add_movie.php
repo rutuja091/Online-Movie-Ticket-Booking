@@ -147,7 +147,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
 <?php
 $databaseHost = "localhost";
 $databaseName = "movieticketdb";
@@ -175,30 +174,26 @@ if (isset($_POST["submit"])) {
     $show_date = $_POST["show_date"];
     $show_time = $_POST["show_time"];
 
-    // Debugging: print out the SQL query
-    $sql = "INSERT INTO movies (image, name, description, price, category, duration, date, show_date, show_time)
-            VALUES ('$image', '$name', '$description', '$price', '$category', '$duration', '$date', '$show_date', '$show_time')";
+    // Prepared statement to avoid SQL injection and syntax errors
+    $stmt = $con->prepare("INSERT INTO movies (`image`, `name`, `description`, `price`, `category`, `duration`, `date`, `show_date`, `show_time`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssssssss", $image, $name, $description, $price, $category, $duration, $date, $show_date, $show_time);
 
-    echo $sql; // Print the SQL query for debugging
-
-    if (mysqli_query($con, $sql)) {
+    if ($stmt->execute()) {
         $msg = "Movie added successfully.";
+        
+        // Move the uploaded image
+        if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+            $msg .= " Image uploaded successfully.";
+        } else {
+            $msg .= " Failed to upload image.";
+        }
     } else {
-        $msg = "Error: " . mysqli_error($con); // Display SQL error
+        $msg = "Error: " . $stmt->error;
     }
 
-    if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-        $msg .= " Image uploaded successfully.";
-    } else {
-        $msg .= " Failed to upload image.";
-    }
-
-    // For debugging: Print result of the select query
-    $result = mysqli_query($con, "SELECT * FROM movies");
-    while ($row = mysqli_fetch_assoc($result)) {
-        print_r($row); // Print out the records to verify insertion
-    }
+    $stmt->close();
 }
 
-mysqli_close($con);
+$con->close();
+echo $msg; // Display the success or error message
 ?>

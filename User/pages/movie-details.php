@@ -372,7 +372,7 @@ if (isset($_POST['submit'])) {
     $result = $con->query("SELECT COUNT(*) as count FROM ticket");
     $row = $result->fetch_assoc();
     
-    if ($row['count'] < 10) {
+    if ($row['count'] < 50) {
         $name = $_POST['name'];
         $image = $_POST['image'];
         $quantity = $_POST['quantity'];
