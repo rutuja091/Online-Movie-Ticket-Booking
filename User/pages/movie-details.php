@@ -94,60 +94,75 @@ $con->close();
 
 
 
+/* Container for seating arrangement */
+.container {
+    margin-top: 20px;
+    text-align: center;
+    max-width: 100%; /* Ensure it fits within the viewport */
+    padding-bottom: 50px;
+}
 
-        .container {
-            margin-top: 20px;
-            text-align: center;
-        }
+/* Screen display */
+.screen {
+    width: 50%;
+    height: 50px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-        .screen {
-            width: 50%;
-            height: 50px;
-            background-color: #ccc;
-            margin-bottom: 20px;
-            text-align: center;
-            padding: 10px;
-            font-size: 18px;
-            font-weight: bold;
-        }
+/* Seat row design */
+.row-seat {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow seats to wrap into multiple rows */
+    margin-bottom: 10px;
+}
 
-        .row-seat {
-            display: flex;
-            justify-content: space-evenly;
-            margin-bottom: 5px;
-        }
+/* Seat design */
+.seat {
+    width: 30px; /* Smaller seat size */
+    height: 30px; /* Smaller seat size */
+    background-color: #444;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
 
-        .seat {
-            width: 50px;
-            height: 50px;
-            background-color: #444;
-            margin: 5px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
+/* Seat selection state */
+.seat.selected {
+    background-color: #6c63ff;
+}
 
-        .seat.selected {
-            background-color: #6c63ff;
-        }
+/* Occupied seat state */
+.seat.occupied {
+    background-color: #f78a8a;
+    cursor: not-allowed;
+}
 
-        .seat.occupied {
-            background-color: #f78a8a;;
-            cursor: not-allowed;
-        }
+/* Hover effect for seats that are not occupied */
+.seat:hover:not(.occupied) {
+    background-color: #28a745;
+}
 
-        .seat:hover:not(.occupied) {
-            background-color: #28a745;
-        }
+/* Seat information display */
+.seat-info {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+}
 
-        .seat-info {
-            margin-top: 10px;
-            font-size: 18px;
-        }
+.seat-info span {
+    margin-left: 5px;
+    font-weight: bold;
+}
 
-        .seat-info span {
-            margin-left: 5px;
-        }
     </style>
 
 
@@ -197,7 +212,7 @@ $con->close();
 
 <!-- Main Content -->
 <main>
-    <div class="containers">
+    <div class="containers" >
         <div class="movie-image">
             <img src="./../../Images/movies/<?php echo htmlspecialchars($image); ?>" alt="Movie Image">
         </div>
@@ -221,61 +236,108 @@ $con->close();
 
 
 
+
+
 <div class="container">
-    <div class="screen">select Seat</div>
+        <div class="screen">Select Seat</div>
 
-    <div class="row-seat">
-        <div class="seat" data-seat="A1"></div>
-        <div class="seat occupied" data-seat="A2"></div>
-        <div class="seat" data-seat="A3"></div>
-        <div class="seat" data-seat="A4"></div>
+        <div class="row-seat">
+            
+            <div class="seat" data-seat="A1"></div>
+            <div class="seat occupied" style="background-color:#e60000" data-seat="A2"></div>
+            <div class="seat" data-seat="A3"></div>
+            <div class="seat" data-seat="A4"></div>
+            <div class="seat" data-seat="A5"></div>
+
+            <div class="seat" data-seat="A6"></div>
+            <div class="seat occupied" style="background-color:#e60000" data-seat="A7"></div>
+            <div class="seat" data-seat="A8"></div>
+            <div class="seat" data-seat="A9"></div>
+            <div class="seat" data-seat="A10"></div>
+            
+        </div>
+
+        <div class="row-seat">
+            <div class="seat" data-seat="B1"></div>
+            <div class="seat" data-seat="B2"></div>
+            <div class="seat" data-seat="B3"></div>
+            <div class="seat" data-seat="B4"></div>
+            <div class="seat occupied" style="background-color:#e60000" data-seat="B5"></div>
+            <div class="seat" data-seat="B6"></div>
+            <div class="seat occupied"  style="background-color:#e60000"data-seat="B7"></div>
+            <div class="seat" data-seat="B8"></div>
+            <div class="seat" data-seat="B9"></div>
+            <div class="seat " data-seat="B10"></div>
+        </div>
+
+        <div class="row-seat">
+            <div class="seat" data-seat="C1"></div>
+            <div class="seat occupied" style="background-color:#e60000" data-seat="C2"></div>
+            <div class="seat" data-seat="C3"></div>
+            <div class="seat" data-seat="C4"></div>
+            <div class="seat" data-seat="C5"></div>
+            <div class="seat" data-seat="C6"></div>
+            <div class="seat " data-seat="C7"></div>
+            <div class="seat" data-seat="C8"></div>
+            <div class="seat occupied"  style="background-color:#e60000"data-seat="C9"></div>
+            <div class="seat" data-seat="C10"></div>
+        </div>
+
+        
+        <div class="row-seat">
+            <div class="seat" data-seat="D1"></div>
+            <div class="seat " data-seat="D2"></div>
+            <div class="seat" data-seat="D3"></div>
+            <div class="seat occupied" style="background-color:#e60000" data-seat="D4"></div>
+            <div class="seat occupied" style="background-color:#e60000" data-seat="D5"></div>
+            <div class="seat" data-seat="D6"></div>
+            <div class="seat " data-seat="D7"></div>
+            <div class="seat" data-seat="D8"></div>
+            <div class="seat" data-seat="D9"></div>
+            <div class="seat " data-seat="D10"></div>
+        </div>
+
+        
+        <div class="row-seat">
+            <div class="seat" data-seat="E1"></div>
+            <div class="seat " data-seat="E2"></div>
+            <div class="seat" data-seat="E3"></div>
+            <div class="seat" data-seat="E4"></div>
+            <div class="seat" data-seat="E5"></div>
+            <div class="seat" data-seat="E6"></div>
+            <div class="seat occupied" style="background-color:#e60000" data-seat="E7"></div>
+            <div class="seat" data-seat="E8"></div>
+            <div class="seat" data-seat="E9"></div>
+            <div class="seat  occupied" style="background-color:#e60000" data-seat="E10"></div>
+        </div>
+
+        <div class="seat-info">
+            <p style="color:#e60000;">Price: ₹<?php echo htmlspecialchars($price); ?> per ticket</p>
+            <span>Selected Seats: <b id="selectedseats">0</b></span>
+            <p>Total Price: ₹<span id="total_price">0</span></p>
+        </div>
     </div>
 
-    <div class="row-seat">
-        <div class="seat" data-seat="B1"></div>
-        <div class="seat" data-seat="B2"></div>
-        <div class="seat" data-seat="B3"></div>
-        <div class="seat occupied" data-seat="B4"></div>
-    </div>
+    <script>
+        const seats = document.querySelectorAll('.seat:not(.occupied)');
+        const selectedSeatsElement = document.getElementById('selectedseats');
+        const totalPriceElement = document.getElementById('total_price');
+        const ticketPrice = <?php echo $price; ?>;
 
-    <div class="row-seat">
-        <div class="seat" data-seat="C1"></div>
-        <div class="seat occupied" data-seat="C2"></div>
-        <div class="seat" data-seat="C3"></div>
-        <div class="seat" data-seat="C4"></div>
-    </div>
-
-    <div class="seat-info">
-      <p style="color: red;">Price: ₹<?php echo htmlspecialchars($price); ?> per ticket</p>
-        <span>Selected Seats: <b id="selectedseats">0</b></span>
- <!--  <span>Total Price: ₹<b id="form_total_price">0</b></span> -->
-       
-     <p>Total Price: ₹<span id="total_price"><?php echo htmlspecialchars($price); ?> </span></p>
-    </div>
-
-</div>
-
-<script>
-    const seats = document.querySelectorAll('.seat:not(.occupied)');
-    const selectedSeatsElement = document.getElementById('selectedseatsgit');
-    const totalPriceElement = document.getElementById('total_price');
-    const ticketPrice = <?php echo $price; ?>;
-
-    seats.forEach(seat => {
-        seat.addEventListener('click', () => {
-            seat.classList.toggle('selected');
-            updateSelectedCount();
+        seats.forEach(seat => {
+            seat.addEventListener('click', () => {
+                seat.classList.toggle('selected');
+                updateSelectedCount();
+            });
         });
-    });
 
-    function updateSelectedCount() {
-        const selectedSeats = document.querySelectorAll('.seat.selected');
-        const selectedSeatsCount = selectedSeats.length;
-        selectedSeatsElement.innerText = selectedSeatsCount;
-        totalPriceElement.innerText = selectedSeatsCount * <?php echo $price; ?>;
-    }
-</script>
-
+        function updateSelectedCount() {
+            const selectedSeats = document.querySelectorAll('.seat.selected');
+            const selectedSeatsCount = selectedSeats.length;
+            selectedSeatsElement.innerText = selectedSeatsCount;
+            totalPriceElement.innerText = selectedSeatsCount * ticketPrice;
+        }
+    </script>
 
 
 
@@ -283,22 +345,13 @@ $con->close();
 
 
 
-
-
-            <div class="ticket-quantity" style="margin-top:20px">
-                <button type="button" onclick="decrement()">-</button>
-                <input type="text" id="quantity" value="1" readonly>
-                <button type="button" onclick="increment()">+</button>
-            </div>
-            <p style="color: red;">Price: ₹<?php echo htmlspecialchars($price); ?> per ticket</p>
-           <!-- <p>Total Price: ₹<span id="total_price"><?php /*echo htmlspecialchars($price);*/ ?></span></p>-->
-           
+            
 
             <form action="" method="POST">
                 <input type="hidden" name="movie_id" value="<?php echo htmlspecialchars($id); ?>">
                 <input type="hidden" name="name" value="<?php echo htmlspecialchars($name); ?>">
                 <input type="hidden" name="image" value="./../../Images/movies/<?php echo htmlspecialchars($image); ?>">
-                <input type="hidden" name="quantity" id="form_quantity" value="1">
+                <input type="hidden" name="quantity" id="form_quantity" value="0">
                
                 <input type="hidden" name="total_price" id="form_total_price" value="<?php echo htmlspecialchars($price); ?>">
                 
@@ -308,6 +361,12 @@ $con->close();
 
                 <input type="submit" name="submit" value="Book Ticket" class="buy-button">
             </form>
+            <script>
+        document.querySelector('form').addEventListener('submit', function() {
+            document.getElementById('form_quantity').value = document.querySelectorAll('.seat.selected').length;
+            document.getElementById('form_total_price').value = document.getElementById('total_price').textContent;
+        });
+    </script>
         </div>
     </div>
 

@@ -139,7 +139,7 @@ $check_movie=mysqli_num_rows($query_run)>0;
   ?>    
   <div class="movie-card">
   <div class="img-cont" style="height:350px with:100%;padding:5px">
-        <img src=".\Images\homepage\<?php echo $row['image'];?>" style="height:300px; width :100%" alt="Maidan">
+        <img src=".\Images\Movies\<?php echo $row['image'];?>" style="height:300px; width :100%" alt="Maidan">
  </div>
         <div class="card-content">
             <h3><?php echo $row['name'];?></h3>
@@ -148,7 +148,8 @@ $check_movie=mysqli_num_rows($query_run)>0;
                 <p><strong>Release Date:</strong> <?php echo $row['date'];?></p>
                 <p><strong>Duration:</strong> <?php echo $row['duration'];?></p>
                 
-                <p><strong>Showtimes:</strong><?php echo $row['time'];?></p>
+                <p class="movie-genre" ><h6 style="color:white">Time: <?php echo $row['show_time'];?></h6></p>
+                    <p class="movie-genre">Date: <?php echo $row['show_date'];?></p>
             </div>
           <?php /* echo "<a href='.\User\pages\movie-details.php?id=$row[id]' class='book-button'>Book Ticket</a>";*/?> 
         </div>
@@ -224,7 +225,7 @@ $check_movie=mysqli_num_rows($query_run)>0;
   ?>    
   <div class="movie-card">
     <div class="img-cont" style="height:350px with:100%;padding:5px;">
-        <img src=".\Images\homepage\<?php echo $row['image'];?>" style="height:300px; width :100%" alt="Maidan">
+        <img src=".\Images\Movies\<?php echo $row['image'];?>" style="height:300px; width :100%" alt="Maidan">
  </div>
         <div class="card-content">
             <h3><?php echo $row['name'];?></h3>
@@ -233,7 +234,8 @@ $check_movie=mysqli_num_rows($query_run)>0;
                 <p><strong>Release Date:</strong> <?php echo $row['date'];?></p>
                 <p><strong>Duration:</strong> <?php echo $row['duration'];?></p>
                 
-                <p><strong>Showtimes:</strong><?php echo $row['time'];?></p>
+                <p class="movie-genre" ><h6 style="color:white">Time: <?php echo $row['show_time'];?></h6></p>
+                <p class="movie-genre">Date: <?php echo $row['show_date'];?></p>
             </div>
             <?php /* echo "<a href='.\User\pages\movie-details.php?id=$row[id]' class='book-button'>Book Ticket</a>";*/?>
             
