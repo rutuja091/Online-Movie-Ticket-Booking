@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 10, 2024 at 11:08 AM
+-- Generation Time: Sep 18, 2024 at 02:05 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,7 +42,8 @@ INSERT INTO `gallery` (`id`, `image`, `name`) VALUES
 (2, 'img1.jpg', 'front area'),
 (3, 'img4.jpg', 'Light'),
 (4, 'img3.jpg', 'stage'),
-(5, 'img9.jpg', 'theater');
+(5, 'img9.jpg', 'theater'),
+(7, 'img5.jpg', 'Inside area');
 
 -- --------------------------------------------------------
 
@@ -91,7 +92,15 @@ INSERT INTO `movies` (`id`, `image`, `name`, `description`, `price`, `category`,
 (58, 'all-the-best.jpg', 'All the best', 'All The Best: Fun Begins is a 2009 Indian Hindi-language comedy film directed by Rohit Shetty and produced by Ajay Devgn. It stars Ajay Devgn, Sanjay Dutt, Fardeen Khan, Bipasha Basu, Johny Lever, Sanjay Mishra and Mugdha Godse.[2][3][4] Upon release, it was a critical and commercial success.', '300', 'Drama', '120', '2024-08-21', '2024-09-03', '13:22'),
 (59, 'Gotya.jpg', 'Gotya', 'Gotya is a small-town boy who loves to play the game of marbles. His school does not accept it as a sport and with the help of Vishal, his sports teacher, Gotya manages to convince the school.', '450', 'Drama', '200', '2024-09-04', '2024-09-30', '04:40'),
 (60, 'thanks-dear.jpeg', 'Thanks Dear', 'This drama film is about a successful man who reviews his life after a dramatic event. The film stars Naga Chaitanya Akkineni as Abhiram, a character who rises through hard work but becomes arrogant and self-centered', '300', 'Drama', '340', '2024-09-04', '2024-09-28', '03:30'),
-(61, 'choricha-mamla.jpg', 'Choricha Mamla', 'Nandan, an honest thief, breaks into the farmhouse of politician Amrajit Patil to steal money. However, Amrajit arrives with a dancer named Shraddha and calls the police. Amrajit then lies to his wife, Anjali, about going to Delhi for a political meeting', '500', 'Drama', '260', '2024-01-10', '2024-09-25', '16:40');
+(62, 'choricha-mamla.jpg', 'Choricha Mamla', 'The film received mostly mixed-to-positive reactions from critics. The critic Ganesh Matkari of the Mumbai Mirror pointed out the loopholes in the story but appreciated Joshi and Dhome’s chemistry and said, \"Choricha Mamla would have worked better as a play, preferably in the pre-cellphone era. ', '299', 'Drama', '120', '2024-09-18', '2024-09-27', '19:38'),
+(63, 'stree2.jpeg', 'Stree 2', 'Stree is a 2018 Indian horror-comedy film about a mysterious female spirit who abducts men in the small town of Chanderi during an annual festival.', '500', 'Now Playing', '200', '2024-09-02', '2024-09-11', '15:00'),
+(64, 'raghu.jpeg', 'Raaghu', 'A medicine delivery executive working at night shift, loots the houses he delivers. An unexpected incident forces him to accomplish a few crooked deals overnight, failing to which his life may go upside down.', '300', 'Now Playing', '140', '2024-09-06', '2024-09-03', '18:50'),
+(65, 'The-Greatest-Of-All-Time.jpeg', 'The Greatest Of All Time ', 'After graduating from high school without any plans for the future, Isaiah receives a push to start making better life decisions.', '300', 'Now Playing', '140', '2024-09-06', '2024-09-09', '20:00'),
+(66, 'The-forge.jpg', 'The Forge', 'After graduating from high school without any plans for the future, Isaiah receives a push to start making better life decisions.', '340', 'Now Playing', '230', '2024-09-15', '2024-09-17', '23:00'),
+(67, 'dhadak2.jpg', 'Dhadak 2', 'The story revolves around Vidhi and Nilesh who are deeply in love with each other but belong to different castes.', '310', 'Comming Soon', '120', '2024-09-26', '2024-09-28', '10:00'),
+(68, 'Housefull5.jpg', 'HouseFull 5', 'Housefull 5 is a comedy film, featuring Akshay Kumar, Pooja Hegde, Kriti Sanon, and John Abraham in the lead roles.', '300', 'Comming Soon', '160', '2024-09-16', '2024-09-17', '20:30'),
+(69, 'Devara.jpg', 'DEVARA Part 1 ', 'An epic action saga set against coastal lands, which briefs about rip-roaring ,emotionally charged incidents in the periodic timeline, also comprises the titular protagonist being the rescuer to deprived and fear to evildoers.', '230', 'Comming Soon', '150', '2024-09-26', '2024-09-30', '10:10'),
+(70, 'Welcome-To-The-Jungle.jpg', 'Welcome To The Jungle', 'Police officers Jay Bakshi and Sandhya have been given task to track down notorious criminal Raj Solanki. Things take an unexpected turn when JaY finds out that Raj plays a significant role in his life.', '420', 'Comming Soon', '120', '2024-09-27', '2024-09-30', '01:20');
 
 -- --------------------------------------------------------
 
@@ -109,6 +118,19 @@ CREATE TABLE `payment` (
   `card_number` text NOT NULL,
   `total_price` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `payment`
+--
+
+INSERT INTO `payment` (`id`, `name`, `email`, `mobile_no`, `movie_name`, `payment_mode`, `card_number`, `total_price`) VALUES
+(15, 'rutuja', 'rutuja@gmail.com', '9322856447', 'Mauli', 'creditCard', '132324', '660'),
+(16, 'rutuja', 'rutuja@gmail.com', '9322856447', 'Black Out', 'creditCard', '132324', '255'),
+(17, 'rutuja', 'rutuja@gmail.com', '9322856447', 'Black Out', 'creditCard', '132324', '255'),
+(18, 'rutuja', 'rutuja@gmail.com', '9322856447', 'Mauli', 'creditCard', '132324', '660'),
+(19, 'rutuja', 'v@gmail.com', '9322856447', 'Mauli', 'creditCard', '132324', '1320'),
+(20, 'abc', 'r@gmail.com', '9322856447', 'Bhola', 'creditCard', '123', '690'),
+(21, 'priya', 'priya@gmail.com', '9999999999', 'All the best', 'debitCard', '555566667672', '1200');
 
 -- --------------------------------------------------------
 
@@ -131,7 +153,20 @@ CREATE TABLE `ticket` (
 --
 
 INSERT INTO `ticket` (`id`, `name`, `quantity`, `total_price`, `image`, `show_date`, `show_time`) VALUES
-(69, 'Mauli', '2', '440', './../../Images/movies/Mauli.jpeg', '2024-09-16', '11:30');
+(69, 'Mauli', '2', '440', './../../Images/movies/Mauli.jpeg', '2024-09-16', '11:30'),
+(70, 'Mauli', '3', '660', './../../Images/movies/Mauli.jpeg', '2024-09-16', '11:30'),
+(71, 'Thnank  God', '2', '460', './../../Images/movies/thank-god.jpeg', '', ''),
+(72, 'Thnank  God', '3', '690', './../../Images/movies/thank-god.jpeg', '', ''),
+(73, 'Thnank  God', '2', '460', './../../Images/movies/thank-god.jpeg', '2024-09-03', '19:00'),
+(74, 'Black Out', '2', '510', './../../Images/movies/Black-Out.jpeg', '2024-09-05', '15:25'),
+(75, 'Black Out', '0', '0', './../../Images/movies/Black-Out.jpeg', '2024-09-05', '15:25'),
+(76, 'Black Out', '3', '765', './../../Images/movies/Black-Out.jpeg', '2024-09-05', '15:25'),
+(77, 'Black Out', '3', '765', './../../Images/movies/Black-Out.jpeg', '2024-09-05', '15:25'),
+(78, 'Black Out', '1', '255', './../../Images/movies/Black-Out.jpeg', '2024-09-05', '15:25'),
+(79, 'Mauli', '3', '660', './../../Images/movies/Mauli.jpeg', '2024-09-16', '11:30'),
+(80, 'Mauli', '6', '1320', './../../Images/movies/Mauli.jpeg', '2024-09-16', '11:30'),
+(81, 'Bhola', '3', '690', './../../Images/movies/bhola.jpeg', '2024-09-03', '14:50'),
+(82, 'All the best', '4', '1200', './../../Images/movies/all-the-best.jpg', '2024-09-03', '13:22');
 
 -- --------------------------------------------------------
 
@@ -153,7 +188,10 @@ CREATE TABLE `user_feedback` (
 
 INSERT INTO `user_feedback` (`id`, `name`, `email`, `subject`, `message`) VALUES
 (1, 'sai', 'sai@gmail.com', 'About your system', 'Your Website is very  Helpful.'),
-(2, 'Rutuja', 'Rutu@gmail.com', 'service', 'your starlight service is very nice');
+(2, 'Rutuja', 'Rutu@gmail.com', 'service', 'your starlight service is very nice'),
+(5, 'gauri', 'gauri@gmail.com', 'system related', 'Your system is very good platform for book movie ticket'),
+(6, 'nikita', 'nikita@gmail.com', 'booking system', 'Ticket Booking System is good'),
+(7, 'priya', 'priya@gmail.com', 'website Related', 'Your Website is Good platform For book Movie ticket ');
 
 -- --------------------------------------------------------
 
@@ -168,6 +206,17 @@ CREATE TABLE `user_registration` (
   `password` varchar(30) NOT NULL,
   `confirm_password` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user_registration`
+--
+
+INSERT INTO `user_registration` (`id`, `user_name`, `email`, `password`, `confirm_password`) VALUES
+(5, 'rutujag', 'rutujag@gmail.com', '123', '123'),
+(6, 'barate', 'barate@gmaim.com', '123', '123'),
+(7, 'rohit', 'rohit@gmail.com', '123', '123'),
+(8, 'shree', 'shree@gmail.com', '123', '123'),
+(9, 'Priya', 'priya@gmail.com', '123', '123');
 
 --
 -- Indexes for dumped tables
@@ -217,37 +266,37 @@ ALTER TABLE `user_registration`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `payment`
 --
 ALTER TABLE `payment`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `ticket`
 --
 ALTER TABLE `ticket`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT for table `user_feedback`
 --
 ALTER TABLE `user_feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user_registration`
 --
 ALTER TABLE `user_registration`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
