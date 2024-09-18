@@ -49,32 +49,33 @@
 
 
 
-    <div class="carousel-item active" style="background-image:url('./../../Images/User-images/login-bg.jpg');">
+    <div class="carousel-item active" style="background-image:url('./../../Images/User-images/rbg.jpg');">
     <div class="containers2">
         <form class="registration-form" action="" method="post" enctype="multipart/form-data" onsubmit="return.validate()">
             <h2>Register</h2>
             <div class="form-group">
             <label for="user_name" class="form-label">Username</label>
                     <input type="text"id="user_name" class="form-control" 
-                    placeholder="enter your user name" style="color:black"autocomplete="off" required="required"
+   placeholder="enter your user name" style="color:black"autocomplete="off" required="required"
+
                     name="user_name">
             </div>
             <div class="form-group">
             <label for="email" class="form-label">Email</label>
-                    <input type="email"id="email"  style="color:black"class="form-control" 
+
                     placeholder="enter your user email" autocomplete="off"
                      required="required" name="email">
             </div>
           
             <div class="form-group">
             <label for="password" class="form-label">Enter Your password</label>
-                    <input type="password"id="password"  style="color:black"class="form-control" 
+
                     placeholder="enter your user password" autocomplete="off"
                      required="required" name="password">
             </div>
             <div class="form-group">
             <input type="password"id="confirm_password" class="form-control" 
-                    placeholder=" confirm_password" style="color:black" autocomplete="off"
+
                      required="required" name="confirm_password" onkeyup="check(this)">
                      <error id="alert" class="text-danger"></error>
             </div>

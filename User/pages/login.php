@@ -94,7 +94,7 @@ if (isset($_POST['login'])) {
 
 
 
-    <div class="carousel-item active" style="background-image:url('./../../Images/User-images/login-bg.jpg');">
+    <div class="carousel-item active" style="background-image:url('./../../Images/User-images/rbg.jpg');">
 
     <div class="containers1">
        
