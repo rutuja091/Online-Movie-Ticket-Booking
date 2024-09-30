@@ -53,7 +53,9 @@ $sql = "SELECT * FROM ticket ORDER BY id DESC";
                 <tr>
                     <th>User Id</th>
                     <th>Name</th>
+                    <th>Quantity</th>
                     <th>total_price</th>
+                    
                  
                    
                     
@@ -73,6 +75,7 @@ while ($res = $query->fetch_assoc())
   echo "<tr>";
   echo" <td >".++$i."</td>";
   echo "<td>".$res['name']."</td>";
+  echo "<td>".$res['quantity']."</td>";
   echo "<td>".$res['total_price']."</td>";
   
   echo "<td>";

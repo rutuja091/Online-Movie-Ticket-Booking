@@ -65,7 +65,7 @@ $query = $con->query($sql);
     </header>
 
     <div class="containers print-container">
-        <h2>Manage Movie Details</h2>
+        <h2>Movies Report</h2>
        
         <table class="movie-table">
             <thead>

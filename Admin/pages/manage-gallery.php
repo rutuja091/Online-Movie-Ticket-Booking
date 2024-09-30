@@ -47,7 +47,7 @@ $query = $con->query($sql);
     <div class="containers">
         <h2>Manage Gallery Details</h2>
         <div >
-            <a href="./report-gallery.php"><button  style="color:white; background-color:#4CAF50;margin-left:1070px;margin-top:1px;margin-bottom: 5px;">View Report</button></a>
+            <a href="./add_gallery.php"><button  style="color:white; background-color:#4CAF50;margin-left:1070px;margin-top:1px;margin-bottom: 5px;">Add Gallery</button></a>
          </div>
         <table class="movie-table">
             <thead>
