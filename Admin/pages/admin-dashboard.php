@@ -41,7 +41,7 @@
       </ul>  -->
     </div>
     <div class="d-flex align-items-center">
-      <a href="#" class="btn btn-outline-primary">
+      <a href="./login.php" class="btn btn-outline-primary">
       <i class="bi bi-person"></i> <img src =".\..\..\Images\login.png" style="height:40px;">
       </a>
     </div>

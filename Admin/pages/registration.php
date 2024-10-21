@@ -51,7 +51,8 @@
 
     <div class="carousel-item active" style="background-image:url('./../../Images/User-images/rbg.jpg');">
     <div class="containers2">
-        <form class="registration-form">
+        
+        <form action="" method="post"  class="registration-form" enctype="multipart/form-data">
             <h2>Register</h2>
             <div class="form-group">
                 <label for="username"  style="color:white;">Username</label>
@@ -75,13 +76,14 @@
                    style="color:black;"
                  id="confirm-password" name="confirm-password" required>
             </div>
-          <a href="./login.php"> <button type="submit">Register</button> </a>
+          <!--<a href="./../pages/login.php"> <button type="submit">Register</button> </a> -->
+          <a href="./login.php"> <input type="button" name="login" value="login" /> </a>
            <!-- <h6 style="color: #f3f1f1; margin-top:10px;">if you apready have an account? </h6><a href="./login.php"> login </a> -->
 
            <h6 style="color: #f3f1f1; margin-top: 20px; display: inline;">
              if you already have an account? &nbsp;
            </h6>
-          <a href="./login.php" style="color: white; text-decoration: none; display: inline; margin-left: 5px;">
+          <a href="./../pages/login.php" style="color: white; text-decoration: none; display: inline; margin-left: 5px;">
             login
             </a>
         </form>

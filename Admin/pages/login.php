@@ -52,8 +52,8 @@
     <div class="carousel-item active" style="background-image:url('./../../Images/User-images/rbg.jpg');">
 
     <div class="containers1">
-       
-        <form  class="login-form">
+    <form action="" method="post"  class="login-form" enctype="multipart/form-data">
+        <!-- <form  class="login-form"> -->
         <h2>Login</h2>
             <div class="form-group">
                 <label for="username" style="color:white;">Username</label>
@@ -69,7 +69,8 @@
                 id="password" name="password" required>
             </div>
             
-             <a href="./admin-dashboard.php"><button type="submit">Login</button> </a>
+            <!-- <a href="./admin-dashboard.php"><button type="submit">Login</button> </a> -->
+             <a href="./admin-dashboard.php"> <input type="button" name="login" value="login" /> </a>
             <h6 style="color: #f3f1f1; margin-top: 20px; display: inline;">
              if not have account &nbsp;
            </h6>
