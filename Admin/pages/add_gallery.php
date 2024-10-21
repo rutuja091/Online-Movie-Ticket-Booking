@@ -29,7 +29,7 @@
        <div class="container1">
     
     <form class="movie-form" action="add_gallery.php" method="POST" enctype="multipart/form-data">
-        <h2> Add Movie Details</h2>
+        <h2> Add Gallery Details</h2>
         <div class="form-group">
             <label for="image">Movie Image:</label>
             <input type="file" id="image" name="image" accept="image/*" >

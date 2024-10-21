@@ -51,12 +51,12 @@ $name = $resultData['name'];
             <h2>Update Gallery Details</h2>
 
             <div class="form-group">
-                <label for="image">Movie Image:</label>
+                <label for="image">Gallery Image:</label>
                 <input type="file" id="image" name="image" accept="image/*">
-                <img src="<?php echo './uploads/' . $image; ?>" alt="Movie Image" height="100">
+                <img src="<?php echo './uploads/' . $image; ?>" alt="Gallery Image" height="100">
             </div>
             <div class="form-group">
-                <label for="name">Movie Name:</label>
+                <label for="name"> Name:</label>
                 <input type="text" id="name" name="name" autocomplete="off" value="<?php echo $name; ?>" required>
             </div>
           

@@ -41,7 +41,7 @@
       </ul>  -->
     </div>
     <div class="d-flex align-items-center">
-      <a href="#" class="btn btn-outline-primary">
+      <a href="./login.php" class="btn btn-outline-primary">
       <i class="bi bi-person"></i> <img src =".\..\..\Images\login.png" style="height:40px;">
       </a>
     </div>
@@ -53,7 +53,10 @@
       
     <div class="container">
 
-    <h1 style="justify-content:center;text-align:center; color:#ff5500">Manage Movies</h1>
+    <h1 style="justify-content:center;text-align:center; color:#ff5500">Dashboard</h1>
+    <div >
+            <a href=".\..\pages\reports.php"><button  style="color:white; background-color:#4CAF50;margin-left:1070px;margin-top:1px;margin-bottom: 5px;border-radius:10px;padding:10px 20px">Reports</button></a>
+         </div>
         <div class="row">
 
             <!-- Card 1 -->
@@ -102,8 +105,8 @@
             <!-- Card 6 -->
             <div class="col-md-6 col-lg-4">
                 <div class="card">
-                    <img src=".\..\..\Images\admin-images\all-reports.png" alt="Movie 2">
-                    <a href =".\..\pages\reports.php"><button class="movie-button"> View All Report</button></a>
+                    <img src=".\..\..\Images\admin-images\gallery.png" alt="Movie 2">
+                    <a href =".\..\pages\manage-gallery.php"><button class="movie-button">Manage Gallery</button></a>
                 </div>
             </div>
 

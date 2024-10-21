@@ -49,27 +49,32 @@
 
 
 
-    <div class="carousel-item active" style="background-image:url('./../../Images/User-images/login-bg.jpg');">
+    <div class="carousel-item active" style="background-image:url('./../../Images/User-images/rbg.jpg');">
 
     <div class="containers1">
-       
-        <form  class="login-form">
+    <form action="" method="post"  class="login-form" enctype="multipart/form-data">
+        <!-- <form  class="login-form"> -->
         <h2>Login</h2>
             <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+                <label for="username" style="color:white;">Username</label>
+                <input type="text"
+                style="color:black;"
+                id="username" name="username" required>
             </div>
             
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <label for="password" style="color:white;">Password</label>
+                <input type="password" 
+                style="color:black;"
+                id="password" name="password" required>
             </div>
             
-             <a href="./admin-dashboard.php"><button type="submit">Login</button> </a>
+            <!-- <a href="./admin-dashboard.php"><button type="submit">Login</button> </a> -->
+             <a href="./admin-dashboard.php"> <input type="button" name="login" value="login" /> </a>
             <h6 style="color: #f3f1f1; margin-top: 20px; display: inline;">
              if not have account &nbsp;
            </h6>
-          <a href="./register.php" style="color: white; text-decoration: none; display: inline; margin-left: 5px;">
+          <a href="./registration.php" style="color: white; text-decoration: none; display: inline; margin-left: 5px;">
             Register
             </a>
         </form>
